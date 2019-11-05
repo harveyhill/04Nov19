@@ -49,11 +49,11 @@ a.navbarlink{
     margin-right: auto;
     vertical-align: middle;
     padding: 100px 0;
-    background-image: url("studyofdista.jpg");
+    background-image: url("../img/studyofdista.jpg");
     border: 3px solid royalblue;
 }
 .backgroundimage{
-    background-image:url("The-Fairy-of-Eagle-Nebula.jpg")
+    background-image:url('../img/The-Fairy-of-Eagle-Nebula.jpg')
 }
 #hobbies{
     background-color: black;
