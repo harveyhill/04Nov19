@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <HEAD>
+        <meta name="About Keaton, Web Page" content="Brief Description of Keaton and Toy Programs">
+        <style>
+            h1 {color:white;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 10%;
+                }
+
+            .blockElement {color:red}
+            #inlineElement {color:purple}
+
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            /* Three image containers (use 25% for four, and 50% for two, etc) */
+            .column {
+                float: left;
+                width: 50%;
+                padding: 0px;
+            }
+
+            /* Clear floats after image containers */
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            html {
+                background-color:wheat;
+                background-image: url("dice.jpg");
+                background-size: 100%;
+            }
+            title {
+                background-color: peachpuff;
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                }
+            li {background-color: rgb(231, 222, 136);}
+            p {text-align: center;
+                color: white;
+                }
+            
+        </style>
+        <div class="center">
+            <title>Keaton Boardman---Bachelor of Science, Computer Science</title>
+        </div>
+    <HEAD>
+    <BODY>
+        <div class="blockElement" style="color:red">
+            <h1 id="openParagraph">About <span="inlineElement">Keaton</span></h1>
+        </div>
+        <div id="aboutMe">
+           <p>Hello, my name is Keaton Boardman and this is my modest web page about me.<br>
+                Here are some of my wholesome hobbies:
+           </p> 
+        </div>
+            <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\roll-d20s.gif" height="350" width="500" class="center">
+            <ul>
+                <li class="center">Dungeons and Dragons</li>
+                <li class="center">Pathfinder</li>
+                <li class="center">Biodome Research</li>
+                <li class="center">Meme Farming</li>
+                <li class="center">Meme Smithing</li>
+                <li class="center">Reading</li>
+                <li class="center">Computer Science</li>
+                <li class="center">Mathematics</li>
+                <li class="center">History</li>
+            </ul>
+            <div class="row">
+                <div class="column">
+                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\meme-farming.jpg" height="250" width="350" class="center">
+                </div>
+                <div class="column">
+                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\babylonian-algorithm-cuneiform-tablet.jpg" height="250" width="350" class="right">
+                </div>
+            </div>
+
+            <script src="practice_test.js"><p>RUN IT!!</p></script>
+    </BODY>
+</html>
