@@ -19,9 +19,16 @@ function controlFlow() {
 
 }
 
-function whileFunction()
+function whileForOfFunction()
 {
     var counter = 0;
+    var items = ["Hello", "world", "foo", "bar", "baz"];
+
+    for(x of items)
+    {
+        console.log(x);
+    }
+
     while(counter <= 100)
     {
         console.log(counter + " I'm still counting up!!");
