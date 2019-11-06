@@ -1,4 +1,6 @@
-
+function fib(number){
+    
+}
 function UpdateTime()
 {
     let day=new Date();
