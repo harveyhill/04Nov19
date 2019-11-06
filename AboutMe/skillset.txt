@@ -1,0 +1,59 @@
+Programming Languages
+C++
+Java
+Python
+JavaScript
+
+Programming GUI/Frontend
+Kivy
+Tkinter
+
+Password management
+LastPass
+BitWarden
+
+Development environments
+NodeJS
+NGinx
+Anaconda
+Spyder
+Arduino
+Notepad++
+
+Server/Web
+Virtual Private Server
+Virtual Private Network
+Ubuntu Server
+Restful API
+Angular
+TypeScript
+HTML
+CSS
+
+Source Control
+Git
+Github
+Gitlab
+DropBox
+
+Office Suite
+Microsoft Office
+LibreOffice
+
+Editing/Publishing
+Amazon KDP Publishing
+Manuscript preparation
+General Editor
+Technical Editor
+GIMP
+Inkscape
+LaTeX
+
+eCommerce
+ChannelAdvisor
+Salesforce
+BigCommerce
+Google Ads
+Ebay
+Amazon Seller Central
+ShipStation

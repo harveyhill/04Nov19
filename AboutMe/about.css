@@ -1,0 +1,44 @@
+body {background-color: beige;}
+
+.portraitPicture img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+}
+
+.introductoryParagraph {
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introductoryParagraph p {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#doubleColumnList ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#doubleColumnList h3 {
+    text-align: left;
+}
+
+#skillSet {
+/**/
+}
+
+#hobbyList {
+/**/
+}
