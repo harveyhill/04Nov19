@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Controls</title>
+    </head>
+    <body>
+      <H1>This will print controls results</H1>  
+    </body>
+<script>
+    
+function  mycontrolls(){
+//    console.log("print array");
+let arr=["valvo","Honda","ford"];
+// for loop
+for(name of arr)
+{
+console.log(name);
+
+}
+
+let str="rabia";
+
+for(j=str.length; j>=0; j--){
+console.log(str[j]);
+}
+
+}
+
+// print even no till 10 using while loop
+
+function evenNumbers(){
+//console.log("print even no");
+let i=0;
+while(i<20)
+{
+if(i%2==0)
+console.log(i);
+i++;
+}
+}
+// switch statment
+function  carCheck()
+{
+let arr=["valvo","ford","honda"];
+var i=0;
+do{
+switch(arr[i]){
+case "valvo":
+    console.log(arr[i]+"  a swedish car is available");
+    break;
+case "ford" :   
+console.log(arr[i]+"   an American car is available");
+break;
+case "honda":
+console.log(arr[i]+"  a japenes car is available");
+default:
+console.log("Sorry! no car is available");
+
+}
+i++;
+}
+while(i<arr.length)
+}
+
+
+</script>
+
+</html>
