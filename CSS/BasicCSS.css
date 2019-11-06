@@ -37,28 +37,28 @@ body{
 .content{
     background-color:rgba(29, 29, 29, 0.90);
     display:inline-block;
-    width:60vw;
+    width:50vw;
 }
 .content > ul{
     display:inline-block;
 }
 #backgroundvideo{
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: -5%;
+    bottom: -15%;
     z-index: -100;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 #headerbackground{
     background-color:rgba(29, 29, 29, 0.90);
     display:inline-block;
     padding: 14px 0;
-    width:60vw;
+    width:50vw;
 }
 #headerimagebackground{
     min-height: 50px;
-    max-width: 60vw;
+    max-width: 50vw;
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
