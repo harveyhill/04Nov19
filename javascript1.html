@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document1</title>
+    <h2>Myfirst javascrpit</h2>
+    
+
+    
+    
+</head>
+
+<body>
+    <p>Click the button to do a loop with a break.
+       The loop is supposed to output the numbers 0 to 6,
+        but the break statement exits the loop when the variable i is equal to "5".</p>
+
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      var text = ""
+      var i;
+      for (i = 0; i < 6; i++) {
+        if (i === 4) {
+          break;
+        }
+        text += "The number is " + i + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+
+    
+
+    
+</body>
+</html>
