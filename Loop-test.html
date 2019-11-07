@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+</style>
+</head>
+<body>
+    <h2>Test1</h2>
+    <table>
+
+    
+    <tr><td><button type="button" onclick="wloop();" style="width:100px;">While loop</button></td></tr>
+    <tr><td></td></tr>
+      <tr><td><button type="button" onclick="dloop();" style="width:100px;">Do loop</button></td></tr>
+      <tr><td></td></tr>
+        <tr><td><button type="button" onclick="floop();" style="width:100px;">For Loop</button></td></tr>
+        <tr><td></td></tr>
+          <tr><td><button type="button" onclick="sloop();" style="width:100px;">Switch</button></td></tr>
+         
+      </table>
+
+<script>
+    function wloop(){
+        var perm;
+        perm= prompt("To stop loop enter (N)");
+        let i=1;
+        let j=1;
+        
+        
+        while(perm != "N"){
+            let pp="";
+                j++;
+                
+            for(i=1; i<11; i++) {
+                pp=pp+ " "+ i*j +" ";
+            }
+            
+            perm=prompt(pp + " .....To stop loop enter (N)");
+        }
+        
+    }
+
+    function dloop(){
+           let j=0;
+        let perm = ""
+        do {
+            j++;
+            var pp="My Name is Sabir Hazratzai      Time(s) printed:"+ j;
+                
+            perm=prompt(pp + "           To stop loop enter (N)");
+        }while (perm != "N");
+    }
+    
+    function floop(){
+      let arr=new Array();
+      let tt="";
+      for(i=1;i<18; i++){
+      arr[i-1]=i*17;
+            }
+            let k=0;
+      for(k of arr){
+        tt=tt+ k +" , ";
+      }
+      alert("These are some numbers divite by 17: "+ tt);
+
+    }
+    
+    function sloop(){
+        let perm=prompt("Please enter the weekday as number(0-6):");
+        let day="";
+        switch (perm) {
+            
+  case "0":
+    
+  day="Sunday";
+    
+  break;
+  case "1":
+    day = "Monday";
+    break;
+  case "2":
+     day = "Tuesday";
+    break;
+  case "3":
+    day = "Wednesday";
+    break;
+  case "4":
+    day = "Thursday";
+    break;
+  case "5":
+    day = "Friday";
+    break;
+  case "6":
+    day = "Saturday";
+}
+alert(day);}
+</script>
+</body>
+</html>
