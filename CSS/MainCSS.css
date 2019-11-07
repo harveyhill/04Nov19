@@ -6,6 +6,16 @@ body{
     text-align:center;
     
 }
+.botton{
+    background-color: gray;
+    border: 3px ridge darkgray;
+    color: whitesmoke;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:16px;
+}
 .topbar{
     background-color:rgb(5, 5, 5);
     border-bottom: 1px solid black;
