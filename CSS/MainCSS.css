@@ -66,6 +66,10 @@ body{
     background-image: url('../img/The-Fairy-of-Eagle-Nebula.jpg');
     border: 3px solid royalblue;
 }
+.contentborder{
+    border: 2px outset rgba(32, 32, 32, 0.712);
+    border-radius: 5px;
+}
 #hobbies{
     background-color: black;
 }
