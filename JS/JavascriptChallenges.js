@@ -1,8 +1,24 @@
+/*1. Fibonacci 
 Define function: fib(n) 
 Return the nth number in the fibonacci sequence.*/
 
 function fib(n) {
-
+    if(n==0)
+      return 0;
+    else if (n==1 || n==2)
+      return 1;
+    else
+      return fibHelper(1, 1, n-2)
+}
+function fibHelper(n, nprev, iter){
+  if(iter>0){
+    let temp=n;
+    n=n+nprev;
+    nprev=temp;
+    return fibHelper(n,nprev,iter-1);
+  }
+  else
+    return n;
 }
 
 /*2. Bubble Sort
@@ -11,7 +27,22 @@ Use the bubble sort algorithm to sort the array.
 Return the sorted array.*/
 
 function bubbleSort(numArray) {
-
+  //sorted into ascending order
+  let sorted=false;
+  while(sorted==false){
+    sorted=true;
+    for(i=0;i<numArray.length-1;i++)
+    {
+      if(numArray[i]>numArray[i+1])
+      {
+        let temp=numArray[i];
+        numArray[i]=numArray[i+1];
+        numArray[i+1]=temp;
+        sorted=false;
+      }
+    }
+  }
+  return numArray;
 }
 
 /*3. Reverse String
@@ -27,7 +58,7 @@ Define function: factorial(someNum)
 Use recursion to compute and return the factorial of someNum.*/
 
 function factorial(someNum) {
-
+    return someNum*factorial(someNum-1);
 }
 
 /*5. Substring
@@ -45,7 +76,10 @@ Return true if even, false if odd.
 Do not use % operator.*/
 
 function isEven(someNum) {
-    
+    if((someNum & 1) == 0)
+      return true;
+    else
+      return false;
 }
 
 /*7. Palindrome
@@ -135,8 +169,6 @@ function UpdateTime()
     let day=new Date();
     document.querySelector("#timestamp").innerHTML = day.toLocaleTimeString();
 }
-setInterval(UpdateTime,1000);
-
 /*15.  Descending order
 Your task is to make a function that can take any non-negative 
 integer as a argument and return it with its digits in descending 
