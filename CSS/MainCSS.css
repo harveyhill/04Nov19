@@ -7,7 +7,7 @@ body{
     background-color: brown;
     color: white;
 }
-.center{
+#center{
     text-align:center;
     
 }
@@ -80,5 +80,10 @@ h2{
     color:royalblue;
     font-weight:bold;
     font-size: 54px;
-
+}
+table, th, td{
+    border: 1px solid blue;   
+}
+th, td{
+    padding:5px 10px;
 }
