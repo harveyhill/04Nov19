@@ -18,7 +18,7 @@ body{
 }
 .topbar a{
     float:left;
-    color: royalblue;
+    color: whitesmoke;
     text-align:center;
     padding: 14px 16px;
     font-size:22px;
@@ -52,7 +52,6 @@ body{
     right: -10%;
     bottom: -40%;
     z-index: -100;
-    width: 140vw;
     height: 140vh;
 }
 #headerbackground{
