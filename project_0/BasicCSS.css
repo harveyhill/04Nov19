@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image : url("dark2.jpg") !important;
+
+}
+
+#header, #sports , #mySweetDiv{
+    color: white;
+}
+
+li {
+    float: left;
+}
+
+#wrapper {
+    margin : 0 auto;
+    background: rgba(185, 164, 164, 0.5);
+    width: 750px;
+    height: 1000px;
+    scroll-behavior: auto;
+}
+
+#col1, #col2, #col3 {
+    padding: 50px;
+    float: left;
+}
+
+#api {
+ float: left;
+}
+
+#mod {
+    float: left;
+}
+
+#results {
+    color: white;
+}
+
+a {color : white;}
+
+.btn-outline-secondary {
+    color : white;
+}
+
+ 
+
