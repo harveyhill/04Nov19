@@ -70,7 +70,22 @@ Return the substring contained between offset and (offset + length) inclusively.
 If incorrect input is entered, use the alert function and describe why the input was incorrect.*/
 
 function substring(someStr, length, offset) {
-
+    if(offset<0)
+      alert('Invalid input: Offset cannot be < 0');
+    else if(length<0)
+      alert('Invalid input: Length cannot be < 0');
+    else if(offset+length>someStr.length)
+      alert('Invalid input: Offset and length is larger than string size');
+    else if (offset>someStr.length-1)
+      alert('Invalid input: Offset cannot be larger than string size');
+    else
+    {
+      let subStr="";
+      for(i=0;i<length;i++){
+        subStr=subStr+someStr.charAt(offset+i);
+      }
+      return subStr;
+    }
 }
 
 /*6. Even Number
@@ -90,7 +105,13 @@ Define function isPalindrome(someStr)
 Return true if someStr is a palindrome, otherwise return false*/
 
 function isPalindrome(someStr) {
-
+  let halflen=Math.ceil(someStr.length/2);
+  for(i=0;i<halflen;i++)
+  {
+    if(someStr.charAt(i)!=someStr.charAt(someStr.length-i-1))
+      return false;
+  }
+  return true;
 }
 
 /*8. Shapes
@@ -124,7 +145,8 @@ Define function traverseObject(someObj)
 Print every property and it's value.*/
 
 function traverseObject(someObj) {
-
+  for(property in someObj)
+    console.log(property+": "+someObj[property]);
 }
 
 /*10. Delete Element
