@@ -3,12 +3,13 @@ Define function: fib(n)
 Return the nth number in the fibonacci sequence.*/
 
 function fib(n) {
+  //check first 2 special cases, then recursively add values until desired iteration num
     if(n==0)
       return 0;
-    else if (n==1 || n==2)
+    else if (n==1)
       return 1;
     else
-      return fibHelper(1, 1, n-2)
+      return fibHelper(1, 0, n-1)
 }
 function fibHelper(n, nprev, iter){
   if(iter>0){
@@ -28,6 +29,7 @@ Return the sorted array.*/
 
 function bubbleSort(numArray) {
   //sorted into descending order
+  //continue checking all pairs until no swaps are made
   let sorted=false;
   while(sorted==false){
     sorted=true;
@@ -70,22 +72,23 @@ Return the substring contained between offset and (offset + length) inclusively.
 If incorrect input is entered, use the alert function and describe why the input was incorrect.*/
 
 function substring(someStr, length, offset) {
-    if(offset<0)
-      alert('Invalid input: Offset cannot be < 0');
-    else if(length<0)
-      alert('Invalid input: Length cannot be < 0');
-    else if(offset+length>someStr.length)
-      alert('Invalid input: Offset and length is larger than string size');
-    else if (offset>someStr.length-1)
-      alert('Invalid input: Offset cannot be larger than string size');
-    else
-    {
-      let subStr="";
-      for(i=0;i<length;i++){
-        subStr=subStr+someStr.charAt(offset+i);
-      }
-      return subStr;
+  //loop through and grab every character from offset to offset+length.
+  if(offset<0)
+    alert('Invalid input: Offset cannot be < 0');
+  else if(length<0)
+    alert('Invalid input: Length cannot be < 0');
+  else if(offset+length>someStr.length)
+    alert('Invalid input: Offset and length is larger than string size');
+  else if (offset>someStr.length-1)
+    alert('Invalid input: Offset cannot be larger than string size');
+  else
+  {
+    let subStr="";
+    for(i=0;i<length;i++){
+      subStr=subStr+someStr.charAt(offset+i);
     }
+    return subStr;
+  }
 }
 
 /*6. Even Number
@@ -94,6 +97,8 @@ Return true if even, false if odd.
 Do not use % operator.*/
 
 function isEven(someNum) {
+  //use bitwise operator to check rightmost bit. 
+  //if it's 1, value is odd
     if((someNum & 1) == 0)
       return true;
     else
@@ -105,12 +110,13 @@ Define function isPalindrome(someStr)
 Return true if someStr is a palindrome, otherwise return false*/
 
 function isPalindrome(someStr) {
+  //traverse from both ends of the string until center. 
+  //return false if the characters in both iterators are different
+  //return true if it never finds different characters
   let halflen=Math.ceil(someStr.length/2);
   for(i=0;i<halflen;i++)
-  {
     if(someStr.charAt(i)!=someStr.charAt(someStr.length-i-1))
       return false;
-  }
   return true;
 }
 
@@ -199,7 +205,8 @@ Your task is to make a function that can take any non-negative
 integer as a argument and return it with its digits in descending 
 order. Essentially, rearrange the digits to create the highest possible number.*/
 
-function descOrder(n) {
+function descOrder(n) { 
+  //convert to int array, send to bubble sort, then convert back to int
   if(n<0)
     alert('Invalid Input: Input cannot be negative');
   else
