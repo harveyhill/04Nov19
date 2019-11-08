@@ -27,13 +27,13 @@ Use the bubble sort algorithm to sort the array.
 Return the sorted array.*/
 
 function bubbleSort(numArray) {
-  //sorted into ascending order
+  //sorted into descending order
   let sorted=false;
   while(sorted==false){
     sorted=true;
     for(i=0;i<numArray.length-1;i++)
     {
-      if(numArray[i]>numArray[i+1])
+      if(numArray[i]<numArray[i+1])
       {
         let temp=numArray[i];
         numArray[i]=numArray[i+1];
@@ -200,5 +200,8 @@ integer as a argument and return it with its digits in descending
 order. Essentially, rearrange the digits to create the highest possible number.*/
 
 function descOrder(n) {
-
+  if(n<0)
+    alert('Invalid Input: Input cannot be negative');
+  else
+   return Number(bubbleSort(n.toString().split('')).join(''));
 }
