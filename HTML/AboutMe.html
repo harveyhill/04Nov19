@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../CSS/MainCSS.css">
         <script src="../JS/Demo.js"></script>
         <script src="../JS/JokeGenerator.js"></script>
+        <script src="../JS/JavascriptChallenges.js"></script>
         <script src="../JS/Core.js"></script>
     </head>
     <video autoplay muted loop id="backgroundvideo">
@@ -16,7 +17,6 @@
         <a href="#">About Me</a>
         <a href="JavascriptChallenges.html">JavascriptChallenges</a>
         <p id="timestamp"></p>
-        <script>setInterval(UpdateTime,1000);</script>
     </div>
     <body class="center">
         <br>
@@ -48,8 +48,8 @@
             <h1>Random Joke of the Day:</h1>
             <p id="joketext"></p> 
             <a href="https://icanhazdadjoke.com/">More Jokes</a>
-
         </div>
         <br><br>
     </body>
+    <script>document.addEventListener("scroll",videoParallax);setInterval(UpdateTime,1000);</script>
 </html>

@@ -6,4 +6,3 @@ function videoParallax(){
         document.querySelector("#backgroundvideo").style.bottom=((scrollPercent*40)-40)+"%";
     }
 }
-document.addEventListener("scroll",videoParallax);

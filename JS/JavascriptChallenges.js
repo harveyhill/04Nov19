@@ -50,7 +50,10 @@ Define function: reverseStr(someStr)
 Reverse and return the String.*/
 
 function reverseString(someStr) {
-
+    let revStr="";
+    for (character of someStr)
+      revStr=character+revStr;
+    return revStr;
 }
 
 /*4. Factorial

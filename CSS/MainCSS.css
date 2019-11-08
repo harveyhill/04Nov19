@@ -6,7 +6,7 @@ body{
     text-align:center;
     
 }
-.botton{
+.button{
     background-color: gray;
     border: 3px ridge darkgray;
     color: whitesmoke;
@@ -59,10 +59,11 @@ body{
 }
 #backgroundvideo{
     position: fixed;
-    right: -10%;
+    right: -5%;
     bottom: -40%;
     z-index: -100;
-    height: 140vh;
+    height: 140%;
+    min-width: 100vw;
 }
 #headerbackground{
     background-color:rgba(29, 29, 29, 0.90);
