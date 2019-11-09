@@ -1,3 +1,5 @@
+var myVar = setInterval(updateTime, 1000);
+
 ///////////
 //API calls
 ///////////
@@ -226,6 +228,71 @@ function traverseObject(someObj) {
       
 }
 
+/*10. Delete Element
+Define function deleteElement(someArr)
+Print length
+Delete the third element in the array.
+Print length
+The lengths should be the same.*/
+function deleteElement(someDelArr) {
+    var output = "length before -> " + someDelArr.length + " \n";
+    someDelArr[2] = "";
+    output += "length after -> " + someDelArr.length;
+    return output;
+}
+
+/*11. Splice Element
+Define function spliceElement(someArr)
+Print length
+Splice the third element in the array.
+Print length
+The lengths should be one less than the original length.*/
+function spliceElement(someArr) {
+    var output = "length before -> " + someArr.length + " \n";
+    var result = [];
+    for(i = 0; i < someArr.length; i++)
+    {
+        if(2 != i)
+        {
+            result.push(output[i]);
+        }
+    }
+    output += "length after -> " + result.length;
+    return output;
+}
+
+/*12. Defining an object using a constructor
+Define a function Person(name, age)
+The following line should set a Person object to the variable john:
+	var john = new Person("John", 30);*/
+function Person(name, age) {
+    class Person {
+        constructor(name, age) {
+            this._name = name;
+            this._age = age;
+        }
+    }
+
+    var john = new Person(name,age);
+    return "name : " + john._name + " age : " + john._age;
+}
+
+
+/*13. Defining an object using an object literal
+Define function getPerson(name, age)
+The following line should set a Person object to the variable john:
+    var john = getPerson("John", 30);*/
+
+function getPerson(name, age) {
+
+}
+
+/*14. Display the current time on the top right of your HTML page, 
+updating every second*/
+function updateTime() {
+    var time = new Date();
+    document.querySelector("#myTime").textContent = time.toLocaleTimeString();
+}
 
 /*15.  Descending order
 Your task is to make a function that can take any non-negative 
@@ -303,6 +370,7 @@ document.querySelector("#myDescOrder").addEventListener("click", function (e) {
     var result = descOrder(parseInt(input));
     document.querySelector("#output").value = result;
 })
+
     
 
 
