@@ -280,6 +280,18 @@ document.querySelector("#myReverseString").addEventListener("click", function (e
     document.querySelector("#output").value = String(result);
 })
 
+document.querySelector("#mySubstring").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var trimmed = input.split(",");
+    var myArray = [];
+    for (x of trimmed)
+    {
+        myArray.push(x);
+    }
+    var output = substring(myArray[0],parseInt(myArray[1]),parseInt(myArray[2])); 
+    document.querySelector("#output").value = output;
+})
+
 document.querySelector("#myTraverseObj").addEventListener("click", function (e) {
     var input = document.querySelector("#userInput").value;
     var result = traverseObject(JSON.parse(input));
