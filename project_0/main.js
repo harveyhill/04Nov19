@@ -209,7 +209,7 @@ Example for printShape("Diamond", 5, "*");
 *****
  ***
   * */
- function printShape(shape, height, character) {
+function printShape(shape, height, character) {
     
 }
 
@@ -224,7 +224,9 @@ function traverseObject(someObj) {
 }
 
 
-
+///////////////////////////////////
+// Event listeners 
+///////////////////////////////////
 document.querySelector("#myFib").addEventListener("click", function (e) {
     var input = document.querySelector("#userInput").value;
     var output = fib(parseInt(input));
@@ -233,9 +235,20 @@ document.querySelector("#myFib").addEventListener("click", function (e) {
 
 document.querySelector("#myBubbleSort").addEventListener("click", function (e) {
     var input = document.querySelector("#userInput").value;
-    
-    var output = bubbleSort();
+    var trimmed = input.split(",");
+    var myArray = [];
+    for (x of trimmed)
+    {
+        myArray.push(parseInt(x));
+    }
+    var output = bubbleSort(myArray);
     document.querySelector("#output").value = String(output);
+})
+
+document.querySelector("#myReverseString").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var result = reverseString(input);
+    document.querySelector("#output").value = String(result);
 })
     
 
