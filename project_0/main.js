@@ -217,12 +217,41 @@ function printShape(shape, height, character) {
 Define function traverseObject(someObj)
 Print every property and it's value.*/
 function traverseObject(someObj) {
-    for(x in someObj)
-    {
-        console.log(x);
-    }
+    //Code from MDN
+    var result = "";
+    for (let [key, value] of Object.entries(someObj)) {
+        result += `${key}: ${value}` + ", \n";
+      }
+    return result;
+      
 }
 
+
+/*15.  Descending order
+Your task is to make a function that can take any non-negative 
+integer as a argument and return it with its digits in descending 
+order. Essentially, rearrange the digits to create the highest possible number.*/
+function descOrder(n) {
+    
+    var divisor = parseInt(n);
+    var remainder = 0;
+    var temp = [];
+    var result = "";
+    
+    while(divisor > 0)
+    {
+        remainder = divisor % 10;
+        divisor = Math.floor(divisor / 10);
+        temp.push(remainder);
+    }
+    temp = bubbleSort(temp);
+    for(i = (temp.length - 1); i >= 0; i--)
+    {
+        result += "" + temp[i];
+    }
+
+    return result;
+}
 
 ///////////////////////////////////
 // Event listeners 
@@ -250,7 +279,20 @@ document.querySelector("#myReverseString").addEventListener("click", function (e
     var result = reverseString(input);
     document.querySelector("#output").value = String(result);
 })
+
+document.querySelector("#myTraverseObj").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var result = traverseObject(JSON.parse(input));
+    document.querySelector("#output").value = String(result);
+})
+
+document.querySelector("#myDescOrder").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var result = descOrder(parseInt(input));
+    document.querySelector("#output").value = result;
+})
     
+
 
    
   
