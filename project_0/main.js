@@ -143,9 +143,17 @@ function substring(someStr, length, offset) {
     {
         try
         {
-            for(i = offset; i <= (offset + length); i++)
+            var totalLength = offset + length;
+            if( totalLength < someStr.length)
             {
-                result += someStr.charAt(i);
+                for(i = offset; i <= (offset + length); i++)
+                {
+                    result += someStr.charAt(i);
+                }
+            }
+            else
+            {
+                alert("invalid index range");
             }
         }
         catch(Exception)
@@ -383,6 +391,32 @@ document.querySelector("#myTraverseObj").addEventListener("click", function (e) 
     var result = traverseObject(JSON.parse(input));
     document.querySelector("#output").value = String(result);
 })
+
+document.querySelector("#myDeleteElem").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var trimmed = input.split(",");
+    var myArray = [];
+    for (x of trimmed)
+    {
+        myArray.push(x);
+    }
+    var result = deleteElement(myArray);
+    document.querySelector("#output").value = String(result);
+})
+
+document.querySelector("#mySplice").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var trimmed = input.split(",");
+    var myArray = [];
+    for (x of trimmed)
+    {
+        myArray.push(x);
+    }
+    var result = spliceElement(myArray);
+    document.querySelector("#output").value = String(result);
+})
+
+
 
 document.querySelector("#myDescOrder").addEventListener("click", function (e) {
     var input = document.querySelector("#userInput").value;
