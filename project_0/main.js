@@ -244,7 +244,7 @@ Print length
 The lengths should be the same.*/
 function deleteElement(someDelArr) {
     var output = "length before -> " + someDelArr.length + " \n";
-    someDelArr[2] = "";
+    delete(someDelArr[2]);
     output += "length after -> " + someDelArr.length;
     return output;
 }
@@ -258,14 +258,9 @@ The lengths should be one less than the original length.*/
 function spliceElement(someArr) {
     var output = "length before -> " + someArr.length + " \n";
     var result = [];
-    for(i = 0; i < someArr.length; i++)
-    {
-        if(2 != i)
-        {
-            result.push(output[i]);
-        }
-    }
-    output += "length after -> " + result.length;
+    
+    someArr.splice(2,1);
+    output += "length after -> " + someArr.length;
     return output;
 }
 
