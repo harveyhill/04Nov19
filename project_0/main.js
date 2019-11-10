@@ -366,6 +366,18 @@ document.querySelector("#mySubstring").addEventListener("click", function (e) {
     document.querySelector("#output").value = output;
 })
 
+document.querySelector("#myIsEven").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var result = isEven(parseInt(input));
+    document.querySelector("#output").value = String(result);
+})
+
+document.querySelector("#myIsPalindrome").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var result = isPalindrome(input);
+    document.querySelector("#output").value = String(result);
+})
+
 document.querySelector("#myTraverseObj").addEventListener("click", function (e) {
     var input = document.querySelector("#userInput").value;
     var result = traverseObject(JSON.parse(input));
