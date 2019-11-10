@@ -285,7 +285,11 @@ The following line should set a Person object to the variable john:
     var john = getPerson("John", 30);*/
 
 function getPerson(name, age) {
-
+    var john = {
+        x : name,
+        y : age
+    };
+    return JSON.stringify(john);
 }
 
 /*14. Display the current time on the top right of your HTML page, 
@@ -409,6 +413,17 @@ document.querySelector("#mySplice").addEventListener("click", function (e) {
     document.querySelector("#output").value = String(result);
 })
 
+document.querySelector("#myGetPerson").addEventListener("click", function (e) {
+    var input = document.querySelector("#userInput").value;
+    var trimmed = input.split(",");
+    var myArray = [];
+    for (x of trimmed)
+    {
+        myArray.push(x);
+    }
+    var result = getPerson(myArray[0],myArray[1]);
+    document.querySelector("#output").value = result;
+})
 
 
 document.querySelector("#myDescOrder").addEventListener("click", function (e) {
