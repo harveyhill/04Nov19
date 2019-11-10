@@ -335,14 +335,26 @@ function descOrder(n) {
 ///////////
 //JS challenges listeners
 ///////////
+document.querySelector("#myFib").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "5";
+})
+
+document.querySelector("#myBubbleSort").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "55,1,34,32,6,9,8,3";
+})
+
+
+
 document.querySelector("#myFib").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var output = fib(parseInt(input));
     document.querySelector("#output").value = String(output);
 })
 
 document.querySelector("#myBubbleSort").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var trimmed = input.split(",");
     var myArray = [];
     for (x of trimmed)
