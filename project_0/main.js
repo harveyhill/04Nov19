@@ -257,8 +257,6 @@ Print length
 The lengths should be one less than the original length.*/
 function spliceElement(someArr) {
     var output = "length before -> " + someArr.length + " \n";
-    var result = [];
-    
     someArr.splice(2,1);
     output += "length after -> " + someArr.length;
     return output;
