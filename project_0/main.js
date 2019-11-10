@@ -335,6 +335,8 @@ function descOrder(n) {
 ///////////
 //JS challenges listeners
 ///////////
+
+//Placeholders
 document.querySelector("#myFib").addEventListener("mouseover", function (e) {
     document.querySelector("#userInput").placeholder = "5";
 })
@@ -343,8 +345,45 @@ document.querySelector("#myBubbleSort").addEventListener("mouseover", function (
     document.querySelector("#userInput").placeholder = "55,1,34,32,6,9,8,3";
 })
 
+document.querySelector("#myReverseString").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "Hello World";
+})
+
+document.querySelector("#mySubstring").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "Hello World,5 ,4";
+})
+
+document.querySelector("#myIsEven").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "4";
+})
+
+document.querySelector("#myIsPalindrome").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "racecar";
+})
+
+document.querySelector("#myTraverseObj").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "{ \"id\" : 0, \"name\" : \"helloWorld\"  }";
+})
+
+document.querySelector("#myDeleteElem").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "[1,2,3,4,5]";
+})
+
+document.querySelector("#mySplice").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "[1,2,3,4,5]";
+})
+
+document.querySelector("#myGetPerson").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "john,30";
+})
+
+document.querySelector("#myDescOrder").addEventListener("mouseover", function (e) {
+    document.querySelector("#userInput").placeholder = "4567";
+})
 
 
+
+//actions
 document.querySelector("#myFib").addEventListener("click", function (e) {
     var suggestion = document.querySelector("#userInput").placeholder;
     var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
@@ -366,13 +405,15 @@ document.querySelector("#myBubbleSort").addEventListener("click", function (e) {
 })
 
 document.querySelector("#myReverseString").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var result = reverseString(input);
     document.querySelector("#output").value = String(result);
 })
 
 document.querySelector("#mySubstring").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var trimmed = input.split(",");
     var myArray = [];
     for (x of trimmed)
@@ -384,25 +425,29 @@ document.querySelector("#mySubstring").addEventListener("click", function (e) {
 })
 
 document.querySelector("#myIsEven").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var result = isEven(parseInt(input));
     document.querySelector("#output").value = String(result);
 })
 
 document.querySelector("#myIsPalindrome").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var result = isPalindrome(input);
     document.querySelector("#output").value = String(result);
 })
 
 document.querySelector("#myTraverseObj").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var result = traverseObject(JSON.parse(input));
     document.querySelector("#output").value = String(result);
 })
 
 document.querySelector("#myDeleteElem").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var trimmed = input.split(",");
     var myArray = [];
     for (x of trimmed)
@@ -414,7 +459,8 @@ document.querySelector("#myDeleteElem").addEventListener("click", function (e) {
 })
 
 document.querySelector("#mySplice").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var trimmed = input.split(",");
     var myArray = [];
     for (x of trimmed)
@@ -426,7 +472,8 @@ document.querySelector("#mySplice").addEventListener("click", function (e) {
 })
 
 document.querySelector("#myGetPerson").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var trimmed = input.split(",");
     var myArray = [];
     for (x of trimmed)
@@ -439,7 +486,8 @@ document.querySelector("#myGetPerson").addEventListener("click", function (e) {
 
 
 document.querySelector("#myDescOrder").addEventListener("click", function (e) {
-    var input = document.querySelector("#userInput").value;
+    var suggestion = document.querySelector("#userInput").placeholder;
+    var input = ("" != document.querySelector("#userInput").value ? document.querySelector("#userInput").value : suggestion);
     var result = descOrder(parseInt(input));
     document.querySelector("#output").value = result;
 })
