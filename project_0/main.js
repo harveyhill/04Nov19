@@ -323,6 +323,13 @@ function descOrder(n) {
 ///////////////////////////////////
 // Event listeners 
 ///////////////////////////////////
+///////////
+//About ME listeners
+///////////
+
+///////////
+//JS challenges listeners
+///////////
 document.querySelector("#myFib").addEventListener("click", function (e) {
     var input = document.querySelector("#userInput").value;
     var output = fib(parseInt(input));
@@ -370,6 +377,8 @@ document.querySelector("#myDescOrder").addEventListener("click", function (e) {
     var result = descOrder(parseInt(input));
     document.querySelector("#output").value = result;
 })
+
+
 
     
 
