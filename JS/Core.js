@@ -18,3 +18,7 @@ function navbarIconMouseover(){
     });
 
 }
+function dropdownClick(event)
+{
+    document.querySelector(".dropdownButton").innerHTML=event.target.innerHTML;
+}

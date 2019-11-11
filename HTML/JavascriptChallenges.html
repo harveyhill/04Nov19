@@ -19,30 +19,27 @@
         <body class="center">
             <br>
             <h2 class="contentborder" id="headerbackground">Javascript Challenges</h2>
-            <div class="content contentborder">
+            <div class="content contentborder" style="min-height: 80vh;">
+                <h1>Select a challenge: </h2> 
                 <div class="dropdown">  
                     <button class="dropdownButton">Challenges List</button>       
                     <div class="dropdownContent">    
-                        <a>Fib</a>
-                        <a>bubble</a>
-                        <a>reverse</a>
-                        <a>factorial</a>
-                        <a>sub string</a>
-                        <a>even number</a>
-                        <a>shapes</a>
-                        <a>obj literal</a>
-                        <a>remove elem</a>
-                        <a>splice elem</a>
-                        <a>define w/ construct</a>
-                        <a>define w/ literal</a>
-                        <a>desc order</a>
+                        <a>Fibonacci Seq</a>
+                        <a>Bubble Sort</a>
+                        <a>Reverse String</a>
+                        <a>Factorial</a>
+                        <a>Sub-string</a>
+                        <a>Is Even</a>
+                        <a>Is Palindrome</a>
+                        <a>Object Literal</a>
+                        <a>Desc Order</a>
                     </div>   
                 </div>
-                Testtext
            </div>
         </body>
         <script>
         document.addEventListener("scroll",videoParallax);
+        document.addEventListener("mousedown",dropdownClick);
         setInterval(UpdateTime,1000);
         navbarIconMouseover();
         </script>
