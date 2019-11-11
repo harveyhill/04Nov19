@@ -47,12 +47,12 @@ body{
 .centerText{
     text-align:center;
 }
-.center{
+.centerContainer{
     position: relative;
     left: 20vw;
     width:60vw;
 }
-.topbar{
+.topBar{
     background-color:rgb(5, 5, 5);
     border-bottom: 1px solid black;
     overflow:hidden;
@@ -63,7 +63,7 @@ body{
     height: auto;
     z-index:1;
 }
-.topbar a{
+.topBar a{
     float:left;
     color: whitesmoke;
     text-align:center;
@@ -71,7 +71,7 @@ body{
     font-size:22px;
     text-decoration: none;
 }
-.topbar a:hover{
+.topBar a:hover{
     background-color: rgb(65, 65, 65);
 }
 .content{
@@ -81,18 +81,18 @@ body{
 .content > ul{
     display:inline-block;
 }
-.contentborder{
+.contentBorder{
     border: 1px ridge rgba(32, 32, 32, 0.712);
     border-radius: 5px;
 }
-.smallicon{
+.smallIcon{
     float:left;
     padding:10px 10px;
     margin-left: 50px;
     max-width:32px; 
     border-radius: 50%;
 }
-#backgroundvideo{
+#backgroundVideo{
     position: fixed;
     right: -5%;
     bottom: -40%;
@@ -100,21 +100,11 @@ body{
     height: 140%;
     min-width: 100vw;
 }
-#headerbackground{
+#headerBackground{
     background-color:rgba(29, 29, 29, 0.90);
     display:inline-block;
     padding: 14px 0;
     width:60vw;
-}
-#headerimagebackground{
-    min-height: 50px;
-    max-width: 60vw;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-    padding: 60px 0;
-    background-image: url('../img/The-Fairy-of-Eagle-Nebula.jpg');
-    border: 3px solid royalblue;
 }
 #hobbies{
     background-color: black;

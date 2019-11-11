@@ -9,51 +9,53 @@
         <script src="../JS/JavascriptChallenges.js"></script>
         <script src="../JS/Core.js"></script>
     </head>
-    <video autoplay muted loop id="backgroundvideo">
-        <source src="../videos/Galaxy.mp4" type="video/mp4">
-    </video>
-    <div class="topbar">
-        <img href="google.com" id="navbarIcon" class="smallicon" src="../img/v217-2-mint-ning-29-icons.jpg">
-        <a href="#">About Me</a>
-        <a href="JavascriptChallenges.html">JavascriptChallenges</a>
-        <p id="timestamp"></p>
-    </div>
-    <body class="center centerText">
-        <br>
-        <h2 class="contentborder" id="headerbackground">About me <br> <span style="font-size: 40px">Jonathan Liu</span></h2>
-        <div class="content contentborder">
-            <h1>Current Hobbies:</h1>
-            <ul>
-                <li>Gaming</li>
-                <li>Watching TV shows</li>
-                <li>Listening to music</li>
-            </ul>
-            <h1>Favorite Song:</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UX__4aHwYzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h1>Education:</h1>
-            <p>Pennsylvania State University. University Park. 2019. <br>BS in Computer Science.</p>
-            <h1>Current Employment:</h1>
-            <p>Revature Salesforce Team: 2019 - current</p>
-            <h1>Contact Information:</h1>
-            <table align="center">
-                <tr>
-                    <th style="text-decoration: underline;">Phone Number</th>
-                    <th style="text-decoration: underline;">Email</th>
-                </tr>
-                <tr>
-                    <td>123-456-7890</td>
-                    <td>SampleEmail@mail.com</td>
-                </tr>
-            </table>
-            <h1>Random Joke of the Day:</h1>
-            <p id="joketext"></p> 
-            <a href="https://icanhazdadjoke.com/">More Jokes</a>
+    <body>>
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="../videos/Galaxy.mp4" type="video/mp4">
+        </video>
+        <div class="topBar">
+            <img href="google.com" id="navbarIcon" class="smallIcon" src="../img/v217-2-mint-ning-29-icons.jpg">
+            <a href="#">About Me</a>
+            <a href="JavascriptChallenges.html">JavascriptChallenges</a>
+            <p id="timeStamp"></p>
         </div>
-        <br><br>
+        <div class="center centerText">
+            <br>
+            <h2 class="contentBorder" id="headerBackground">About me <br> <span style="font-size: 40px">Jonathan Liu</span></h2>
+            <div class="content contentBorder">
+                <h1>Current Hobbies:</h1>
+                <ul>
+                    <li>Gaming</li>
+                    <li>Watching TV shows</li>
+                    <li>Listening to music</li>
+                </ul>
+                <h1>Favorite Song:</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UX__4aHwYzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h1>Education:</h1>
+                <p>Pennsylvania State University. University Park. 2019. <br>BS in Computer Science.</p>
+                <h1>Current Employment:</h1>
+                <p>Revature Salesforce Team: 2019 - current</p>
+                <h1>Contact Information:</h1>
+                <table align="center">
+                    <tr>
+                        <th style="text-decoration: underline;">Phone Number</th>
+                        <th style="text-decoration: underline;">Email</th>
+                    </tr>
+                    <tr>
+                        <td>123-456-7890</td>
+                        <td>SampleEmail@mail.com</td>
+                    </tr>
+                </table>
+                <h1>Random Joke of the Day:</h1>
+                <p id="joketext"></p> 
+                <a href="https://icanhazdadjoke.com/">More Jokes</a>
+            </div>
+            <br><br>
+        </div>
     </body>
     <script>
-    document.addEventListener("scroll",videoParallax);
-    setInterval(UpdateTime,1000);
-    navbarIconMouseover();
+        document.addEventListener("scroll",videoParallax);
+        setInterval(UpdateTime,1000);
+        navbarIconMouseover();
     </script>
 </html>
