@@ -2,19 +2,47 @@ body{
     background-color: black;
     color: white;
 }
-.center{
-    text-align:center;
-    
+.dropdown{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
-.button{
-    background-color: gray;
-    border: 3px ridge darkgray;
-    color: whitesmoke;
-    padding: 15px 32px;
+.dropdownButton{
+    background-color: rgb(65, 65, 65);
+    border: 1px ridge darkgray;
+    color: royalblue;
+    padding: 0.5em 0.5em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size:16px;
+    font-size:1em;
+}
+.dropdown:hover .dropdownButton{
+    background-color: rgba(29, 29, 29, 0.90);
+}
+.dropdownContent{
+    display:none;
+    z-index: 1;
+    position: absolute;
+}
+.dropdownContent a{
+    display:block;
+    padding: 0.2em 0.5em;
+    border: 1px inset darkgray;
+    background-color: rgb(65, 65, 65);
+    text-align:center;
+    color:royalblue;;
+    text-decoration:none;
+}
+.dropdownContent a:hover{
+    background-color: rgba(29, 29, 29, 0.90);
+}
+.dropdown:hover .dropdownContent {
+    display:block
+}
+.center{
+    text-align:center;
+    
 }
 .topbar{
     background-color:rgb(5, 5, 5);

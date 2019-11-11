@@ -8,7 +8,7 @@
             <script src="../JS/Core.js"></script>
         </head>
         <div class="topbar">
-            <img href="google.com" class="smallicon" src="../img/v217-2-mint-ning-29-icons.jpg">
+            <img href="google.com" id="navbarIcon" class="smallicon" src="../img/v217-2-mint-ning-29-icons.jpg">
             <a href="AboutMe.html">About Me</a>
             <a href="JavascriptChallenges.html">JavascriptChallenges</a>
             <p id="timestamp"></p>
@@ -20,21 +20,30 @@
             <br>
             <h2 class="contentborder" id="headerbackground">Javascript Challenges</h2>
             <div class="content contentborder">
-                <br>
-                Fib<br>
-                bubble<br>
-                reverse<br>
-                factorial<br>
-                sub string<br>
-                even number<br>
-                shapes<br>
-                obj literal<br>
-                remove elem<br>
-                splice elem<br>
-                define w/ construct<br>
-                define w/ literal<br>
-                desc order<br>
+                <div class="dropdown">  
+                    <button class="dropdownButton">Challenges List</button>       
+                    <div class="dropdownContent">    
+                        <a>Fib</a>
+                        <a>bubble</a>
+                        <a>reverse</a>
+                        <a>factorial</a>
+                        <a>sub string</a>
+                        <a>even number</a>
+                        <a>shapes</a>
+                        <a>obj literal</a>
+                        <a>remove elem</a>
+                        <a>splice elem</a>
+                        <a>define w/ construct</a>
+                        <a>define w/ literal</a>
+                        <a>desc order</a>
+                    </div>   
+                </div>
+                Testtext
            </div>
         </body>
-        <script>document.addEventListener("scroll",videoParallax);setInterval(UpdateTime,1000);</script>
+        <script>
+        document.addEventListener("scroll",videoParallax);
+        setInterval(UpdateTime,1000);
+        navbarIconMouseover();
+        </script>
 </html>
