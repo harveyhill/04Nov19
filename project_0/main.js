@@ -220,7 +220,58 @@ Example for printShape("Diamond", 5, "*");
  ***
   * */
 function printShape(shape, height, character) {
-    
+    var output = "";
+    switch(shape)
+    {
+        case "Square" : output = printSquare(height, character);
+                break;
+        
+        case "Triangle" : output = printTri(height, character);
+                break;
+        
+        case "Diamond" : output = printDiamond(height, character);
+                break;
+        default : break;
+    }
+    return output;
+}
+
+function printSquare(height, character)
+{
+    var output = "\n";
+    var width = "";
+    for(j = 0; j< height; j++)
+    {
+        width += character;
+    }
+    for(i = 0; i < height; i++)
+    {
+        output += width + "\n";
+    }
+    return output;
+}
+
+function printTri(height, character)
+{
+    var output = "";
+    var iterations = 0;
+    var counter = 0;
+    while(iterations < height)
+    {
+        iterations = height - (height - counter);
+        for(i = 0; i < iterations; i++)
+        {
+            output += character;
+        }
+        output += "\n";
+        counter++;
+    }
+    return output;
+}
+
+function printDiamond(height, character)
+{
+    //need to figure out this one
 }
 
 /*9. Object literal
