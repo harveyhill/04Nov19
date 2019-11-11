@@ -44,9 +44,13 @@ body{
 .dropdown:hover .dropdownContent {
     display:block
 }
-.center{
+.centerText{
     text-align:center;
-    
+}
+.center{
+    position: relative;
+    left: 20vw;
+    width:60vw;
 }
 .topbar{
     background-color:rgb(5, 5, 5);
@@ -54,9 +58,10 @@ body{
     overflow:hidden;
     position:fixed;
     top:0;
-    left:0;
-    width:100vw; 
+    left: auto;
+    width: 60vw;
     height: auto;
+    z-index:1;
 }
 .topbar a{
     float:left;
@@ -70,9 +75,7 @@ body{
     background-color: rgb(65, 65, 65);
 }
 .content{
-    background-color:rgba(29, 29, 29, 0.90);
-    display:inline-block;
-    width:50vw;
+    background-color:rgba(29, 29, 29, 0.90); 
     padding: 0 0 50px 0;
 }
 .content > ul{
@@ -101,11 +104,11 @@ body{
     background-color:rgba(29, 29, 29, 0.90);
     display:inline-block;
     padding: 14px 0;
-    width:50vw;
+    width:60vw;
 }
 #headerimagebackground{
     min-height: 50px;
-    max-width: 50vw;
+    max-width: 60vw;
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
