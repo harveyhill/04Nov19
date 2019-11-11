@@ -3,7 +3,7 @@ function videoParallax(){
     let bodyElement=document.querySelector("html");
     if(bodyElement.scrollHeight/bodyElement.clientHeight>1.5){
         let scrollPercent=bodyElement.scrollTop/(bodyElement.scrollHeight-bodyElement.clientHeight);
-        document.querySelector("#backgroundvideo").style.bottom=((scrollPercent*40)-40)+"%";
+        document.querySelector("#backgroundVideo").style.bottom=((scrollPercent*40)-40)+"%";
     }
 }
 function navbarIconMouseover(){
@@ -16,13 +16,6 @@ function navbarIconMouseover(){
     function() {   
         navbarIcon.src='../img/v217-2-mint-ning-29-icons.jpg';
     });
-
-}
-function dropdownClick(event)
-{
-    document.querySelector(".dropdownButton").innerHTML=event.target.innerHTML;
-    document.querySelector(".dropdown").classList.remove('show')
-    setActiveChallenge(event.target.innerHTML);
 }
 function setActiveChallenge(challengeName)
 {
@@ -30,31 +23,31 @@ function setActiveChallenge(challengeName)
     for (i=0;i<challenges.length;i++)
         challenges[i].style.display="none";
     switch(challengeName){
-        case "Fibonacci Seq":
+        case "fib":
             document.querySelector("#fibContainer").style.display="block";
             break;
-        case "Bubble Sort":
+        case "bub":
             document.querySelector("#bubSortContainer").style.display="block";
         break;
-        case "Reverse String":
+        case "rev":
             document.querySelector("#revStrContainer").style.display="block";
             break;
-        case "Factorial":
+        case "fac":
             document.querySelector("#factoriContainer").style.display="block";
             break;
-        case "Sub-string":
+        case "subs":
             document.querySelector("#subStrContainer").style.display="block";
             break;
-        case "Is Even":
+        case "even":
             document.querySelector("#isEvenContainer").style.display="block";
             break;
-        case "Is Palindrome":
+        case "palin":
             document.querySelector("#isPalinContainer").style.display="block";
             break;
-        case "Object Literal":
+        case "obj":
             document.querySelector("#objLitContainer").style.display="block";
             break;
-        case "Desc Order":
+        case "desc":
             document.querySelector("#descOrdContainer").style.display="block";
             break;
     }

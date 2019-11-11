@@ -198,7 +198,7 @@ function getPerson(name, age) {
 function UpdateTime()
 {
     let day=new Date();
-    document.querySelector("#timestamp").innerHTML = day.toLocaleTimeString();
+    document.querySelector("#timeStamp").innerHTML = day.toLocaleTimeString();
 }
 /*15.  Descending order
 Your task is to make a function that can take any non-negative 

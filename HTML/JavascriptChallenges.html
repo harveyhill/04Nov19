@@ -25,15 +25,15 @@
                     <div class="dropdown">  
                         <button class="dropdownButton">Challenges List</button>       
                         <div class="dropdownContent">    
-                            <a>Fibonacci Seq</a>
-                            <a>Bubble Sort</a>
-                            <a>Reverse String</a>
-                            <a>Factorial</a>
-                            <a>Sub-string</a>
-                            <a>Is Even</a>
-                            <a>Is Palindrome</a>
-                            <a>Object Literal</a>
-                            <a>Desc Order</a>
+                            <a onclick="setActiveChallenge('fib')">Fibonacci Seq</a>
+                            <a onclick="setActiveChallenge('bub')">Bubble Sort</a>
+                            <a onclick="setActiveChallenge('rev')">Reverse String</a>
+                            <a onclick="setActiveChallenge('fac')">Factorial</a>
+                            <a onclick="setActiveChallenge('subs')">Sub-string</a>
+                            <a onclick="setActiveChallenge('even')">Is Even</a>
+                            <a onclick="setActiveChallenge('palin')">Is Palindrome</a>
+                            <a onclick="setActiveChallenge('obj')">Object Literal</a>
+                            <a onclick="setActiveChallenge('desc')">Desc Order</a>
                         </div>   
                     </div>
                     <div class="challengeContainer" id="fibContainer">fib</div>
@@ -51,7 +51,6 @@
     </body>
     <script>
     document.addEventListener("scroll",videoParallax);
-    document.addEventListener("mousedown",dropdownClick);
     setInterval(UpdateTime,1000);
     navbarIconMouseover();    
     </script>

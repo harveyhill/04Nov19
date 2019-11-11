@@ -44,9 +44,6 @@ body{
 .dropdown:hover .dropdownContent{
     display:block;
 }
-.dropdown:active .dropdownContent{
-    display:none;
-}
 .centerText{
     text-align:center;
 }
