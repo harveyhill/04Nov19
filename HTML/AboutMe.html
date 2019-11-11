@@ -13,7 +13,7 @@
         <source src="../videos/Galaxy.mp4" type="video/mp4">
     </video>
     <div class="topbar">
-        <img href="google.com" class="smallicon" src="../img/v217-2-mint-ning-29-icons.jpg">
+        <img href="google.com" id="navbarIcon" class="smallicon" src="../img/v217-2-mint-ning-29-icons.jpg">
         <a href="#">About Me</a>
         <a href="JavascriptChallenges.html">JavascriptChallenges</a>
         <p id="timestamp"></p>
@@ -51,5 +51,9 @@
         </div>
         <br><br>
     </body>
-    <script>document.addEventListener("scroll",videoParallax);setInterval(UpdateTime,1000);</script>
+    <script>
+    document.addEventListener("scroll",videoParallax);
+    setInterval(UpdateTime,1000);
+    navbarIconMouseover();
+    </script>
 </html>

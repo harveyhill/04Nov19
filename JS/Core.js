@@ -6,3 +6,15 @@ function videoParallax(){
         document.querySelector("#backgroundvideo").style.bottom=((scrollPercent*40)-40)+"%";
     }
 }
+function navbarIconMouseover(){
+    let navbarIcon=document.getElementById('navbarIcon');
+    navbarIcon.addEventListener("mouseover", 
+    function() {   
+        navbarIcon.src='../img/v217-2-mint-ning-29-icons-inverted.jpg';
+    });
+    navbarIcon.addEventListener("mouseout", 
+    function() {   
+        navbarIcon.src='../img/v217-2-mint-ning-29-icons.jpg';
+    });
+
+}

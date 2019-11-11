@@ -1,11 +1,3 @@
-document.getElementById("icon").addEventListener("mouseover", 
-    function() {   
-        document.getElementById('icon').src='../img/v217-2-mint-ning-29-icons-inverted.jpg';
-    });
-document.getElementById("icon").addEventListener("mouseout", 
-function() {   
-    document.getElementById('icon').src='../img/v217-2-mint-ning-29-icons.jpg';
-});
 
 function demohelper(number)
 {
