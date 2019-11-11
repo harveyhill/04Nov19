@@ -54,13 +54,12 @@ body{
 }
 .topBar{
     background-color:rgb(5, 5, 5);
-    border-bottom: 1px solid black;
+    border-radius: 5px;
     overflow:hidden;
-    position:fixed;
-    top:0;
-    left: auto;
+    position:sticky;
     width: 60vw;
-    height: auto;
+    top: 0;
+    display: block;
     z-index:1;
 }
 .topBar a{
@@ -100,16 +99,14 @@ body{
     height: 140%;
     min-width: 100vw;
 }
-#headerBackground{
+#header{
     background-color:rgba(29, 29, 29, 0.90);
-    display:inline-block;
     padding: 14px 0;
-    width:60vw;
 }
 #hobbies{
     background-color: black;
 }
-#timestamp{
+#timeStamp{
     float: right;
     padding: 0px 50px;
 }
