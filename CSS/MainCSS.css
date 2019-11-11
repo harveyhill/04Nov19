@@ -41,8 +41,11 @@ body{
 .dropdownContent a:hover{
     background-color: rgba(29, 29, 29, 0.90);
 }
-.dropdown:hover .dropdownContent {
-    display:block
+.dropdown:hover .dropdownContent{
+    display:block;
+}
+.dropdown:active .dropdownContent{
+    display:none;
 }
 .centerText{
     text-align:center;
@@ -51,6 +54,9 @@ body{
     position: relative;
     left: 20vw;
     width:60vw;
+}
+.challengeContainer{
+    display:none;
 }
 .topBar{
     background-color:rgb(5, 5, 5);
@@ -118,6 +124,7 @@ h2{
     color:royalblue;
     font-weight:bold;
     font-size: 3.5em;
+    margin: 0.5em 0;
 }
 p{
     color:white;
