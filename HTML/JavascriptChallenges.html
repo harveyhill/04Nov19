@@ -20,31 +20,43 @@
             </div>
             <div class="centerText">
                 <h2 class="contentBorder centerText" id="header">Javascript Challenges</h2>
-                <div class="content contentBorder" style="min-height: 500vh;">
-                    <h1>Select a challenge: </h2> 
-                    <div class="dropdown">  
-                        <button class="dropdownButton">Challenges List</button>       
-                        <div class="dropdownContent">    
-                            <a onclick="setActiveChallenge('fib')">Fibonacci Seq</a>
-                            <a onclick="setActiveChallenge('bub')">Bubble Sort</a>
-                            <a onclick="setActiveChallenge('rev')">Reverse String</a>
-                            <a onclick="setActiveChallenge('fac')">Factorial</a>
-                            <a onclick="setActiveChallenge('subs')">Sub-string</a>
-                            <a onclick="setActiveChallenge('even')">Is Even</a>
-                            <a onclick="setActiveChallenge('palin')">Is Palindrome</a>
-                            <a onclick="setActiveChallenge('obj')">Object Literal</a>
-                            <a onclick="setActiveChallenge('desc')">Desc Order</a>
-                        </div>   
-                    </div>
-                    <div class="challengeContainer" id="fibContainer">fib</div>
-                    <div class="challengeContainer" id="bubSortContainer">bubbleSort</div>
-                    <div class="challengeContainer" id="revStrContainer">revStr</div>
-                    <div class="challengeContainer" id="factoriContainer">factorial</div>
-                    <div class="challengeContainer" id="subStrContainer">subString</div>
-                    <div class="challengeContainer" id="isEvenContainer">isEven</div>
-                    <div class="challengeContainer" id="isPalinContainer">isPalin</div>
-                    <div class="challengeContainer" id="objLitContainer">objLit</div>
-                    <div class="challengeContainer" id="descOrdContainer">descOrd</div>
+                <div class="content contentBorder" style="min-height: 80vh;">
+                    <row>
+                        <column>
+                            <h1>Select a challenge: </h2> 
+                            <div class="dropdown">  
+                                <button class="button" id="dropdownButton">Challenges List</button>       
+                                <div class="dropdownContent">    
+                                    <a onclick="setActiveChallenge('Fibonacci Seq')">Fibonacci Seq</a>
+                                    <a onclick="setActiveChallenge('Bubble Sort')">Bubble Sort</a>
+                                    <a onclick="setActiveChallenge('Reverse String')">Reverse String</a>
+                                    <a onclick="setActiveChallenge('Factorial')">Factorial</a>
+                                    <a onclick="setActiveChallenge('Sub-string')">Sub-string</a>
+                                    <a onclick="setActiveChallenge('Is Even')">Is Even</a>
+                                    <a onclick="setActiveChallenge('Is Palindrome')">Is Palindrome</a>
+                                    <a onclick="setActiveChallenge('Object Literal')">Object Literal</a>
+                                    <a onclick="setActiveChallenge('Desc Order')">Desc Order</a>
+                                </div>   
+                            </div>
+                        </column>
+                        <column>
+                            <div class="challengeContainer" id="fibContainer">
+                                <h1>Input nth number of the Fibonacci Sequence to calculate:</h1>
+                                <input id="fibInput" type="text">
+                                <div class="center">
+                                    <button class="center button">Calculate</button>
+                                </div>
+                            </div>
+                            <div class="challengeContainer" id="bubSortContainer">bubbleSort</div>
+                            <div class="challengeContainer" id="revStrContainer">revStr</div>
+                            <div class="challengeContainer" id="factoriContainer">factorial</div>
+                            <div class="challengeContainer" id="subStrContainer">subString</div>
+                            <div class="challengeContainer" id="isEvenContainer">isEven</div>
+                            <div class="challengeContainer" id="isPalinContainer">isPalin</div>
+                            <div class="challengeContainer" id="objLitContainer">objLit</div>
+                            <div class="challengeContainer" id="descOrdContainer">descOrd</div>
+                        </column>
+                    </row>
                 </div>
             </div>
         </div>

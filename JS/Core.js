@@ -19,35 +19,36 @@ function navbarIconMouseover(){
 }
 function setActiveChallenge(challengeName)
 {
-    let challenges=document.getElementsByClassName("challengeContainer");
-    for (i=0;i<challenges.length;i++)
-        challenges[i].style.display="none";
-    switch(challengeName){
-        case "fib":
+    document.querySelector("#dropdownButton").innerHTML=challengeName;
+    let challenges=document.querySelectorAll(".challengeContainer");
+    for (challenge of challenges)
+        challenge.style.display="none";
+   switch(challengeName){
+        case "Fibonacci Seq":
             document.querySelector("#fibContainer").style.display="block";
             break;
-        case "bub":
+        case "Bubble Sort":
             document.querySelector("#bubSortContainer").style.display="block";
         break;
-        case "rev":
+        case "Reverse String":
             document.querySelector("#revStrContainer").style.display="block";
             break;
-        case "fac":
+        case "Factorial":
             document.querySelector("#factoriContainer").style.display="block";
             break;
-        case "subs":
+        case "Sub-string":
             document.querySelector("#subStrContainer").style.display="block";
             break;
-        case "even":
+        case "Is Even":
             document.querySelector("#isEvenContainer").style.display="block";
             break;
-        case "palin":
+        case "Is Palindrome":
             document.querySelector("#isPalinContainer").style.display="block";
             break;
-        case "obj":
+        case "Object Literal":
             document.querySelector("#objLitContainer").style.display="block";
             break;
-        case "desc":
+        case "Desc Order":
             document.querySelector("#descOrdContainer").style.display="block";
             break;
     }

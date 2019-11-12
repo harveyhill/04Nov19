@@ -2,12 +2,22 @@ body{
     background-color: black;
     color: white;
 }
+row{
+    display:flex;
+}
+column{
+    flex:50%;
+}
+.center{
+    display:flex;
+    justify-content: center;
+}
 .dropdown{
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
-.dropdownButton{
+.button{
     background-color: rgb(65, 65, 65);
     border: 1px outset darkgray;
     color: royalblue;
@@ -17,9 +27,12 @@ body{
     text-decoration: none;
     display: block;
     font-size:1em;
-    border-radius: 10px;
+    border-radius: 5px;
 }
-.dropdown:hover .dropdownButton{
+.button:hover{
+    background-color: rgba(29, 29, 29, 0.90);
+}
+.dropdown:hover #dropdownButton{
     background-color: rgba(29, 29, 29, 0.90);
 }
 .dropdownContent{
@@ -30,7 +43,7 @@ body{
 .dropdownContent a{
     display: inline-block;
     padding: 0.5em 0;
-    width: 11em;
+    width: 12em;
     box-shadow: 0 0 1px white inset;
     background-color: rgb(65, 65, 65);
     text-align:center;

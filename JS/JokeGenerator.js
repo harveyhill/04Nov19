@@ -4,6 +4,7 @@ function LoadJoke(){
         if(this.readyState == 4 && this.status == 200) {
             //let resp = JSON.parse(this.response);
             //document.querySelector("#joketext").innerHTML = resp.joke;
+            console.log(this);
             document.querySelector("#joketext").innerHTML=this.response;
         }
     }
