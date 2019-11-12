@@ -1,2 +1,0 @@
-Video scaling based on screen size
-topbar fix for small width screens
