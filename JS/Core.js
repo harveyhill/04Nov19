@@ -17,6 +17,42 @@ function navbarIconMouseover(){
         navbarIcon.src='../img/v217-2-mint-ning-29-icons.jpg';
     });
 }
+function updateField(func, fieldName, inputObject){
+    try{
+            document.querySelector(fieldName).innerHTML=func(inputObject.value);
+    }
+    catch(err){
+        document.querySelector(fieldName).innerHTML=err;
+    }
+}
+function subStringUpdateField()
+{console.log(typeof document.querySelector("#subStringLength").value);
+    try{
+        document.querySelector("#subStringResult").innerHTML=substring(document.querySelector("#subStringInput").value,
+            Number(document.querySelector("#subStringLength").value),
+            Number(document.querySelector("#subStringOffset").value));
+        
+    }   
+    catch(err){
+        document.querySelector("#subStringResult").innerHTML=err;
+    }
+}
+function updateFieldAndConvert(func, fieldName, inputObject)
+{
+    let statement;
+    try{
+        try{
+            statement= eval(inputObject.value);
+        }
+        catch(error){
+            throw "Invalid syntax <br>"+error;
+        }
+        document.querySelector(fieldName).innerHTML=func(statement);
+    }
+    catch(err){
+        document.querySelector(fieldName).innerHTML=err;
+    }
+}
 function setActiveChallenge(challengeName)
 {
     document.querySelector("#dropdownButton").innerHTML=challengeName;

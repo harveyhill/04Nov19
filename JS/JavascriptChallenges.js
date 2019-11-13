@@ -63,7 +63,10 @@ Define function: factorial(someNum)
 Use recursion to compute and return the factorial of someNum.*/
 
 function factorial(someNum) {
+  if(someNum>1)
     return someNum*factorial(someNum-1);
+  else
+    return someNum;
 }
 
 /*5. Substring
@@ -74,13 +77,13 @@ If incorrect input is entered, use the alert function and describe why the input
 function substring(someStr, length, offset) {
   //loop through and grab every character from offset to offset+length.
   if(offset<0)
-    alert('Invalid input: Offset cannot be < 0');
+    throw('Invalid input: Offset cannot be < 0');
   else if(length<0)
-    alert('Invalid input: Length cannot be < 0');
+  throw('Invalid input: Length cannot be < 0');
   else if(offset+length>someStr.length)
-    alert('Invalid input: Offset and length is larger than string size');
+  throw('Invalid input: Offset and length is larger than string size');
   else if (offset>someStr.length-1)
-    alert('Invalid input: Offset cannot be larger than string size');
+  throw('Invalid input: Offset cannot be larger than string size');
   else
   {
     let subStr="";
@@ -113,6 +116,8 @@ function isPalindrome(someStr) {
   //traverse from both ends of the string until center. 
   //return false if the characters in both iterators are different
   //return true if it never finds different characters
+  if(someStr.length==0)
+    return false;
   let halflen=Math.ceil(someStr.length/2);
   for(i=0;i<halflen;i++)
     if(someStr.charAt(i)!=someStr.charAt(someStr.length-i-1))
@@ -151,8 +156,10 @@ Define function traverseObject(someObj)
 Print every property and it's value.*/
 
 function traverseObject(someObj) {
-  for(property in someObj)
-    console.log(property+": "+someObj[property]);
+  var properties=[];
+  for(var property in someObj)
+    properties.push(property+": "+someObj[property]+"<br>");
+  return properties.join("");
 }
 
 /*10. Delete Element

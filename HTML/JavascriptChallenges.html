@@ -41,20 +41,56 @@
                         </column>
                         <column>
                             <div class="challengeContainer" id="fibContainer">
-                                <h1>Input nth number of the Fibonacci Sequence to calculate:</h1>
-                                <input id="fibInput" type="text">
-                                <div class="center">
-                                    <button class="center button">Calculate</button>
-                                </div>
+                                <h1>Input which number of the Fibonacci Sequence to calculate:</h1>
+                                <input class="inputField centerText" oninput="updateField(fib, '#fibResult', this)" type="text">
+                                <p class="resultField centerText" id="fibResult">N-th number of the Fibonacci seq</p>
                             </div>
-                            <div class="challengeContainer" id="bubSortContainer">bubbleSort</div>
-                            <div class="challengeContainer" id="revStrContainer">revStr</div>
-                            <div class="challengeContainer" id="factoriContainer">factorial</div>
-                            <div class="challengeContainer" id="subStrContainer">subString</div>
-                            <div class="challengeContainer" id="isEvenContainer">isEven</div>
-                            <div class="challengeContainer" id="isPalinContainer">isPalin</div>
-                            <div class="challengeContainer" id="objLitContainer">objLit</div>
-                            <div class="challengeContainer" id="descOrdContainer">descOrd</div>
+                            <div class="challengeContainer" id="bubSortContainer">
+                                <h1>Input a valid number array definition to sort:</h1>
+                                <textarea class="inputField centerText" style = "word-wrap:normal" oninput="updateFieldAndConvert(bubbleSort, '#bubbleSortResult', this)" type="text"></textarea>
+                                <p class="resultField centerText" id="bubbleSortResult">Result</p>
+                            </div>
+                            <div class="challengeContainer" id="revStrContainer">
+                                <h1>Input a string to reverse:</h1>
+                                <textarea class="inputField centerText" style = "word-wrap:normal" oninput="updateField(reverseString, '#revResult', this)" type="text"></textarea>
+                                <p class="resultField centerText" id="revResult">Reversed result</p>
+                            </div>
+                            <div class="challengeContainer" id="factoriContainer">
+                                <h1>Input a number to calculate the factorial of:</h1>
+                                <input class="inputField centerText" oninput="updateField(factorial, '#factorialResult', this)" type="text">
+                                <p class="resultField centerText" id="factorialResult">Result</p>
+                            </div>
+                            <div class="challengeContainer" id="subStrContainer">
+                                <h1>Input a string to shorten:</h1>
+                                <textarea class="inputField centerText" style = "word-wrap:normal" id="subStringInput" oninput="subStringUpdateField()" type="text"></textarea>
+                                <h1>Input an offset and length:</h1>
+                                <label>Offset:</label>
+                                <input class="inputField centerText" id="subStringOffset" oninput="subStringUpdateField()" type="text">
+                                <br>
+                                <label>Length:</label>
+                                <input class="inputField centerText" id="subStringLength" oninput="subStringUpdateField()" type="text">
+                                <p class="resultField centerText" id="subStringResult">Shortened string</p>
+                            </div>
+                            <div class="challengeContainer" id="isEvenContainer">
+                                <h1>Input a number to check if it's even:</h1>
+                                <input class="inputField centerText" oninput="updateField(isEven, '#isEvenResult', this)" type="text">
+                                <p class="resultField centerText" id="isEvenResult">True for even. False for odd.</p>
+                            </div>
+                            <div class="challengeContainer" id="isPalinContainer">
+                                <h1>Input a string to check if it's a palindrome:</h1>
+                                <input class="inputField centerText" oninput="updateField(isPalindrome, '#isPalinResult', this)" type="text">
+                                <p class="resultField centerText" id="isPalinResult">Is this a Palindrome?</p>
+                            </div>
+                            <div class="challengeContainer" id="objLitContainer">
+                                <h1>Input a valid object definition to check:</h1>
+                                <textarea class="inputField centerText" style = "word-wrap:normal" oninput="updateFieldAndConvert(traverseObject, '#traverseObjectResult', this)" type="text"></textarea>
+                                <p class="resultField centerText" id="traverseObjectResult">Result</p>
+                            </div>
+                            <div class="challengeContainer" id="descOrdContainer">
+                                <h1>Input a number to sort into descending order:</h1>
+                                <input class="inputField centerText" oninput="updateField(descOrder, '#descOrderResult', this)" type="text">
+                                <p class="resultField centerText" id="descOrderResult">Number ordered by digit</p>
+                            </div>
                         </column>
                     </row>
                 </div>

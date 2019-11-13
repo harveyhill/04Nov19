@@ -8,6 +8,14 @@ row{
 column{
     flex:50%;
 }
+.inputField{
+    max-width: 200px;
+    min-width: 20px;
+    width: 15vw;
+    border-radius:5px;
+    outline:none;
+    word-wrap: break-word;
+}
 .center{
     display:flex;
     justify-content: center;
@@ -99,6 +107,16 @@ column{
 .contentBorder{
     border: 1px ridge rgba(32, 32, 32, 0.712);
     border-radius: 5px;
+}
+.resultField{
+    margin: 15px 50px;
+    padding: 5px;
+    min-height: 1.1em;
+    margin-left:auto;
+    margin-right:auto;
+    word-wrap: break-word;
+    max-width: 350px;
+    background-color:rgb(65, 65, 65);
 }
 .smallIcon{
     float:left;
