@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <HEAD>
+        <title>API</title>
+        <meta name="description" content="Learn Project 0" charset='utf-8'>
+        <link rel="stylesheet" href="../css/project_0.css">
+        <link rel="stylesheet" href="../css/api.css">
+        <script src="../js/api.js"></script>
+    </HEAD>
+    <BODY>
+        <ul class="navigationBar">
+            <li><a class="navigationLink" href="aboutMe.html">About Me</a></li>
+            <li><a class="navigationLink" href="jsSolutions.html">JavaScript Challenge Solutions</a></li>
+            <li><a class="activeLink" href="api.html">API</a></li>
+        </ul>
+
+        <div id="gameHolder">
+            <span class="game" id="playerGame">
+                <h1>Player</h1>
+                <p>Choose your player: 
+                <select id="playerDropDown" onchange="choosePlayer()">
+                    <optgroup label="Easy">
+                        <option value="joeHarris" selected>Joe Harris <img src="joeHarris.png"></option>
+                        <option value="dannyGreen">Danny Green</option>
+                        <option value="sethCurry">Seth Curry</option>
+                    </optgroup>
+                    <optgroup label="Medium">
+                        <option value="chrisPaul">Chris Paul</option>
+                        <option value="joshRichardson">Josh Richardson</option>
+                        <option value="rodneyHood">Rodney Hood</option>
+                    </optgroup>
+                    <optgroup label="Hard">
+                        <option value="nikolaJokic">Nikola Jokic</option>
+                        <option value="kyleKuzma">Kyle Kuzma</option>
+                        <option value="russellWestbrook">Russell Westbrook</option>
+                    </optgroup>
+                </select>
+                </p>
+                <input type="submit" value="Play!" onclick="threePTContest()"> <input type="submit" value="Reset" onclick="reset()">
+
+                <!-- chosen player -->
+                <br>
+                <br>
+                <div id="chosenplayer">
+                    You chose <u id="playerName">Joe Harris</u>, he had a 3-point percentage of <u id="player3PT">0.474</u> in 2018.
+                </div>
+
+                <br>
+                <div id="playerRack1"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                <br>
+                <div id="playerRack2"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                <br>
+                <div id="playerRack3"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                <br>
+                <div id="playerRack4"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                <br>
+                <div id="playerRack5"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                <div class="scoreBox">Player Score: <u id="playerScore">0</u></div>
+            </span>
+
+            <span class="game" id="computerGame"> 
+                <h1>Computer</h1>
+                <div id="chosencomputer">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    The computer chose <u id="computerName">Kemba Walker</u>, he had a 3-point percentage of <u id="computer3PT">0.356</u> in 2018.
+                </div>
+
+                    <br>
+                    <div id="computerRack1"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                    <br>
+                    <div id="computerRack2"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                    <br>
+                    <div id="computerRack3"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                    <br>
+                    <div id="computerRack4"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                    <br>
+                    <div id="computerRack5"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+
+                    <div class="scoreBox">Computer Score: <u id="computerScore">0</u></div>
+            </span>
+        </div>
+    </BODY>
+</html>

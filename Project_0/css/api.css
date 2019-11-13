@@ -1,0 +1,46 @@
+#gameHolder{
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    margin: 50px 0 0 0;
+    border: none;
+    padding: none;
+}
+.game {
+    /* positioning */
+    background-color:rgb(4, 30, 66);
+    padding-left: 10px;
+    color: white;
+    margin: none;
+    border: none;
+    padding: none;
+    height: 600px;
+    min-width: 45%;
+}
+
+span[id='playerGame']{
+    background: rgb(4, 30, 66) url("../playerHeadshots/joeHarris.png") top right no-repeat;
+}
+
+span[id='computerGame']{
+    background: rgb(4, 30, 66) url("../computerHeadshots/kembaWalker.png") no-repeat top right;
+}
+
+#chosencomputer{
+    padding: 0, 10px, 0, 5px;
+}
+
+u{
+    text-decoration: none;
+}
+
+.scoreBox{
+    float: right;
+    padding: 5px 50px 5px 5px;
+    border: 2px solid white;
+    margin-right: 50px;
+}
+
+#playerRack1, #playerRack2, #playerRack3, #playerRack4, #playerRack5, #computerRack1, #computerRack2, #computerRack3, #computerRack4, #computerRack5 {
+    padding-left: 20px;
+}

@@ -1,0 +1,44 @@
+.backgroundImage{
+    background: url("genoa_widescreen_small.jpg") left no-repeat, url("genoa_widescreen_small_flipped.jpg") right no-repeat;
+    background-size: 50% 100%;
+    margin-top: 0;
+}
+
+.pageTitle{
+    /*text-shadow: 2px 2px 8px #ff0000;*/
+    text-decoration-line: underline;
+    font-size: 250%;
+}
+
+/* navigation bar */
+.navigationBar {
+    background-color: rgb(4, 30, 66);
+    list-style-type: none;
+    height: 20px;
+    width: 100%;
+
+    position: sticky;
+    position: -webkit-sticky;
+    margin: 0 0 0 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.navigationLink {
+    float: left;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.activeLink {
+    background-color: rgb(30, 64, 124);
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+}

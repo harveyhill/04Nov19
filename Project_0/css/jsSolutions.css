@@ -1,0 +1,66 @@
+/* JavaScript solution display CSS */
+#jsSolutionDisplay {
+    /* positioning */
+    margin: 50px 15% 0 15%;
+    height: 500px;
+    width: 70%;
+    background-color:rgb(4, 30, 66);
+    padding-left: 10px;
+
+    color: white;
+}
+#jsSolutionDropDown {
+    /* positioning */
+    margin: 10px 0 0 10px;
+}
+
+/* solution display settings */
+#none{
+    display: none;
+}
+#fibonacci{
+    display: none;
+    padding-top: 10px;
+}
+#bubble{
+    display: none;
+}
+#reverse{
+    display: none;
+}
+#factorial{
+    display: none;
+}
+#substring{
+    display: none;
+}
+#even{
+    display: none;
+}
+#palindrome{
+    display: none;
+}
+#shape{
+    display: none;
+}
+#returnLiteral{
+    display: none;
+}
+#delete{
+    display: none;
+}
+#splice{
+    display: none;
+}
+#defineConstructor{
+    display: none;
+}
+#defineLiteral{
+    display: none;
+}
+#displayTime{
+    display: none;
+}
+#descendOrder{
+    display: none;
+}
