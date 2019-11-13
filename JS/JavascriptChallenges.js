@@ -116,6 +116,7 @@ function isPalindrome(someStr) {
   //traverse from both ends of the string until center. 
   //return false if the characters in both iterators are different
   //return true if it never finds different characters
+  someStr=someStr.toLowerCase().replace(/[^A-Z0-9]/ig, "");
   if(someStr.length==0)
     return false;
   let halflen=Math.ceil(someStr.length/2);
