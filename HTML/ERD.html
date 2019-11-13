@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Challenges</title>
+        <meta name="description" content="Demonstration of Javascript knowledge">
+        <link rel="stylesheet" href="../CSS/MainCSS.css">
+        <script src="../JS/JavascriptChallenges.js"></script>
+        <script src="../JS/Core.js"></script>
+    </head>
+    <body>
+        <video autoplay muted loop id="backgroundVideo">
+                <source src="../videos/Galaxy.mp4" type="video/mp4">
+        </video>
+        <div class="centerContainer">
+            <div class="topBar">
+                <img id="navbarIcon" class="smallIcon" src="../img/v217-2-mint-ning-29-icons.jpg">
+                <a href="AboutMe.html">About Me</a>
+                <a href="JavascriptChallenges.html">Javascript Challenges</a>
+                <a href="ERD.html">E-R Diagram</a>
+                <p id="timeStamp"></p>
+            </div>
+            <div class="centerText">
+                    <h2 class="contentBorder centerText" id="header">Entity-Relation Diagram<br> <span style="font-size: 40px">Hospital</span></h2>
+                </div>
+                <div class="content contentBorder" style="min-height: 80vh;">
+                    <img style="display:block; margin-left: auto; 
+                    margin-right: auto; margin-top: 30px; border: 10px solid white;" src="../img/ERD.png">
+                    <h1 class="centerText">Contents:</h1>
+                    <div style="margin-left:50px; margin-right:50px;">
+                    <p><b>Patients:</b></p>
+                    <ul>
+                        <li>Has a many to many relationship with drugs. One patient can be prescripted multiple drugs and drugs are not exclusive to a single patient.
+                        <li>Patients may need multiple operations to recover.
+                        <li>Patients are assigned to one room, but they may share it with other patients.
+                    </ul>
+                    <br>
+                    <p><b>Staff:</b></p>
+                    <ul>
+                        <li>Staff may be doctors, nurses, janatorial, administrative, etc. depending on what is specified in the object.
+                        <li>Staff will be assigned to multiple operations or daily routine tasks
+                        <li>There is a many to many relationship between staff and tasks. Routine task assignments may have multiple staff members assigned to each one.
+                    </ul>
+                    <br>
+                    <p><b>Drugs/Equipment:</b></p>
+                    <ul>
+                        <li>Drugs and equipment may be assigned to multiple different operations.
+                        <li>Routine job assignments may be assigned equipment. Each piece of equipment can be assigned to muliple jobs.
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener("scroll",videoParallax);
+        setInterval(UpdateTime,1000);
+        navbarIconMouseover();    
+    </script>
+</html>
