@@ -1,0 +1,14 @@
+<apex:page standardController="Account">
+    <p>Hello World</p>
+    <apex:form>
+    	<apex:pageblock>
+    		<apex:pageblocksection>
+                <apex:outputText value="{!Account.Name}" />
+                <apex:outputText value="{!Account.BillingStreet}" />
+                <apex:outputText value="{!Account.BillingState}" />
+                <apex:outputText value="{!Account.BillingPostalCode}" />
+                <apex:outputText value="{!Account.BillingCity}" />
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>
