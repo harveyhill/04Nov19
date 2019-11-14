@@ -1,23 +1,17 @@
-/* JavaScript solution display CSS */
-#jsSolutionDisplay {
-    /* positioning */
+/* div holding solutions and drop down to choose solution */
+#solutionDisplay {
     margin: 50px 15% 0 15%;
     height: 500px;
     width: 70%;
     background-color:rgb(4, 30, 66);
     padding-left: 10px;
-
     color: white;
 }
-#jsSolutionDropDown {
-    /* positioning */
+#solutionDropDown {
     margin: 10px 0 0 10px;
 }
 
-/* solution display settings */
-#none{
-    display: none;
-}
+/* hide every solution until one chosen */
 #fibonacci{
     display: none;
     padding-top: 10px;
@@ -63,4 +57,9 @@
 }
 #descendOrder{
     display: none;
+}
+
+/* the two object creation solutions need wider input text boxes */
+input[name=constructorCall], input[name=literalCall]{
+    width: 300px;
 }

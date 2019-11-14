@@ -4,24 +4,23 @@
         <title>JavaScript Challenge Solutions</title>
         <meta name="description" content="Learn Project 0" charset='utf-8'>
         <link rel="stylesheet" href="../css/project_0.css">
-        <link rel="stylesheet" href="../css/jsSolutions.css">
-        <script src="../js/jsSolutions.js"></script>
-        <script src="../js/handlers.js"></script>
+        <link rel="stylesheet" href="../css/challengeSolutions.css">
     </HEAD>
     <BODY>
         <ul class="navigationBar">
             <li><a class="navigationLink" href="aboutMe.html">About Me</a></li>
-            <li><a class="activeLink" href="jsSolutions.html">JavaScript Challenge Solutions</a></li>
+            <li><a class="activeLink" href="challengeSolutions.html">JavaScript Challenge Solutions</a></li>
             <li><a class="navigationLink" href="api.html">API</a></li>
         </ul>
         
+        <div id='backgroundImage'></div>
+
         <!-- section for time display -->
         <div id="time"></div>
 
         <!-- section for javascript challenge solutions -->
-        <div id="jsSolutionDisplay">
-            <select id="jsSolutionDropDown" onchange="changeClass()">
-                <option value="none" selected disabled hidden>Select a JavaScript Challenge Solution</option>
+        <div id="solutionDisplay">
+            <select id="solutionDropDown">
                 <option value="fibonacci">1. Fibonacci Number Calculator</option>
                 <option value="bubble">2. Bubble Sort</option>
                 <option value="reverse">3. Reverse String</option>
@@ -35,7 +34,7 @@
                 <option value="splice">11. Splice Element</option>
                 <option value="defineConstructor">12. Object Constructor Definition</option>
                 <option value="defineLiteral">13. Object Literal Definition</option>
-                <option value="displayTime" onclick="setInterval('timeHandler()', 1000)">14. Display Time</option>
+                <option value="displayTime" id="timeHandler">14. Display Time</option>
                 <option value="descendOrder">15. Descending Order Sort</option>
             </select>
 
@@ -45,7 +44,7 @@
 
                 <br>
 
-                <p>Enter a Fibonacci Number to Calculate: <input type="text" name="fibNum"> <input type="submit" value="Calculate" onclick="fibHandler()"> </p>
+                <p>Enter a Fibonacci Number to Calculate: <input type="text" name="fibNum"> <input type="submit" value="Calculate" id="fibHandler"> </p>
                 <p class="output"></p>
             </div>
 
@@ -53,7 +52,7 @@
                 <p>Please input a number array as a list of comma-separated numbers, <i>i.e. 3, 5, 7, 2.</i></p>
 
                 <br>
-                <input type="text" name="bubArray"> <input type="submit" value="Sort" onclick="bubHandler()">
+                <input type="text" name="bubArray"> <input type="submit" value="Sort" id="bubHandler">
                 <p class="output"></p>
             </div>
 
@@ -61,7 +60,7 @@
                 <p> Please input a string to be reversed.</p>
 
                 <br>
-                <input type="text" name="unreversedString"> <input type="submit" value="Reverse" onclick="revHandler()">
+                <input type="text" name="unreversedString"> <input type="submit" value="Reverse" id="revHandler">
                 <p class="output"></p>
             </div>
 
@@ -69,7 +68,7 @@
                 <p> Please input the number whose factorial you want to be calculated.</p>
 
                 <br>
-                <input type="text" name="factNum"> <input type="submit" value="Calculate" onclick="factHandler()">
+                <input type="text" name="factNum"> <input type="submit" value="Calculate" id="factHandler">
                 <p class="output"></p>
             </div>
 
@@ -81,20 +80,20 @@
                 <br>
                 <p> Please input the index of the super string at which the substring should start. <input type="text" name="offset"></p>
                 <br> 
-                <input type="submit" value="Slice!" onclick="subHandler()">
+                <input type="submit" value="Slice!" id="subHandler">
                 <p class="output"></p>
             </div>
 
             <div id="even">
                 <br>
-                <p> Please input a number. <input type="text" name="findEven"> <input type="submit" value="Even?" onclick="evenHandler()"></p>
+                <p> Please input a number. <input type="text" name="findEven"> <input type="submit" value="Even?" id="evenHandler"></p>
                 <br>
                 <p class="output"></p>
             </div>
 
             <div id="palindrome">
                 <br>
-                <p>Please input a string to test if it is a palindrome. <input type="text" name="isPalindrome"> <input type="submit" value="Palindrome?" onclick="palHandler()"></p> 
+                <p>Please input a string to test if it is a palindrome. <input type="text" name="isPalindrome"> <input type="submit" value="Palindrome?" id="palHandler"></p> 
                 <br>
                 <p class="output"></p>
             </div>
@@ -111,53 +110,57 @@
                 <br>
                 <p>Please enter the character to print in the shape. <input type="text" name="shapeChar" maxlength=1></p>
                 <br>
-                <input type="submit" value="Print Shape" onclick="shapeHandler()">
+                <input type="submit" value="Print Shape" id="shapeHandler">
                 <br>
                 <p class="output"></p>
             </div>
 
             <div id="returnLiteral">
                 <br>
-                <p>Please enter an object literal in proper JavaScript syntax, <i>e.g. {name: "Ben", age: 22}.</i> <input type="text" name="objectLiteral"> <input type="submit" value="Print" onclick="returnLitHandler()"></p>
+                <p>Please enter an object literal in proper JavaScript syntax, <i>e.g. {name: "Ben", age: 22}.</i> <input type="text" name="objectLiteral"> <input type="submit" value="Print" id="returnLitHandler"></p>
                 <br>
                 <p class="output"></p>
             </div>
 
             <div id="delete">
                 <br>
-                <p>Please enter an array as a list of comma-separated values. <input type="text" name="undeletedArr"> <input type="submit" value="Delete Third Element" onclick="delHandler()"></p>
+                <p>Please enter an array as a list of comma-separated values. <input type="text" name="undeletedArr"> <input type="submit" value="Delete Third Element" id="delHandler"></p>
                 <br>
                 <p class="output"></p>
             </div>
 
             <div id="splice">
-                <p>Please enter an array as a list of comma-separated values. <input type="text" name="unspliceArr"> <input type="submit" value="Splice Third Element" onclick="spliceHandler()"></p>
+                <p>Please enter an array as a list of comma-separated values. <input type="text" name="unspliceArr"> <input type="submit" value="Splice Third Element" id="spliceHandler"></p>
                 <br>
                 <p class="output"></p>
             </div>
 
             <div id="defineConstructor">
-                <p>Please initialize a new object and assign it to a variable using proper JavaScript syntax, <i>e.g. var john = new Person("John", 30);</i> <input type="text" name="constructorCall"> <input type="submit" value="Create Object" onclick="constructHandler()"></p>
+                <p>Please initialize a new Person object and assign it to a variable using proper JavaScript syntax, <i>e.g. var john = new Person("John", 30);</i></p>
+                <p><input type="text" name="constructorCall"> <input type="submit" value="Create Object" id="constructHandler"></p>
                 <br>
                 <p class="output"></p>
             </div>
-            <div id="defineLiteral"></div>
+
+            <div id="defineLiteral">
+                <p>Please initialize a new object and assign it to a variable by calling the getPerson function, <i> e.g. var john = getPerson("John", 30);</i></p>
+                <p><input type="text" name="literalCall"> <input type="submit" value="Create Object" id="literalHandler"></p>
+                <br>
+                <p class="output"></p>
+            </div>
 
             <div id="displayTime">
-                <p>The current time is displayed in the upper right hand corner of the page.</p>
+                <p>The current time is displayed in the upper right hand corner of the page below the background image.</p>
             </div>
 
             <div id="descendOrder">
-                <p>Please enter a number to rearrange in descending order. <input type="text" name="unorderedNum"> <input type="submit" value="Order" onclick="descHandler()"></p>
+                <p>Please enter a number to rearrange in descending order. <input type="text" name="unorderedNum"> <input type="submit" value="Order" id="descHandler"></p>
                 <br>
                 <p class="output"></p>
             </div>
-
-            <!-- fix page refresh-->
-
         </div>
 
-        
-
+        <script src="../js/listeners.js"></script>
+        <script src="../js/challengeSolutions.js"></script>
     </BODY>
 </html>

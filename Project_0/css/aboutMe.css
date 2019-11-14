@@ -1,4 +1,6 @@
 /* collapsible content */
+
+/* basic characteristics that title div elements share whether collapsed or expanded */
 .collapsed, .expanded {
     display: block;
     cursor: pointer;
@@ -6,34 +8,33 @@
     width: 100%;
     font-size: large;
     text-align: left;
-    margin-bottom: 20px solid white;
-    margin-right: 30px;
     box-sizing: border-box;
 }
 
+/* show arrows when mouse hovers over div element */
 .collapsed:hover::after{
     content: '\22CE';
     float: right;
-    color: rgb(4, 30, 66);
     margin-right: 10px;
 }
-
-.collapsed{
-    color: rgb(4, 30, 66);
-    border: none;
-}
-
-.expanded{
-    color: rgb(30, 64, 124);
-    border-bottom: 4px solid rgb(4, 30, 66);
-}
-
 .expanded:hover::after{
     content: '\22CF';
     float: right;
     margin-right: 10px;
 }
 
+/* differences between collapsed and expanded title div elements */
+.collapsed{
+    color: rgb(4, 30, 66);
+    border: none;
+}
+.expanded{
+    color: rgb(30, 64, 124);
+    border-bottom: 4px solid rgb(4, 30, 66);
+}
+
+
+/* content class, hide unless title div is clicked */
 .content {
     color: rgb(30, 64, 124);
     padding: 10px;
@@ -43,16 +44,19 @@
     box-sizing: border-box;
 }
 
-.background{
-    background: white;
-}
-
+/* table under skiing title div */
 table.content{
     display: none;
     margin-right: 30%;
     margin-left: 30%;
+    margin-bottom: 0;
 }
 th, tr, td{
     padding-left: 40px;
     padding-right: 40px;
+}
+
+/* list under penn state football title div */
+ul.content{
+    margin-left: 10%;
 }

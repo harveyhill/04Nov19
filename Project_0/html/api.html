@@ -5,20 +5,21 @@
         <meta name="description" content="Learn Project 0" charset='utf-8'>
         <link rel="stylesheet" href="../css/project_0.css">
         <link rel="stylesheet" href="../css/api.css">
-        <script src="../js/api.js"></script>
     </HEAD>
     <BODY>
         <ul class="navigationBar">
             <li><a class="navigationLink" href="aboutMe.html">About Me</a></li>
-            <li><a class="navigationLink" href="jsSolutions.html">JavaScript Challenge Solutions</a></li>
+            <li><a class="navigationLink" href="challengeSolutions.html">JavaScript Challenge Solutions</a></li>
             <li><a class="activeLink" href="api.html">API</a></li>
         </ul>
+
+        <div id='backgroundImage'></div>
 
         <div id="gameHolder">
             <span class="game" id="playerGame">
                 <h1>Player</h1>
                 <p>Choose your player: 
-                <select id="playerDropDown" onchange="choosePlayer()">
+                <select id="playerDropDown">
                     <optgroup label="Easy">
                         <option value="joeHarris" selected>Joe Harris <img src="joeHarris.png"></option>
                         <option value="dannyGreen">Danny Green</option>
@@ -36,7 +37,7 @@
                     </optgroup>
                 </select>
                 </p>
-                <input type="submit" value="Play!" onclick="threePTContest()"> <input type="submit" value="Reset" onclick="reset()">
+                <input type="submit" value="Play!" id="threePTContest"> <input type="submit" value="Reset" id="reset">
 
                 <!-- chosen player -->
                 <br>
@@ -46,19 +47,19 @@
                 </div>
 
                 <br>
-                <div id="playerRack1"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                <div id="playerRack1"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                 <br>
-                <div id="playerRack2"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                <div id="playerRack2"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                 <br>
-                <div id="playerRack3"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                <div id="playerRack3"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                 <br>
-                <div id="playerRack4"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                <div id="playerRack4"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                 <br>
-                <div id="playerRack5"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                <div id="playerRack5"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                 <div class="scoreBox">Player Score: <u id="playerScore">0</u></div>
             </span>
@@ -74,22 +75,24 @@
                 </div>
 
                     <br>
-                    <div id="computerRack1"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                    <div id="computerRack1"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                     <br>
-                    <div id="computerRack2"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                    <div id="computerRack2"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                     <br>
-                    <div id="computerRack3"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                    <div id="computerRack3"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                     <br>
-                    <div id="computerRack4"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                    <div id="computerRack4"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                     <br>
-                    <div id="computerRack5"><img src="../gameIcons/faded_basketball.png" class="ball1"> <img src="../gameIcons/faded_basketball.png " class="ball2"> <img src="../gameIcons/faded_basketball.png" class="ball3"> <img src="../gameIcons/faded_basketball.png" class="ball4"> <img src="../gameIcons/faded_aba.png" class="ball5"></div>
+                    <div id="computerRack5"><img class="ball1"> <img class="ball2"> <img class="ball3"> <img class="ball4"> <img class="ball5"></div>
 
                     <div class="scoreBox">Computer Score: <u id="computerScore">0</u></div>
             </span>
         </div>
+
+        <script src="../js/api.js"></script>
     </BODY>
 </html>

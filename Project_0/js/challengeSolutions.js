@@ -1,13 +1,6 @@
-/*
-
-This file contains funtion solutions to the 15 given JavaScript challenges. The structure of this file is as follows: the fir
-
-
-
-
-*/
-
-
+// this file contains solutions to the 15 given JavaScript challenges
+// each function declaration is exactly the declaration prescribed in the given challenge file
+// functions are in order of challenge number (1-15)
 
 function fib(n){
     // if n is 0, return the zeroth Fibonacci number (0)
@@ -94,7 +87,7 @@ function isEven(someNum){
 }
 
 function isPalindrome(someStr){
-    someStr.toLowerCase();
+    someStr = someStr.toLowerCase();
     let someStrReverse = reverseStr(someStr);
     if(someStr == someStrReverse){
         return true;
@@ -112,7 +105,7 @@ function printShape(shape, height, character){
                 for(j = 0; j < height; j++){
                     output += character;
                 }
-                output += "<br>";
+                output += "\n";
             }
             return output;
         case "Triangle":
@@ -120,7 +113,7 @@ function printShape(shape, height, character){
                 for(j = 0; j <= i; j++){
                     output += character;
                 }
-                output += "<br>";
+                output += "\n";
             }
             return output;
         default:
@@ -134,17 +127,16 @@ function printShape(shape, height, character){
                     numBlankSpaces = i - Math.floor(height / 2);
                 }
                 for(j = 0; j < numBlankSpaces; j++){
-                    output += "&#160;";
+                    output += " ";
                 }
                 for(j = 0; j < (height - numBlankSpaces * 2); j++){
                     output += character;
                 }
                 for(j = 0; j < numBlankSpaces; j++){
-                    output += "&#160;";
+                    output += " ";
                 }
-                output += "<br>";
+                output += "\n";
             }
-            console.log(output);
             return output;
     }
 }
@@ -152,22 +144,22 @@ function printShape(shape, height, character){
 function traverseObject(someObj){
     var output = "";
     for(property in someObj){
-        output += property + ": " + someObj[property] + "<br>";
+        output += property + ": " + someObj[property] + "\n";
     }
     return output;
 }
 
 function deleteElement(someDelArr){
-    var output = "Array before deletion: [" + someDelArr.join(", ") + "]<br>Array length before deletion: " + someDelArr.length + "<br>";
+    var output = "Array before deletion: [" + someDelArr.join(", ") + "]\nArray length before deletion: " + someDelArr.length + "\n";
     delete someDelArr[2];
-    output += "Array after deletion: [" + someDelArr.join(", ") + "]<br>Array length after deletion: " + someDelArr.length;
+    output += "Array after deletion: [" + someDelArr.join(", ") + "]\nArray length after deletion: " + someDelArr.length;
     return output;
 }
 
 function spliceElement(someArr){
-    var output = "Original array: [" + someArr.join(", ") + "]<br>Original array length: " + someArr.length + "<br>";
+    var output = "Original array: [" + someArr.join(", ") + "]\nOriginal array length: " + someArr.length + "\n";
     someArr.splice(2, 1);
-    output += "Array after splicing: [" + someArr.join(", ") + "]<br>Array length after splicing: " + someArr.length;
+    output += "Array after splicing: [" + someArr.join(", ") + "]\nArray length after splicing: " + someArr.length;
     return output;
 }
 
@@ -176,6 +168,9 @@ function Person(name, age){
     this.age = age;
     this.getName = function(){
         return name;
+    }
+    this.getAge = function(){
+        return age;
     }
 }
 

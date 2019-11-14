@@ -1,13 +1,7 @@
-.backgroundImage{
-    background: url("genoa_widescreen_small.jpg") left no-repeat, url("genoa_widescreen_small_flipped.jpg") right no-repeat;
-    background-size: 50% 100%;
-    margin-top: 0;
-}
-
-.pageTitle{
-    /*text-shadow: 2px 2px 8px #ff0000;*/
-    text-decoration-line: underline;
-    font-size: 250%;
+#backgroundImage{
+    background: url('../backgrounds/cliffs_of_moher.jpg') center/cover no-repeat;
+    min-height: 350px;
+    max-height: 400px;
 }
 
 /* navigation bar */
@@ -16,14 +10,13 @@
     list-style-type: none;
     height: 20px;
     width: 100%;
-
     position: sticky;
     position: -webkit-sticky;
-    margin: 0 0 0 0;
-    border: none;
+    top: 0;
     box-sizing: border-box;
 }
 
+/* regular link */
 .navigationLink {
     float: left;
     text-decoration: none;
@@ -33,6 +26,7 @@
     padding-right: 5%;
 }
 
+/* current page link */
 .activeLink {
     background-color: rgb(30, 64, 124);
     display: block;

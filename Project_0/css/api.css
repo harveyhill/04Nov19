@@ -1,3 +1,4 @@
+/* div to hold player and computer games on same line */
 #gameHolder{
     display: flex;
     justify-content: space-between;
@@ -6,41 +7,45 @@
     border: none;
     padding: none;
 }
+
+/* characteristics shared by both player and computer games */
 .game {
-    /* positioning */
-    background-color:rgb(4, 30, 66);
     padding-left: 10px;
     color: white;
     margin: none;
-    border: none;
-    padding: none;
-    height: 600px;
     min-width: 45%;
 }
 
+/* set default backgrounds */
 span[id='playerGame']{
     background: rgb(4, 30, 66) url("../playerHeadshots/joeHarris.png") top right no-repeat;
 }
-
 span[id='computerGame']{
     background: rgb(4, 30, 66) url("../computerHeadshots/kembaWalker.png") no-repeat top right;
 }
 
+/* make sure computer information doesn't run up against right edge of computer box */
 #chosencomputer{
     padding: 0, 10px, 0, 5px;
 }
 
+/* i'm cheating and using <u> tags to easily find elements that are gonna be replaced by information from api calls, but i don't want them to be underlined */
 u{
     text-decoration: none;
 }
 
+/* score boxes for both player and computer
+hide them by default so they don't load at the top of the page then move to the bottom
+once the ball racks have been loaded */
 .scoreBox{
+    display: none;
     float: right;
     padding: 5px 50px 5px 5px;
     border: 2px solid white;
     margin-right: 50px;
 }
 
+/* make sure ball racks don't run up against left edge of boxes */
 #playerRack1, #playerRack2, #playerRack3, #playerRack4, #playerRack5, #computerRack1, #computerRack2, #computerRack3, #computerRack4, #computerRack5 {
     padding-left: 20px;
 }

@@ -1,9 +1,16 @@
-function changeClass(){
+// This file contains event listeners for the challenge solution drop down as well as each of the submit buttons
+// there are extensive checks in each listener to make sure that the prescribed input form is followed precisely
+
+// the first event listener is for the drop down to choose the currently displayed challenge, the event listeners
+// for each challenge then follows in order of challenge number (1-15)
+
+// listener for drop down choosing displayed challenge
+document.querySelector("select[id='solutionDropDown']").addEventListener("change", function(){
     // get div element holding javascript challenge solutions
-    var enclosingDiv = document.querySelector("div[id='jsSolutionDisplay']");
-    var dropDown = enclosingDiv.querySelector("select[id='jsSolutionDropDown']");
+    var enclosingDiv = document.querySelector("div[id='solutionDisplay']");
+    var dropDown = enclosingDiv.querySelector("select[id='solutionDropDown']");
     var dropDownIndex = dropDown.selectedIndex;
-    for(i = 0; i < 16; i++){
+    for(i = 0; i < 15; i++){
         if(i == dropDownIndex){
             enclosingDiv.querySelector(String("div[id='" + dropDown[i].value + "']")).style.display = "block";
         }
@@ -11,15 +18,15 @@ function changeClass(){
             enclosingDiv.querySelector(String("div[id='" + dropDown[i].value + "']")).style.display = "none";
         }
     }
-}
+});
 
-function fibHandler(){
+document.querySelector("input[id='fibHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='fibonacci']");
     // catch non-numbers, floats, and negatives and return alert
     var fibNum = parseInt(enclosingDiv.querySelector("input[name='fibNum']").value);
     var fibNumFloat = parseFloat(enclosingDiv.querySelector("input[name='fibNum']").value);
-    if(((!fibNum) || (fibNum != fibNumFloat)) || (fibNum < 0)){
+    if((((!fibNum) && fibNum != 0) || (fibNum != fibNumFloat)) || (fibNum < 0)){
         alert("You must enter a positive whole number!");
         return;
     }
@@ -32,9 +39,9 @@ function fibHandler(){
         output.innerHTML = String("Fibonacci number " + String(fibNum) + " is " + String(fibValue) + ".");
         enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
     }
-}
+});
 
-function bubHandler(){
+document.querySelector("input[id='bubHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='bubble']");
     
@@ -61,9 +68,9 @@ function bubHandler(){
     output.className = "output";
     output.innerHTML = String("The sorted array is " + bubString + ".");
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function revHandler(){
+document.querySelector("input[id='revHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='reverse']");
     var unRev = enclosingDiv.querySelector("input[name='unreversedString']").value;
@@ -80,9 +87,9 @@ function revHandler(){
     output.className = "output";
     output.innerHTML = String("The reversed string is " + rev + ".");
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function factHandler(){
+document.querySelector("input[id='factHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='factorial']");
 
@@ -108,9 +115,9 @@ function factHandler(){
         output.innerHTML = String("The factorial of " + String(factNum) + " is " + String(factValue) + ".");
         enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
     }
-}
+});
 
-function subHandler(){
+document.querySelector("input[id='subHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='substring']");
 
@@ -140,9 +147,9 @@ function subHandler(){
         output.innerHTML = String("The substring is " + substr + ".");
         enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
     }
-}
+});
 
-function evenHandler(){
+document.querySelector("input[id='evenHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='even']");
 
@@ -167,9 +174,9 @@ function evenHandler(){
         output.innerHTML = String(String(evenNum) + " is even.");
     }
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function palHandler(){
+document.querySelector("input[id='palHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='palindrome']");
 
@@ -191,9 +198,9 @@ function palHandler(){
         output.innerHTML = String("The string " + palTest + " is not a palindrome.");
     }
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function shapeHandler(){
+document.querySelector("input[id='shapeHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='shape']");
 
@@ -219,16 +226,24 @@ function shapeHandler(){
     var shapeHeight = parseInt(enclosingDiv.querySelector("input[name='shapeHeight']").value);
     var shapeChar = enclosingDiv.querySelector("input[name='shapeChar']").value;
     
-    // call printShape and output result to page
+    // call printShape, change js newlines to html newlines and output result to page
     var shapeString = printShape(shapeType, shapeHeight, shapeChar);
+    console.log(shapeString);
+    while(shapeString.indexOf("\n") != -1){
+        shapeString = shapeString.replace("\n", "<br>");
+    }
+    while(shapeString.indexOf(" ") != -1){
+        shapeString = shapeString.replace(" ", "&#160;");
+    }
+    console.log(shapeString);
     var output = document.createElement("p");
     output.className = "output";
     output.innerHTML = shapeString;
     output.style.whiteSpace = "pre";
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function returnLitHandler(){
+document.querySelector("input[id='returnLitHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='returnLiteral']");
 
@@ -289,14 +304,18 @@ function returnLitHandler(){
         value = "";
     }
 
-    // call traverseObject and output result to page
+    // call traverseObject, replace javascript newlines with HMTL newlines, and output result to page
+    var stringifiedObject = traverseObject(inputObj);
+    while(stringifiedObject.indexOf("\n") != -1){
+        stringifiedObject = stringifiedObject.replace("\n", "<br>");
+    }
     var output = document.createElement("p");
     output.className = "output";
-    output.innerHTML = traverseObject(inputObj);
+    output.innerHTML = stringifiedObject;
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function delHandler(){
+document.querySelector("input[id='delHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='delete']");
 
@@ -308,14 +327,18 @@ function delHandler(){
         return;
     }
     
-    // otherwise, call deleteElement and print output to page
+    // otherwise, call deleteElement, change js newlines to html newlines, and print output to page
+    var deletedArr = deleteElement(inputArr);
+    while(deletedArr.indexOf("\n") != -1){
+        deletedArr = deletedArr.replace("\n", "<br>");
+    }
     var output = document.createElement("p");
     output.className = "output";
-    output.innerHTML = deleteElement(inputArr);
+    output.innerHTML = deletedArr;
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function spliceHandler(){
+document.querySelector("input[id='spliceHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='splice']");
 
@@ -327,14 +350,18 @@ function spliceHandler(){
         return;
     }
         
-    // otherwise, call deleteElement and print output to page
+    // otherwise, call spliceElement, replace js newlines with html newlines, and print output to page
+    var splicedArr = spliceElement(inputArr);
+    while(splicedArr.indexOf("\n") != -1){
+        splicedArr = splicedArr.replace("\n", "<br>");
+    }
     var output = document.createElement("p");
     output.className = "output";
-    output.innerHTML = spliceElement(inputArr);
+    output.innerHTML = splicedArr;
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
 
-function constructHandler(){
+document.querySelector("input[id='constructHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='defineConstructor']");
 
@@ -368,20 +395,63 @@ function constructHandler(){
     ageValue.trim();
     ageValue = parseFloat(ageValue);
 
-    var equals = inputString.indexOf("=");
-    var assignedVar = inputString.substring(4, equals);
-    assignedVar = assignedVar.trim()
+    var createdObj = new Person(nameValue, ageValue);
+    
+    // otherwise, call deleteElement and print output to page
+    var output = document.createElement("p");
+    output.className = "output";
+    output.innerHTML = "A new object has been successfully created using the Person constructor with name " + createdObj.getName() + " and age " + String(createdObj.getAge()) + ".";
+    enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
+});
 
-    var objOfObj = {assignedVar: getPerson(nameValue, ageValue)};
-    console.log(JSON.stringify(objOfObj.assignedVar));
+document.querySelector("input[id='literalHandler']").addEventListener("click", function(){
+    // get div element holding all of solution specific elements
+    var enclosingDiv = document.querySelector("div[id='defineLiteral']");
+
+    // get string input and test for errors
+    var inputString = enclosingDiv.querySelector("input[name='literalCall']").value;
+    if(inputString.substring(0, 4) != "var "){
+        alert("Incorrect input; you must declare a variable to which to assign the object!");
+        return;
+    }
+    var equalsIndex = inputString.indexOf("=");
+    if(equalsIndex == -1){
+        alert("Incorrect input; your statement must include an equals sign for assignment!");
+        return;
+    }
+    else if((inputString.substring(equalsIndex - 1, equalsIndex + 12)) != " = getPerson("){
+        alert("Incorrect input!");
+        return;   
+    }
+    else if((inputString.substring(inputString.length - 2)) != ");"){
+        alert("Incorrect input!");
+        return;
+    }
+
+    var firstQuote = inputString.indexOf("\"");
+    var secondQuote = inputString.indexOf("\"", firstQuote + 1);
+    var nameValue = inputString.substring(firstQuote + 1, secondQuote);
+
+    var comma = inputString.indexOf(",");
+    var rightParenth = inputString.indexOf(")");
+    var ageValue = inputString.substring(comma + 1, rightParenth);
+    ageValue.trim();
+    ageValue = parseFloat(ageValue);
+    
+    // otherwise, call deleteElement and print output to page
+    var output = document.createElement("p");
+    output.className = "output";
+    output.innerHTML = "A new object has been successfully created using the getPerson function; the returned object is " + JSON.stringify(getPerson(nameValue, ageValue));
+    enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
+});
+
+document.querySelector("option[id='timeHandler']").addEventListener("click", function(){
+    repeatedTime();
+    setInterval(function(){repeatedTime();}, 1000);
+});
 
 
-    console.log(nameValue, ageValue, assignedVar);
-
-
-}
-
-function timeHandler(){
+function repeatedTime(){
     // get div element holding all of solution specific elements
     var body = document.querySelector("body");
 
@@ -393,7 +463,7 @@ function timeHandler(){
     body.replaceChild(output, body.querySelector("div[id='time']"));
 }
 
-function descHandler(){
+document.querySelector("input[id='descHandler']").addEventListener("click", function(){
     // get div element holding all of solution specific elements
     var enclosingDiv = document.querySelector("div[id='descendOrder']");
 
@@ -414,7 +484,6 @@ function descHandler(){
     // call descOrder and print returned output to screen
     var output = document.createElement("p");
     output.className = "output";
-    console.log(descOrder(unordered));
     output.innerHTML = "The number in descending order is " + descOrder(unordered) + ".";
     enclosingDiv.replaceChild(output, enclosingDiv.querySelector("p.output"));
-}
+});
