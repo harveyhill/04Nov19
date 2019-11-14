@@ -120,8 +120,7 @@ column{
 }
 .smallIcon{
     float:left;
-    padding:10px 10px;
-    margin-left: 50px;
+    margin: 10px 10px 10px 60px;
     max-width:32px; 
     border-radius: 50%;
 }
