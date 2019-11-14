@@ -272,6 +272,31 @@ function printTri(height, character)
 function printDiamond(height, character)
 {
     //need to figure out this one
+    var output = "";
+    var iterations = 0;
+    var empties = ""
+    for(j = 0; j < (height/2); j++)
+    {
+        iterations = (j * 2) + 1;
+        for(k =0; k < iterations; k++)
+        {
+            empties.repeat(iterations - k);
+            output += empties + character + empties;
+        }
+        output += "\n";
+    
+        
+    }
+    for(i = (height/2); i > 0; i--)
+    {
+        for(k =i; k > 0; k--)
+        {
+            empties.repeat(k);
+            output += empties + character + empties;
+        }
+        output += "\n";
+    }
+    return output;
 }
 
 /*9. Object literal
