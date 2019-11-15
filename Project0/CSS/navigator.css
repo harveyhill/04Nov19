@@ -1,0 +1,30 @@
+#btn{
+    
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px;
+    padding: 0;
+     width:100vw;
+      background-color: black;
+      
+  }  
+.btn_decore{
+width:381px;
+height:40px ;
+color:silver;
+font-weight:1000;
+margin:0px;
+padding: 0px;
+border:none;
+background-color: black;
+
+
+
+}
+
+button:hover{
+    background-color: thistle;
+    color:red;
+
+}

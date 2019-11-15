@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>API Call</title>
+<script src="..\javaScript\APIcall.js"></script>
+<link rel="stylesheet"  href="..\CSS\API.css" >
+<link rel="stylesheet"  href="..\CSS\navigator.css" >
+
+
+</head>
+<body>
+        <div id="btn">
+                <button class="btn_decore"   onclick="window.location.href='..\\HTML\\AboutMe.html'"  >About Me </button>
+                 <button class="btn_decore"  onclick="window.location.href='..\\HTML\\API_Call.html'" >API</button>
+                 <button  class="btn_decore" onclick="window.location.href='..\\HTML\\functionsPage.html'" >JavaScript</button>
+                 <button class="btn_decore" onclick="window.location.href='..\\HTML\\Hospital_ERD.html'" >ERD</button>
+                </div>
+                 
+<div id="header">  
+        <H1>Convert your Currency</h1>    
+            <p>
+<input type="text" id="Currency_to">
+<input type="text" id="Currency_from"></p>
+<button id="BubbleBtn" onclick="apiCall(document.getElementById('Currency_to').value,document.getElementById('Currency_from').value)">Call API</button>
+<div id="API_result"></div>
+</div>
+</body>
+</html>

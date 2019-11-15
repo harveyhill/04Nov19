@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+    <title>Functions</title>
+    <script src="..\javaScript\functions.js"></script>
+    <link rel="stylesheet"  href="..\CSS\functions.css" >
+    <link rel="stylesheet"  href="..\CSS\navigator.css" >
+
+
+
+</head>
+<div id="btn">
+        <button class="btn_decore" onclick="window.location.href='..\\HTML\\AboutMe.html'"  >About Me </button>
+         <button class="btn_decore" onclick="window.location.href='..\\HTML\\API_Call.html'" >API</button>
+         <button  class="btn_decore"onclick="window.location.href='..\\HTML\\functionsPage.html'" >JavaScript</button>
+         <button class="btn_decore"onclick="window.location.href='..\\HTML\\Hospital_ERD.html'" >ERD</button>
+        </div>
+        
+<body onload="updateTime()">
+        <div id=time>
+                <p id="time_result"  ></p>
+        </div>
+        <div>
+        <h1 style="color:darkred; margin-left:30%; margin-right:30% ">JAVA SCRIPT CHALLENGES</h1></div>
+
+        <div class="Fibonacci "></div>
+ 
+<table>
+            <tr><th><h2>Fibonacci</h2></th></tr>
+    <tr>
+<td><p>Enter Any Fibonacci Numbers
+<input type="textbox" id="fib" onfocus="value=''">
+
+    <button id="BubbleBtn" onclick="fibonacci(document.getElementById('fib').value)">Fibonacci</button></p>
+</td>
+</tr>
+<tr>
+<td>
+    <p  id="fibonacci_numbers" style="color: red;">So Fibonacci Series with next Fibonacci Number is:</p>
+</td>  
+</tr>  
+
+</table>
+</div>
+<div class="BubbleSort">
+
+<table>
+            <tr><th><h2>Bubble Sort</h2></th></tr>
+        <tr><td>
+        <p>Enter Your Numbers 
+        <input type="textbox" id="PushNumber" onfocus="value=''">
+        <button id="PushBtn" onclick="PushNumber(document.getElementById('PushNumber').value)" >Push Number</button>
+        <button id="BubbleBtn" onclick="bubbleSort()">Sorted Number</button>
+    </p></td></tr>
+<tr><td>
+    <p id="SortedNumbers" style="color:red"></p></td>
+</tr>
+</table>
+</div>
+<div calss="stringname">
+<table>   
+    
+            <tr><th>
+
+            <h2>Reverse String</h2></tr></th>
+            <tr><td>
+            <p>Enter Your String
+            
+            <input type="textbox" id="name" onfocus="value=''">
+            <button  id="stringButton" onclick="ReverseString(document.getElementById('name').value)">So!Your New Name is..</button>
+        </p></td></tr>
+        <tr><td>
+            <p id="reverseName" style="color:red"></p>   </td></tr>     
+    
+</table>
+</div> 
+<table>
+    <div class="factorial">
+            <tr><th>
+
+            <h2>Factorial</h2></tr></th>
+            <tr><td>
+
+            <p>Enter any Number            
+            
+
+            <input type="textbox" id="number" onfocus="value=''">
+            <button  id="FactorialButton" onclick="window.alert(factorial(document.getElementById('number').value))">So! Factorail is..</button>
+        </p></td></tr>
+            <tr><td>
+
+            <p id="FactorailNumber" style="color:red"></p></td></tr>
+    </div>
+</table>
+<table>
+    <div class="">
+            <tr><th>
+                <h2>Palindrom</h2></tr></th>
+                <tr><td>
+
+                <p>Enter your String
+                    <input type="textbox" id="someStr" onfocus="value=''">
+                <button  id="palindromBtn" onclick="window.alert(isPalindrome(document.getElementById('someStr').value))">So! String is..</button></p>
+            </p></td></tr>
+                <tr><td>
+                <p id="Palindrom_result">
+                   </p> </td></tr>
+
+ </div>
+ <div>
+
+</table>
+  <Table>
+        <tr><th>
+
+     <h2>Even Number</h2></th></tr>
+     <tr><td>  <p>Enter Number   
+    <input type="textbox" id="someNum" onfocus="value=''">
+        <button   onclick="window.alert(isEven(document.getElementById('someNum').value))">Is no even?</button>
+    </p>  </td></tr>
+ 
+</Table> 
+</div>
+<div>        <table>
+            <tr><th><H2>SubString</H2></th></tr>
+            <tr>
+                
+                    <td>
+                    <p>Enter String
+                    <input type="text"  id="SomeStr" onfocus="value=''"> 
+                    Enter Length
+                    <input type="text"  id="length" onfocus="value=''"> 
+                    Enter OffSet
+                    <input type="text"  id="offset" onfocus="value=''"></td> </tr>
+                    <tr><td>
+                    <button  onclick="substring(document.getElementById('SomeStr').value,document.getElementById('length').value,document.getElementById('offset').value)">Get SubString</button>
+                </td>
+                </tr>
+                <tr><td><p id="substring"></p></td></tr>
+                
+               </table>
+            </div>
+            <div>
+               <table>
+                    <tr><th><H2>Decending Order</H2></th></tr>
+                        <tr><td>
+                            <p>Enter Number
+                            <input type="text"  id="UnOrdernumber" onfocus="value=''"> 
+                            
+                            <button  onclick="descOrder(document.getElementById('UnOrdernumber').value)">Get Decending Order</button>
+                        
+                        </p></td></tr>
+                        <tr><td>
+                    <p id="ReturnNumber"></p></td></tr>
+                       </table>
+                
+</div>
+<div>
+    <table>
+            <tr><th><H2>Delete</H2></th></tr>
+            <tr><td>
+                    <P>
+                        Enter , Separated Numbers:
+                    <input type="text"  id="delete" onfocus="value=''"> 
+            
+                    
+                    <button  onclick="deleteElement(document.getElementById('delete').value.split(','))">Delete</button>
+                        
+                </p></td></tr>
+                
+               </table>
+</div>
+<div>
+    <table>
+            <tr><th><H2>Splice</H2></th></tr>
+            <tr><td>
+                    <P>
+                            Enter , Separated Numbers:
+
+                    <input type="text"  id="splice" onfocus="value=''"> 
+            
+                    
+                    <button  onclick="spliceElement(document.getElementById('splice').value.split(','))">Splice</button>
+                        
+                </p></td></tr>
+                
+               </table>
+</div>
+</body>
+</html>
