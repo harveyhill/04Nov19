@@ -1,0 +1,74 @@
+body {background-color: cadetblue; }
+
+header {text-align: center;
+    color: rgb(2, 2, 92); 
+    font-size: 20px; }
+
+div#time { margin-left: 90%; 
+    background-color: whitesmoke; }
+
+.knockout { background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+    color: red;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    font-size: 75px;
+    font-family: arial, helvetica;
+    width: 600px;
+    margin: 30px auto;
+    text-align: center; }
+  
+#top-navbar {background-color: black; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px; }
+
+#top-navbar-links a {
+    font-size: larger;
+    color: whitesmoke;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 0 3px;
+    margin-right: 10px; }
+
+h2 { margin: 1em 0 0.5em 0;
+	font-weight: normal;
+	position: relative;
+	font-size: 28px;
+	line-height: 40px;
+	background: #355681;
+	background: rgba(53,86,129, 0.8);
+	border: 1px solid #fff;
+	padding: 5px 15px;
+	color: whitesmoke;
+	border-radius: 0 10px 0 10px;
+    font-family: 'Muli', sans-serif; }
+    
+p.indent { text-indent: 35px; }
+
+span.button {color: red;
+    font-size: 18px; }
+
+#Separator {margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 20%;
+    margin-left: 20%; 
+    font-family: "Times New Roman", Times, serif; }
+
+table { width: 100%;
+    height: 50px;
+    border: 1px solid whitesmoke; }
+
+table.arraytable { width: 100%;
+    height: 50px;
+    border: 1px solid whitesmoke; }
+
+th {background-color: rgb(9, 60, 155); 
+    font-size: 20px; 
+    border-bottom: 2px dashed; }
+
+td { text-align: center; }
+
+.col1 {background-color: lightblue;}
+
+.col2 {background-color: whitesmoke;}

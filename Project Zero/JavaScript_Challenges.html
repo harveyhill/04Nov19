@@ -1,0 +1,276 @@
+<!DOCTYPE  HTML>
+<HTML>
+    <head>
+        <title>Bailey Dawkins JavaScript Challenges Page</title>
+        <meta name="description">
+        <link rel="stylesheet" type="text/css" href="Stylesheet.css"> <!-- external stylesheet -->
+        <style> 
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="time">Time</div>
+            <div class="knockout">Bailey Dawkins</div>
+            <div id="top-navbar">
+                <span id="top-navbar-links">
+                    <a href="About_Me.html">Home</a>
+                    <a href="JavaScript_Challenges.html">Java Challenges</a>
+                    <a href="API.html">API</a>
+                    <a href="ERD.html">ERD</a>
+                </span>
+            </div>
+        </header>
+        <div id="Separator">
+            <h2>Challenge #1: Fibonacci Sequence</h2>
+                <p>Enter a number and findout which number that is in the Fibonacci Sequence!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="fibnum">Selected Number in the Sequence:</label></td>
+                        <td class="col2" width="50%"><input id="fibnum" type="text" size="18"></td>
+                    </tr>           
+                    <tr>
+                        <td class="col1"><label for="fibans">Answer: </label></td>
+                        <td class="col2" id="fibans"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="FibStart()">Find Out!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #2: Bubble Sort</h2>
+                <p>Enter 5 numbers and they will be sorted lowest to highest!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="16%"><label for="sort1">Enter Numbers:</td>
+                        <td class="col2" width="16%"><input id="sort1" type="text" size="18"></td>
+                        <td class="col1" width="16%"><input id="sort2" type="text" size="18"></td>
+                        <td class="col2" width="16%"><input id="sort3" type="text" size="18"></td>
+                        <td class="col1" width="16%"><input id="sort4" type="text" size="18"></td>
+                        <td class="col2" width="16%"><input id="sort5" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="sortans1">Sorted Numbers:</td>
+                        <td class="col2" id="sortans1"> </td>
+                        <td class="col1" id="sortans2"> </td>
+                        <td class="col2" id="sortans3"> </td>
+                        <td class="col1" id="sortans4"> </td>
+                        <td class="col2" id="sortans5"> </td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="6"><button type="button" onclick="ReturnBubbleSort()">Sort!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #3: Reserve String</h2>
+                <p>Input a string and it will be reversed!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="string1">First String:</label></td>
+                        <td class="col2" width="50%"><input id="string1" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="revstring1">Reversed String:</label></td>
+                        <td class="col2" id="revstring1"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnReverseString()">Reverse!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #4: Factorial</h2>
+                <p>Enter a number and find out its factorial!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="num2">Number:</label></td>
+                        <td class="col2" width="50%"><input id="num2" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="facans">Answer:</label></td>
+                        <td class="col2" id="facans"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnFactorial()">Find Out!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #5: Substring</h2>
+                <p>Input a string and create a substring from it!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="string2">Enter a String:</label></td>
+                        <td class="col2" width="50%"><input id="string2" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="offset">What place should the string be cut?</label></td>
+                        <td class="col2"><input id="offset" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="stringlength">How long should the substring be?</label></td>
+                        <td class="col2"><input id="stringlength" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="substring1">SubString:</label></td>
+                        <td class="col2" id="substring1"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnSubstring()">Create a substring</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #6: Even Number</h2>
+                <p>Input a number and find out if its even!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="num1">Number:</label></td>
+                        <td class="col2" width="50%"><input id="num1" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="numans">Answer:</label></td>
+                        <td class="col2" id="numans"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnIsEven()">Find Out!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #7: Palindrome</h2>
+                <p>Enter a string and find out if it is a palindrome!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="string3">String:</label></td>
+                        <td class="col2" width="50%"><input id="string3" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="palans">Answer:</label></td>
+                        <td class="col2" id="palans"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnPalindrome()">Find Out!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #8: Shapes</h2>
+                <p>Shapes!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="shape">Select A Shape:</label>
+                        <td class="col2" width="50%"><input id="shape" type="text" size="18"></td></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="height">Select A Height:</label>
+                        <td class="col2"><input id="height" type="text" size="18"></td></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="char">Select A Character:</label>
+                        <td class="col2"><input id="char" type="text" size="18"></td></td>
+                    </tr>
+                    <tr>
+                        <td class="col2"><button type="button" onclick="ReturnShape()">Print the Shape!</button></td>
+                        <td id="shaperesult"></td>
+                    </tr>
+                </table>
+            <h2>Challenge #10: Delete Element in an array</h2>
+                <p>Click the button to create a random number array and then to delete the 3rd element!</p>
+                <table class="arraytable">
+                    <tr>
+                        <td class="col1" width="14%"><label for="delarray1_1">Created Array</td>
+                        <td class="col2" width="14%" id="delarray1_1"></td>
+                        <td class="col1" width="14%" id="delarray1_2"></td>
+                        <td class="col2" width="14%" id="delarray1_3"></td>
+                        <td class="col1" width="14%" id="delarray1_4"></td>
+                        <td class="col2" width="14%" id="delarray1_5"></td>
+                        <td class="col1" width="14%" id="delarraylength1"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="delarray2_1">New Array:</td>
+                        <td class="col2" id="delarray2_1"> </td>
+                        <td class="col1" id="delarray2_2"> </td>
+                        <td class="col2" id="delarray2_3"> </td>
+                        <td class="col1" id="delarray2_4"> </td>
+                        <td class="col2" id="delarray2_5"> </td>
+                        <td class="col1" id="delarraylength2"> </td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="7"><button type="button" onclick="ReturnCreatedArray('Delete')">Create the Array!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #11: Splice Element in an array</h2>
+                <p>Click the button to create a random number array and then to splice the 3rd element!</p>
+                <table class="arraytable">
+                    <tr>
+                        <td class="col1" width="14%"><label for="splarray1_1">Created Array</td>
+                        <td class="col2" width="14%" id="splarray1_1"></td>
+                        <td class="col1" width="14%" id="splarray1_2"></td>
+                        <td class="col2" width="14%" id="splarray1_3"></td>
+                        <td class="col1" width="14%" id="splarray1_4"></td>
+                        <td class="col2" width="14%" id="splarray1_5"></td>
+                        <td class="col1" width="14%" id="splarraylength1"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="splarray2_1">Spliced Array:</td>
+                        <td class="col2" id="splarray2_1"> </td>
+                        <td class="col1" id="splarray2_2"> </td>
+                        <td class="col2" id="splarray2_3"> </td>
+                        <td class="col1" id="splarray2_4"> </td>
+                        <td class="col2" id="splarray2_5"> </td>
+                        <td class="col1" id="splarraylength2"> </td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="7"><button type="button" onclick="ReturnCreatedArray('Splice')">Create the Array!</button></td>
+                    </tr>
+                </table>
+            <h2>Challenge #12: Define an Object Literal using a Constructor</h2>
+                <p>Click the button to define the person object!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="name2">Name:</label></td>
+                        <td class="col2" width="50%"><input id="name2" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="age2">Age:</label></td>
+                        <td class="col2"><input id="age2" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnPerson2()">Set the Object!</button></td>
+                    </tr>
+                </table>
+
+            <h2>Challenge #13: Define an Object Literal using an Object</h2>
+                <p>Click the button to define the person object!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="name">Name:</label></td>
+                        <td class="col2" width="50%"><input id="name" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="age">Age:</label></td>
+                        <td class="col2"><input id="age" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnPerson()">Set the Object!</button></td>
+                    </tr>
+                </table>    
+            <h2>Challenge #14: Update Clock</h2>
+                <p><a href="https://www.whattimeisitrightnow.com/">What Time Is It Right Now?</a></p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%">The time is updating in the top right corner!</td>
+                    </tr>
+                </table>
+            <h2>Challenge #15: Descending Order</h2>
+                <p>Click the button to return the maxium number based on the entered digits!</p>
+                <table>
+                    <tr>
+                        <td class="col1" width="50%"><label for="desnum">Enter a Number:</td>
+                        <td class="col2" width="50%"><input id="desnum" type="text" size="18"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="desnum2">Maximum Number:</td>
+                        <td class="col2" id="desnum2"></td>
+                    </tr>
+                    <tr>
+                        <td class="col2" colspan="2"><button type="button" onclick="ReturnDescOrder()">Return the Maximum Number!</button></td>
+                    </tr>
+                </table>
+
+        </div>
+        <footer>
+
+        </footer>
+    </body>
+</HTML>
+<script src="BasicJS.js"></script>

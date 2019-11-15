@@ -1,0 +1,34 @@
+<!DOCTYPE  HTML>
+<HTML>
+    <head>
+        <title>Bailey Dawkins ERD Page</title>
+        <meta name="description">
+        <link rel="stylesheet" type="text/css" href="Stylesheet.css"> <!-- external stylesheet -->
+        <style> 
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="time">Time</div>
+            <div class="knockout">Bailey Dawkins</div>
+            <div id="top-navbar">
+                <span id="top-navbar-links">
+                    <a href="About_Me.html">Home</a>
+                    <a href="JavaScript_Challenges.html">Java Challenges</a>
+                    <a href="API.html">API</a>
+                    <a href="ERD.html">ERD</a>
+                </span>
+            </div>
+        </header>
+        <div id="Separator">
+            <h2>Entity Relationship Diagram of a Hospital</h2>
+         
+            <img src="HospitalERD.jpg" width="100%" />
+            
+            <h2>Description</h2>
+            <p class="indent">For this project, we were tasked with creating an Entity Relationship Diagram based on a hospital. In my solution,I came up with 10 entities, the main ones being patient, doctor, location, and supplier. The patient has one to many relationship with bed/room, a one to many relationship with insurance, and a many to many relationship with doctor. A junction object was created between patient and doctor containing the treatment information. The doctor also has a many to many relationship with location, with a junction object called schedule which details the emloyees shifts. Employee has a simlar relationship with location. The location then has a one to many relationship with inventory which has a one to many ralationship with supplier. Sample fields were included for each object but obviously these are not very extensive.</p>
+        </div>
+    </body>
+</HTML>
+<script src="BasicJS.js"></script>

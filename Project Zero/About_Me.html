@@ -1,0 +1,67 @@
+<!DOCTYPE  HTML>
+<HTML>
+    <head>
+        <title>Bailey Dawkins About Me Page</title>
+        <meta name="description">
+        <link rel="stylesheet" type="text/css" href="Stylesheet.css"> <!-- external stylesheet -->
+        <style> 
+            
+        </style>
+    </head>
+    <body onload="StartTime()">
+        <header>
+            <div id="time">Time</div>
+            <div class="knockout">Bailey Dawkins</div>
+            <div id="top-navbar">
+                <span id="top-navbar-links">
+                    <a href="About_Me.html">Home</a>
+                    <a href="JavaScript_Challenges.html">Java Challenges</a>
+                    <a href="API.html">API</a>
+                    <a href="ERD.html">ERD</a>
+                </span>
+            </div>
+        </header>
+        <div id="Separator">
+            <h2>Biography</h2>
+            <p class="indent">Hey guys! My name is Bailey Dawkins. I was born in Knoxville, Tennessee but moved to Oxford, Pennsylvania when I was 2 years old and thats where I grew up. For college, I attended <a href="https://www.ship.edu/">Shippensburg University</a> where I eventually settled on majoring in Management Information Systems. I started out in Business undeclared, then decided on Marketing, then I was thinking a duel major with marketing and MIS, and finally I dropped marketing to focus solely on MIS. I graduated in the Spring 2019 and Revature is my first job out of college.</p>
+            
+            <h2>Cool Fact</h2>
+            <p class="indent">I once caught a shark while fishing.</p>
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Playing Recreational Sports/ Working Out</li>
+                <li>Watching <span class="button" id="Movies" onclick="ChangeTable(1)">Movies</span> and <span class="button" id="TV_Shows" onclick="ChangeTable(2)">TV Shows</span> and <span class="button" id="Sports" onclick="ChangeTable(3)">Sports</span></li>
+                <li>Reading</li>
+                <li>Long Walks on the Beach</li>
+            </ul>
+
+            <h2 id="headervar">Favorite Sports Teams</h2>
+            <table>
+                <tr>
+                    <th id="head1">Sport</th>
+                    <th id="head2">Team Name</th>
+                    <th id="head3">Favorite Player</th>
+                </tr>
+                <tr>
+                    <td class="col1" id="row1col1" width="33%">Baseball</td>
+                    <td class="col2" id="row1col2" width="33%">Philadelphia Phillies</td>
+                    <td class="col1" id="row1col3" width="33%">Chase Utley</td>
+                </tr>
+                <tr>
+                    <td class="col1" id="row2col1">Football</td>
+                    <td class="col2" id="row2col2">Tennessee Titans</td>
+                    <td class="col1" id="row2col3">Kevin Byard</td>
+                </tr>
+                <tr>
+                    <td class="col1" id="row3col1">Hockey</td>
+                    <td class="col2" id="row3col2">Nashville Predators</td>
+                    <td class="col1" id="row3col3">Roman Josi</td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+
+        </footer>
+        </body>
+</HTML>
+<script src="BasicJS.js"></script>
