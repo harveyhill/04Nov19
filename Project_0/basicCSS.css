@@ -1,0 +1,60 @@
+
+
+
+/*
+header, main, nav, footer, figure, figcaption, aside, section, article { display: block; }
+*/
+/*
+body{
+    background-image:
+}
+*/
+
+#d {size: 20px ; color: green;}
+
+#clock {text-align: right}
+
+#blockContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 1px dotted blue ;
+    
+    
+}
+
+#gradient{
+    background-image: radial-gradient(circle, red, yellow, green);
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #696a70;
+}
+
+header {
+    background-image: radial-gradient(#39f4cc, #1907bc);
+    
+    height: 100px;
+}
+
+
+nav {   
+    background-color: rgba(6, 38, 125, 0.902); 
+           letter-spacing: 0.1em;
+           font-weight: bold;
+           text-align: center; 
+           padding-right: 2em;
+           position: relative;
+           text-shadow: 2px 2px #010005;
+    } 
+    nav ul { list-style-type: none; 
+            margin: 0;
+    }
+    nav li { padding: 0.5em;
+          display: inline-block;
+    }
+    nav a { text-decoration: none; 
+           display: block;
+    }
+    nav a:link { color: #FFFFFF; }
+    nav a:visited { color: #FFFFFF; }
+    nav a:hover {  color: rgb(8, 162, 233); }

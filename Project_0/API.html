@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+
+<title> API Consumed </title>
+<link rel="icon" href="Favicon.png" type="image/x-icon">
+<meta name="description" content="HTML examples" charset="utf-8">
+<link rel="stylesheet" href="BasicCSS.css">
+
+
+<style>
+
+	h1 {color: #FFFFFF; text-align:center;  padding-top: 30px; text-shadow: 2px 2px #18096b;}
+	.blockElement {color:red}
+	#inlineElement {color:purple}
+	
+	p {text-align:center;}
+</style>
+
+<script src="./js/jsDrills.js"></script>
+
+</head>
+
+<body> 
+
+	<div id=wrapper>
+
+		<header><h1>John Mulloy</h1></header>
+
+<!-- Nav Bar-->
+<nav>
+		<ul>
+			<li><a href="Index.html"> About Me</a></li>
+			<li><a href="JavaScript Challenge.html"> JavaScript Challenge</a></li>
+			<li><a href="API.html">  API Consumed</a></li>
+			<li><a href="Diagram.html">  Hospital ERD</a></li>
+		</ul>
+	</nav>
+
+
+    <div class="blockElement" style="color:red">
+            <p id="openParagraph"><b> API<span id="inlineElement"> Consumed </span> </b></p>
+    
+    </div>
+
+
+<div id=blockContainer>
+        <h2>Open Weather Map</h2>
+    <p>Reston Tempurature: <span id="Fahr"></span> °F </p>
+    <body onload="ajaxExample()"></body>
+    
+    <script>
+
+
+function ajaxExample(){
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200) {
+            let t = JSON.parse(this.response);
+            let temp = (t.main.temp - 273.15)*(9/5)+32
+            document.getElementById("Fahr").outerHTML = temp;
+        }
+    }
+    xhr.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Reston,USA&APPID=8fbe8d108dbcd3fecd055b924594c511", true);
+    xhr.send();
+}
+
+//new req
+
+/*
+      var x, text;
+    
+      // Get the value of the input field with id="numb"
+      x = document.getElementById("numb").value;
+    
+      // If x is Not a Number or less than one or greater than 10
+      if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+      } else {
+        text = "Input OK";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+*/
+/*
+
+function myFunction() {
+
+    var data = null;
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+    //JSON.parse(this.responseText));
+}
+});
+
+
+
+
+//soundcloud
+//179988299
+//weather app
+//8fbe8d108dbcd3fecd055b924594c511
+
+
+//xhr.open("GET", "https://the-one-api.herokuapp.com/books");
+//xhr.setRequestHeader("x-rapidapi-key", "unyeQrYvPi8ok1e4cNAS");
+
+//xhr.open("GET", "https://pnpninja-daily-comicstrips-v1.p.rapidapi.com/getComicLinks");
+//xhr.setRequestHeader("x-rapidapi-host", "pnpninja-daily-comicstrips-v1.p.rapidapi.com");
+
+//xhr.setRequestHeader("x-rapidapi-key", "92da788394msh035761dd223b77ap13f1dcjsn7135c8b67177");
+//xhr.setRequestHeader("SameSite","None");
+
+xhr.send(data);
+}*/
+    </script>
+</div>
+
+
+
+</body>
+
+
+</html>

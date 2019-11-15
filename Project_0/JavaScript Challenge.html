@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+
+<title> JavaScript Challenge </title>
+<link rel="icon" href="Favicon.png" type="image/x-icon">
+<meta name="description" content="HTML examples">
+<link rel="stylesheet" href="BasicCSS.css">
+
+
+<style>
+
+	h1 {color: #FFFFFF; text-align:center;  padding-top: 30px; text-shadow: 2px 2px #18096b;}
+	.blockElement {color:red}
+	#inlineElement {color:purple}
+	
+	p {text-align:center;}
+</style>
+
+<script src="./js/jsDrills.js"></script>
+
+</head>
+
+<body> 
+
+	<div id=wrapper>
+
+		<header><h1>John Mulloy</h1></header>
+
+<!-- Nav Bar-->
+<nav>
+		<ul>
+			<li><a href="Index.html"> About Me</a></li>
+			<li><a href="JavaScript Challenge.html"> JavaScript Challenge</a></li>
+			<li><a href="API.html">  API Consumed</a></li>
+			<li><a href="Diagram.html">  Hospital ERD</a></li>
+		</ul>
+	</nav>
+
+
+    <div class="blockElement" style="color:red">
+            <p id="openParagraph"><b> Java<span id="inlineElement">Script </span> </b></p>
+    
+    </div>
+
+    <!--14. Current TIme-->
+    <div id=blockContainer>
+            <h2>Clock Example</h2>
+
+            <p id="clock"></p>
+            
+            <script>
+            var myVar = setInterval(myTimer, 1000);
+            
+            function myTimer() {
+              var d = new Date();
+              document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+            }
+            </script>
+    </div>
+
+<!-- 1. Fibonacci -->
+<div id=blockContainer>
+    <h2>Fibinaci</h2>
+    <input id="fibRef">
+    <button type="button" onclick="fib()">Submit</button>
+    <p id="fibAns"></p>
+    <script>
+
+
+    function fib() {
+        var n;
+        n = document.getElementById("fibRef").value;
+        var total;
+        var laterNum = 0;
+        var closerNum = 1;
+        var answer;
+        switch(n){
+            case(n==0):
+                answer = 0;
+                console.log(answer)
+                break;
+            case(n==1):
+                answer = 1;
+                console.log(answer)
+                break;
+            default:
+                if(n>0){
+                    do{
+                        total = laterNum + closerNum;
+                        console.log(total);
+                        laterNum = closerNum;
+                        answer = closerNum;
+                        closerNum = total;
+                        n--;
+    
+                    }while(n>0);
+                    document.getElementById("fibAns").innerHTML = "\n    ANSWER: " + answer;
+                    //console.log("\n    ANSWER: " + answer)
+                }
+        }
+    }
+    </script>
+</div>
+
+<!-- 3. Reverse String -->
+
+<div id=blockContainer>
+
+    <h2>Reverse String</h2>
+    <input id="revStr">
+    <button type="button" onclick="reverseString()">Submit</button>
+    <p id="revAns"></p>
+
+    <script>
+    function reverseString() {
+        let s;  
+        s = document.getElementById("revStr").value;
+        // string.reverse()
+        // string.split()
+        // string.join()
+
+        let text;
+        text = s.split("").reverse().join("");
+        //check with console log
+        //return to DOM
+        document.getElementById("revAns").innerHTML =text;
+        }
+    </script>
+    
+</div>
+
+
+
+<div id=blockContainer>
+
+    <h2>Even Number</h2>
+    <input id="eNum">
+    <button type="button" onclick="isEven()">Submit</button>
+    <p id="evAns"></p>
+
+    <script>
+        function isEven(someNum) {
+            var someNum = document.getElementById("eNum").value;
+            if(someNum % 2==0){document.getElementById("evAns").innerHTML = "true"}
+            else{ document.getElementById("evAns").innerHTML ="false";}
+            //implement answer to DOM
+        }
+    </script>
+
+
+
+    <!-- I gave up on trying to write the logic within the paramaters given because 
+    I couldn't get it to output properly.
+    <script>
+        function isEven() {
+        //let s;  
+            var someNum;
+            
+            var remainder;
+            var multiple;
+            someNum = document.getElementById("eNum").value;
+            multiple = (someNum / 2);
+            
+            remainder = (someNum - (2 * multiple));
+
+            if(remainder == 0){
+                document.getElementById("evAns").innerHTML ="true";
+                
+            }else{ document.getElementById("evAns").innerHTML ="false";}
+
+        }
+    </script>
+    -->
+
+</div>
+
+<div id=blockContainer>
+
+    <h2>Palindrome</h2>
+    <input id="aPal">
+    <button type="button" onclick="isPalindrome()">Submit</button>
+    <p id="pAns"></p>
+
+    <script>
+
+        function isPalindrome() {
+            let someStr;
+            let revStr2;
+            someStr = document.getElementById("aPal").value;
+            revStr2 = someStr.split("").reverse().join("");
+            if(someStr == revStr2){
+                document.getElementById("pAns").innerHTML= "true";
+            }else{
+                document.getElementById("pAns").innerHTML= "false";
+            }
+        }
+    </script>
+
+</div>
+
+
+<div id=blockContainer>
+
+    <h2>Return SubString</h2>
+    <p style="text-align:left;">String Input</p>
+    <input id="strIn">
+    <p style="text-align:left;">Length</p>
+    <input id="lgth">
+    <p style="text-align:left;">Offset</p>
+    <input id="ofst">
+    <button type="button" onclick="substring()">Submit</button>
+    <p id="strOut"></p>
+
+    <script>
+            function substring() {
+                var someStr;
+                var someLgth;
+                var someOfst;
+                someStr = document.getElementById("strIn").value;
+                someLgth = document.getElementById("lgth").value;
+                someOfst = document.getElementById("ofst").value;
+                var a = someStr.split("");
+                var ans;
+                for (i = someOfst; i < (someOfst+someLgth);i++){
+                    ans += a[i];
+                }
+                document.getElementById("strOut").innerHTML= ans;
+            }
+
+        
+
+        /*
+function substring(someStr, length, offset) {
+    var a = someStr.split("");
+    var ans ='';
+    for (i = offset; i < (length+offset); i++){
+        ans += a[i];
+    }
+    console.log(ans);
+}
+        */
+    </script>
+
+</div>
+
+
+<!--4. Factorial-->
+
+<div id=blockContainer>
+
+    <h2>Factorial</h2>
+    
+    <input id="inFact">
+    <button type="button" onclick="factorial()">Submit</button>
+    <p id="outFact"></p>
+
+    <script>
+        function factorial() {
+        var f;
+        f = document.getElementById("inFact").value;
+        var a;
+            function fact(d) {
+
+                if (d <= 1){
+                    return 1;
+                }else{
+                    return d*fact(d-1);
+                }
+                
+            }
+        
+        document.getElementById("outFact").innerHTML = fact(f);
+        }
+
+        /*
+function factorial(someNum) {
+    if (someNum <= 1) // base case
+        return 1;
+    else    
+        return someNum*factorial(someNum-1);    
+
+}
+        */
+    </script>
+
+</div>
+
+
+<div id=blockContainer>
+
+        <h2>Descending Order: Highest Number</h2>
+        
+        <input id="inHigh">
+        <button type="button" onclick="descOrder()">Submit</button>
+        <p id="outHigh"></p>
+    
+        <script>
+
+
+                function descOrder() {
+                    let f;
+                    f = document.getElementById("inHigh").value;
+                    document.getElementById("outHigh").innerHTML= f.split("").sort().reverse().join("");
+
+                    //then take "n" as a String, split it, then sort it (from smallest to largest), reverse the order, then join it
+
+                }
+
+    
+
+        </script>
+    
+    </div>
+
+
+<!--
+    /*`15.  Descending order
+Your task is to make a function that can take any non-negative 
+integer as a argument and return it with its digits in descending 
+order. Essentially, rearrange the digits to create the highest possible number.*/
+
+function descOrder(n) {
+    //figure out sort funciton
+    //then take "n" as a String, split it, then sort it (from smallest to largest), reverse the order, then join it
+    console.log(String(n).split("").sort().reverse().join(""))
+}
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    //diamond logic
+    //Assume number is odd and over 2 //else error
+    
+    //assume input is 3
+    var input;
+    var multiple;
+    var r;
+    var median;
+
+    multiple = (input-1) / 2;
+    median = multiple + 1;
+
+    //print until up to input number (for each)
+
+    //.....
+
+
+    // create a binary array that prints characters for true and space for false
+
+    
+
+
+-->
+
+<!--
+Example for printShape("Square", 3, "%");
+%%%
+%%%
+%%%
+Example for printShape("Triangle", 3, "$");
+$
+$$
+$$$
+Example for printShape("Diamond", 5, "*");
+  *
+ ***
+*****
+ ***
+  * */
+-->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
