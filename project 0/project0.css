@@ -1,0 +1,81 @@
+
+body{
+	background-image: url("https://i2.wp.com/fanfitgaming.com/wp-content/uploads/2018/02/Rainbow-six-siege-neon-light.jpg?zoom=1.25&fit=900%2C900&ssl=1");
+	background-repeat: inherit;
+}
+
+
+img{
+    display: block;  
+    margin-left: auto; 
+    margin-right:auto; 
+    width: 25%; 
+}
+
+h3{
+    text-align: center; 
+    color: #fff;
+    padding: 5px; 
+}
+
+h4{
+    color: #fff; 
+    padding: 5px;
+}
+
+li{
+    color:#fff;
+}
+
+table{
+    border-collapse: collapse;
+    width: 25%
+}
+
+td, th{
+    border: 1px solid #ddd;
+    color: #ddd;
+    text-align: left; 
+    padding: 8px; 
+}
+
+h1.AboutMe, .API, .JavaScript, .Home, .ERD{
+    text-align: center;
+    color: #fff;
+    border: double; 
+}
+
+p.text{ 
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 20px; 
+}
+
+h5.tableName{ 
+    color:#fff; 
+    text-align: center;
+    padding: 10px;
+}
+#erd{
+    text-align: center;
+}
+
+#clock{
+    position: absolute; 
+    top: 17px; 
+    right: 0;
+    color:#fff; 
+}
+#flightButton{
+    margin-left:auto;
+    margin-right:auto; 
+    display: block; 
+}
+#flight-dest{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 15px;  
+    display: block; 
+    
+}
