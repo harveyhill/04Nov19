@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+<link rel="stylesheet" href="REVATURE 1.css">
+
+<h1>JAVA </h1>
+    
+    <body>
+      <ul>
+        <li><a href="revature hobby.html">About me</a></li>
+        <li><a href="#">Java Challenges</a></li>
+        <li><a href="Project0- Api.html">API</a></li>
+        <li><a href="ERD Project 0.html">ERD</a></li>
+        <br>
+      </ul> 
+      <br>       
+       1.BubbleSort<br>
+       <input id="text1in" placeholder="Enter the numbers">
+       <br>
+       <button onclick="bubbleSort()" id="btn1">Sort</button>
+       <p id="text1out"></p>
+    
+      2.Even or odd<br>
+      <input id="text2in" placeholder="Enter the number">
+      <br>
+      <button onclick="isEven()" id="btn2">Check</button>
+      <p id="text2out"></p>
+
+      3.Fibonacci<br>
+      <input id="text3in" placeholder="Enter the number">
+      <br>
+      <button onclick="fib()" id="btn3">Click</button>
+      <p id="text3out"></p>
+
+      4.Factorial<br>
+      <input id="text4in" placeholder="Enter the number">
+      <br>
+      <button onclick="factorial()" id="btn4">Click</button>
+      <p id="text4out"></p>
+
+
+      5. Reveresing a String<br>
+      <input id="text5in" placeholder="Enter the string">
+      <br>
+      <button onclick="reverseString()" id="btn5" >REVERSE</button>
+      <p id="text5out" ></p>
+
+      6.Palindrome<br>
+      <input id="text6in" placeholder="Enter the String">
+      <br>
+      <button onclick="isPalindrome()" id="btn6">Click</button>
+      <p id="text6out"></p>
+
+      7. Deleting an Element<br>
+      <input id="text7in" placeholder="Enter the elements">
+      <br>
+      <button onclick="deleteElement()" id="btn7">Click</button>
+      <p id="text7out"></p>
+      
+      8. Splicing an element<br>
+      <input id="text8in" placeholder="Enter the elements">
+      <br>
+      <button onclick="spliceElement()" id="btn8">Click</button>
+      <p id="text8out"></p>
+
+      9. Descending order<br>
+      <input id="text9in" placeholder="Enter the number">
+      <br>
+      <button onclick="descOrder()" id="btn9">Click</button>
+      <p id="text9out"></p>
+
+      10.Substring<br>
+      <input id="text10in" placeholder="String,length,offset">
+      <br>
+      <button onclick="substring()" id="btn10">Click</button>
+      <p id="text10out"></p>
+      
+      <p id="text11out"></p> 
+    
+    
+    
+    </body>
+
+
+    <script>
+
+
+
+function bubbleSort(nuMArray)
+    
+{  var Arr=document.getElementById("text1in").value;
+   var arr= Arr.split(',');    //splitting the text element with a ",".
+   var numArray=[];
+   for(i=0;i<arr.length;i++)
+   {
+   numArray.push(parseInt(arr[i]));    
+   }                                      
+  var swapp;                               
+  var y= numArray.length-1;
+  var x=numArray;
+   do{                                  
+      swapp=false;
+      for(var i=0;i<y;i++)
+        {
+         if(x[i] > x[i+1])               //loop for bubblesort
+         {
+            var temp= x[i];
+             x[i]= x[i+1];
+             x[i+1]= temp;
+             swapp= true;  
+          }
+               
+        }
+         y--;
+        }while(swapp);
+        
+         
+         var z=x.toString();     //converting the array to string
+         document.getElementById("text1out").innerHTML=z;
+        
+
+}
+    
+
+
+   
+function isEven(somNum)
+{   var k=document.getElementById("text2in").value;
+   somNum=parseInt(k);    //converting the read text element to an integer. 
+ var x=somNum;
+ var y;
+ var z;
+ y=Math.floor(x/2);   //Returns the lowest integer after deviding by 2.
+ z=y*2;               //multiplying the returned integer by 2.
+
+ if(x==z)
+ { document.getElementById("text2out").innerHTML="Yes the number is even";}
+
+ else
+  {document.getElementById("text2out").innerHTML="No the number is odd";}}
+
+
+
+              
+function fib(n) 
+{ var k=document.getElementById("text3in").value;
+  n=parseInt(k);           //converting the read tex element to an integer     
+var x = 0, y = 1, z = 1;
+for(var i = 2; i <= n; i++) 
+   {
+     z = x + y;
+     x = y;                  //loop for fibonacci
+     y = z;
+   }
+  document.getElementById("text3out").innerHTML=z;
+
+}
+
+
+
+
+ function factorial(someNum)
+ {  var k=document.getElementById("text4in").value;
+    someNum=parseInt(k);       //converting the read text element to an integer.
+    var prod;
+  if(someNum ==0||someNum==1)
+    {
+      document.getElementById("text4out").innerHTML=1;
+    } 
+  else 
+    {prod=1;
+      for(i=1;i<=someNum;i++)
+      { prod=prod*i; }      
+      document.getElementById("text4out").innerHTML=prod;
+    }
+ }    
+                    
+
+                 
+ 
+
+function reverseString(someStr) 
+{ someStr=document.getElementById("text5in").value;
+ var i;                            
+ var newstring="";
+ for(i=someStr.length-1;i>=0;i--)
+    {
+     newstring+=someStr[i];         
+    }                              
+      
+    document.getElementById("text5out").innerHTML=newstring;                             
+}                               
+                                   
+                                   
+
+
+ function isPalindrome(someStr) 
+ { 
+   someStr=document.getElementById("text6in").value;
+   someStr=someStr.toLowerCase();    //converting the read text to lowercase.
+   let newstring="";
+   for(i=someStr.length-1;i>=0;i--)
+   {
+     newstring+=someStr[i];
+   }                                
+   
+        if(newstring==someStr)
+          {   document.getElementById("text6out").innerHTML= "It is a Palindrome"; }
+
+        else
+          { document.getElementById("text6out").innerHTML= "Not a Palindrome";}
+
+}  
+
+
+
+
+function deleteElement(someArr)
+{ var someARR=document.getElementById("text7in").value;
+ smeArr=[];
+  someArr=someARR.split(',');  //tranfers each element seperated by a comma tothe array someArr.   
+  var first="" ;
+  first="The length of the Array before deletion is :" + someArr.length + "<br>";
+
+ delete someArr[2]; //deletion
+ first+="The array after the deletion is :"+ someArr + "<br>";
+ first+="The length of the array after deletion is :"  +someArr.length + "<br>";
+ document.getElementById("text7out").innerHTML=first;
+                                                                           
+}      
+
+                
+                
+function spliceElement(someArr)
+{ var someARR=document.getElementById("text8in").value;
+someArr=[];
+ someArr=someARR.split(',');
+ var first="";
+ first="The length of the array initially is :" + someArr.length + "<br>";                                  
+ someArr.splice(2, 1);
+ first+="The array after splice operation is :"+someArr+ "<br>";
+ first+="The length of the array after splice operation is :"+someArr.length; //the length decereases by one
+ document.getElementById("text8out").innerHTML=first;
+}
+
+
+
+
+function descOrder(n)
+{  var k=document.getElementById("text9in").value;
+    n=parseInt(k);               
+ var rem;
+ var nw=[];
+ var nj=[];
+ while(n>0)
+ {   
+   rem=n%10;     //takes the reminder after dividing by 10
+   n=Math.floor(n/10);//n now is  the lowest integer after dividing n by 10. 
+   nw.push(rem);  //rem  is pushed into the array nw for each loop
+ }
+  var y=nw.length;  //calculates the length of the array.  
+ do{ 
+      swapp=false;
+      for(var i=0;i<y;i++)
+        {
+         if(nw[i] < nw[i+1])
+          {                         //bubblesort for decreasing order.
+            var temp= nw[i];
+             nw[i]= nw[i+1];
+             nw[i+1]= temp;
+             swapp= true;  
+          }
+               
+        }
+         y--;
+        }while(swapp);
+  var nj='';
+  nj=nw.join("");        //converting the sorted array into a string  
+  
+ 
+   var first="The  new number is :" + nj;
+                                                  
+  document.getElementById("text9out").innerHTML= first;
+  
+} 
+
+
+
+
+
+function substring(someStr, length, offset)
+{  var someARR=document.getElementById("text10in").value;
+   var someArr=someARR.split(',');
+      someStr=someArr[0];
+      length=parseInt(someArr[1]);
+      offset=parseInt(someArr[2]);
+ if(someStr.length<length||offset>someStr.length)
+   { alert("The length entered is more than the length of the string or the offset is out of range");}
+   
+ else if(someStr==""||someStr==null)
+ {alert("You haven't entered a string"  );}
+
+  else if(length==""||length==null)
+  {alert("Enter a valid length");}
+
+  else if(offset==""||offset==null)
+  {alert("Enter a valid offset");}   
+                
+  else if(length<0||offset<0)
+  {alert("Eneter a valid length or offset");}                                              
+                                                 
+  else
+  { var subStr = someStr.substring(offset, offset+length+1);
+    document.getElementById("text10out").innerHTML= "The Substring is : "+ subStr;}
+
+}
+  
+
+
+    </script>
+        
+</html>

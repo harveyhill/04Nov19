@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="REVATURE 1.css">
+<h1>API</h1>
+<body>
+    <ul>
+        <li><a href="revature hobby.html">About me</a></li>
+        <li><a href="jsChallenges.html">Java Challenges</a></li>
+        <li><a href="#">API</a></li>
+        <li><a href="ERD Project 0.html">ERD</a></li>
+        <br>
+        
+      </ul>
+
+
+
+
+<br>
+     Find tain stations near you:<button id="btn11" onclick="ajaxExample()">Find</button>
+    <p id="train"></p>
+</body>
+
+<script>
+    var stng="";
+function ajaxExample(){
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200) {
+            let vader = JSON.parse(this.response);
+            for(i=5;i<=9;i++)
+           {stng+="->"+ vader.Res.Stations.Stn[i].name+"<br>";}
+            document.getElementById("train").innerHTML=stng;
+
+     } }
+
+    xhr.open("GET","https://transit.api.here.com/v3/stations/by_name.json?center=38.960190%2C-77.354500&name=union&app_id=Jjtpt0In19vmfJodHnSm&app_code=q_PVcAhuH7WNSNmavZojNg&max=10&method=fuzzy&radius=50000", true);
+    xhr.send();                                                                                                                                                                                                                                                                                                                                                                                                                  
+      }
+</script>
