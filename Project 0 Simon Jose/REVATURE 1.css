@@ -1,0 +1,189 @@
+body{
+    color:rgb(39, 126, 119);
+     background-color:black;
+     font-size:125%;
+     font-family:Century Gothic;
+     background-image:url("https://wallpapercave.com/wp/wp4325241.jpg");
+     background-repeat: no-repeat;
+     background-size:auto; 
+     background-position: right;
+     background-attachment: fixed;
+    margin:20px;
+    } 
+
+    
+    input{
+      float:left;
+    }
+    table{
+      border: 2px solid rgb(39, 126, 119);
+      border-collapse: collapse;
+    }
+
+     th, td, tr {
+      border:  2px solid rgb(39, 126, 119);
+      
+      
+      text-align: left;
+    }
+
+    
+h1{ font-family:Century Gothic;
+    text-align:center;
+    color:rgb(39, 126, 119); 
+    border-bottom:2px solid rgb(39, 126, 119) ;
+    
+    
+}
+
+
+h2{
+    text-align:left;
+    color:rgb(39, 126, 119)k;
+    background-color:black;
+    font-family:Century Gothic;
+}
+h3{
+  text-align:left;
+  color:rgb(39, 126, 119)k;
+  background-color:black;
+  font-family:Century Gothic;
+  
+}
+h4
+{color: rgb(39, 126, 119)k;
+font-family:Century Gothic;
+margin-top: 80px;
+}
+
+
+p{
+  margin: 20px;
+}
+#text1in
+{
+  color:black
+}
+#text1out{
+  color:rgb(39, 126, 119);
+}
+#text5out{
+  color:rgb(39, 126, 119);
+  
+}
+#text2out{
+  color:rgb(39, 126, 119);
+}
+#text3out{
+  color:rgb(39, 126, 119);
+}
+#text4out{
+  color:rgb(39, 126, 119);
+}
+#text5out{
+  color:rgb(39, 126, 119);
+}
+#text6out{
+  color:rgb(39, 126, 119);
+}
+#text7out{
+  color:rgb(39, 126, 119);
+}
+#text8out{
+  color:rgb(39, 126, 119);
+}
+#text9out{
+  color:rgb(39, 126, 119);
+}
+#text10out{
+  color:rgb(39, 126, 119);
+}
+#text11out{
+  color:rgb(39, 126, 119);
+  padding: 8px;
+ 
+  position: absolute;
+
+
+}
+#btn1{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn2{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn3{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn4{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn5{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn6{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn7{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn8{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn9{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn10{
+  background-color:black;
+  color:rgb(39, 126, 119)
+  
+}
+#btn11{
+  background-color:black;
+  color:rgb(39, 126, 119)
+
+}
+ul {
+  list-style-type: none;
+  margin: 1;
+  padding: 0;
+  color: rgb(39, 126, 119);
+  
+}
+
+li {
+  float: left;
+  color:rgb(39, 126, 119)
+}
+
+li a { float: top;
+  display: flex;
+  padding: 8px;
+  color: rgb(39, 126, 119);
+  cursor: pointer;
+  border: 1px solid rgb(39, 126, 119);
+}
+a{
+  color:rgb(39, 126, 119)
+  
+}
+
+   </style>
