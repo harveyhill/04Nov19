@@ -1,0 +1,3 @@
+<h1>Sabir Hazratzai</h1>
+<p>I have more than two decates experience with the Software Developemnt. I had started with Assember, COBOL and PL1 Lanuages for Mainframe computer IBM370 in 1986. </p>
+

@@ -1,0 +1,6 @@
+<ul>
+ <li>Watch TV news</li>
+<li>Walk around</li>
+ <li>Study online</li>
+<li>Play football</li>
+</ul>

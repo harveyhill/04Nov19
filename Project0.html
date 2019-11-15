@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Poject0</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link rel="stylesheet" href="myCSS1.css">
+</head >
+<body>
+
+        <div class="head">
+               <img src="proj00.jpg" style="height:80%;" >
+               
+        </div>
+        <label id="dt" style="float: right; background-color: black; color: white; "></label>
+        <div class="section1" >
+            <table >
+                <tr>
+                        <td align="left"><label>About Me:</label></td>
+                </tr>
+                <tr>  <td align="center">   <button type="button" style="width: 100%;" onclick="hobbfun(3);">Breif </button>        </td></tr>
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="hobbfun(1);" >Hobbies</button>     </td></tr>
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="hobbfun(2);">Certificates</button> </td></tr>
+                
+                <tr><td><hr></td></tr>
+
+                <tr><td align="left"><label>JS Functions:</label>  </td></tr>
+                <tr>  <td align="center">   <button type="button" style="width: 100%;" id="sec11" onclick="funHide(document.querySelector('#sec2-revS'),this);">Reverse Str</button>        </td></tr>
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-facT'),this);" >Factorial</button>     </td></tr>
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-oddE'),this);">Odd or Even</button> </td></tr>                    
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-objCons'),this);">Obj. Constructor</button> </td></tr>                    
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-objName'),this);">Obj. Literal</button> </td></tr>                    
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-arrDelete'),this);">Delete Element</button> </td></tr>                    
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-arrSplice'),this);">Splice Element</button> </td></tr>                    
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-objProp'),this);">Traverse Obj.</button> </td></tr>                
+                <tr > <td align="center">   <button type="button" style="width: 100%;" onclick="funHide(document.querySelector('#sec2-palinD'),this);">Palindrome</button> </td></tr>                
+                <tr><td style="background-color: cornsilk;"><a href="javascript:void(0);" onclick="javascipt:window.open('Mypdf.pdf');" >ERD</a></td></tr>
+            </div>      
+            </table>
+            </div>
+       
+    <div class="section3">
+            <div id="mymainDiv"  style="position: absolute; top:25%; left:15%;color:black;"></div>
+
+            <div id="myDiv"  style="position: absolute; left:15%; background-color:blue; color:white;">
+                        
+                <table>
+                                <tr id="sec2-revS" style="display: none;"> 
+                                        
+                    <td>
+                           
+                    String   : <input type="text" name="acStr" Id="acStr"  > </td>
+                   
+                <td>
+                 <button type="button" style="width: 100%;" onclick="byClick(document.getElementById('acStr').value);">Reverse Str</button>
+                </td><td>&nbsp &nbsp Revered Str:&nbsp&nbsp<label id="lb1" style="background-color: white; color: red;"></label>  </td>
+            </tr>
+           
+
+                <tr id="sec2-facT" style="display: none;">
+                        
+                    <td >  <input type="number"  id="num1"> </td>
+                        <td> <button type="button" style="width: 100%;" onclick="fc(document.querySelector('#num1').value);">Factorial</button> </td>
+                        <td colspan="2"><input type="text" id="fcTx1"> </td>
+                  
+                    </tr>
+                    <tr id="sec2-oddE" style="display: none;">
+                            
+                            <td>  <input type="number" id="num2"> </td>
+                            <td> <button type="button" style="width: 100%;" onclick="(oddEven(document.querySelector('#num2').value))">Even/Odd</button> </td>
+                            <td colspan="2"><input type="text" id="fcTx2"></td>
+                           
+                        </tr>
+                        <tr id="sec2-objCons" style="display: none;">
+                                <td colspan="2"><button style="width: 100%;" onclick="objCons();">Object Const</button></td>
+                                <td>  Name:&nbsp<label id="consName" style="background-color: cornsilk; color:black;"></label></td>
+                                <td> &nbsp&nbsp Age:&nbsp<label id="consAge" style="background-color: cornsilk; color:black;"></label></td>
+                        <tr id="sec2-objName" style="display: none;">
+                                 <td colspan="2"><button style="width: 100%;" onclick="objName();">Object Literal</button></td>
+                                 <td> &nbsp&nbsp <label id="litName" style="background-color: cornsilk; color:black;"></label></td>
+                                <td>  &nbsp&nbsp<label id="litAge"style="background-color: cornsilk; color:black;" ></label></td>
+                         </tr>
+                         <tr id="sec2-arrDelete" style="display: none;">
+                                <td><button style="width: 100%;" onclick="deleteElement();">Delete Element</button></td>            
+                                <td colspan="2">  &nbsp&nbspOrginal Array:&nbsp&nbsp <label style="background-color: blue;" id="arry"></label></td>
+                                <td>&nbsp&nbsp<label style="background-color: Red;">New Arry:</label>&nbsp&nbsp<label id="dnlen" ></label></td>
+                                </tr>
+
+                        <tr id="sec2-arrSplice" style="display: none;">
+                                <td><button style="width: 100%;" onclick="spliceElement();">Splice Element</button></td>
+                                <td colspan="2">  &nbsp&nbsp Orginal Array:&nbsp&nbsp<label style="background-color: blue;" id="arr"></label></td>
+                                 <td>  &nbsp&nbsp <label style="background-color: Red;">New Arry:</label> &nbsp&nbsp<label  id="nlen"></label></td>
+                                 </tr>
+                                 <tr id="sec2-objProp" style="display: none;">
+                                        <td><button style="width: 100%;" onclick="objectProp();">Obj NameVal</button></td>
+                                       <td colspan="3"><div id="objProp"></div></td></tr>
+                        <tr id="sec2-palinD" style="display: none;">
+                        <td><input type="text" id="orStr"></td>
+                        <td colspan="2"><button style="width: 100%;" onclick="palinD(document.querySelector('#orStr').value);">Palindrome</button></td>
+                        <td><label id="revStr" style="background-color: white; color:red">&nbsp&nbsp&nbsp&nbsp</label></td></tr>
+                        
+                                
+
+        </table>
+    </div>
+    <script src="MyJavascript.js"> </script>
+         </body>
+        </html>
