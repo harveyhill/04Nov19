@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+    <meta name="Dice Rolling Web Page" content="User Rolls 1D20,2D6, and 1D4">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+    <style>
+        html {
+                background-color:wheat;
+                background-image: url("images/irl-polyhedral-dice.jpg");
+                background-size: 100%;
+        }
+        .center {
+                display: block;
+                margin-left: 40%;
+                margin-right: 50%;
+                width: 20%;
+                background-image: url("images/snow-background.jpg");
+        }
+        .wallpaper {
+            background-image: url("images/irl-polyhedral-dice.jpg");
+        }
+        .wordcolor{
+            text-decoration-color: gold;
+            background-image: url("images/snow-background.jpg");
+            width: 20%;
+        }
+    </style>
+    <script src="roll_dice.js" type="text/javascript"></script>
+</HEAD>
+<BODY class="wallpaper">
+    <h class="center">ROLL 1D6</h>
+    <p class="center">ROLLING ONE 6 SIDED DIE</p>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+            <button class="btn btn-danger" id='getDieRoll'>ROLL 6 SIDED DIE</button>
+            <div id="rolldice" class="wordcolor">
+                <b>ROLL</b>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <table class="wordcolor">
+        <ul class="center" style="color: blue"><a href="AboutMe.html">HOME</a></ul>
+    </table>
+</BODY>
+</html>

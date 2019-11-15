@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+    <meta name="15 JavaScriptFunctions" content="Tribute Page to the Fibonacci Sequence and Demo of JS Functions">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+    <style>
+        .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        .animation-div {
+                background-color:wheat;
+                background-image: url("images/fibonacci-sequence-golden-ratio-animated.gif");
+                background-size: 50%;
+            }
+            /* Three image containers (use 25% for four, and 50% for two, etc) */
+            .column {
+                float: left;
+                width: 25%;
+                padding: 0px;
+            }
+            .column2 {
+                float: left;
+                width: 33%;
+                padding: 0px;
+            }
+    </style>
+    <script src="15-JS-Functions.js"></script>
+</HEAD>
+<BODY>
+    <div class="animation-div">
+    <div class="center">
+    <h>THE GOLDEN RATIO and The Fibonacci Sequence: The DIVINE SIGNATURE</h>
+    <p>This is a tribute page to the Golden Ratio, the Fibonacci Sequence, <br> and a demo of 15 classic functions in JavaScript.</p>
+    </div>
+
+    <div class="row">
+            <div class="column">
+                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-1.gif" height="200" width="280" class="center">
+            </div>
+            <div class="column">
+                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-3.jpg" height="200" width="280" class="right">
+            </div>
+            <div class="column">
+                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-5.jpg" height="200" width="280" class="center">
+                </div>
+                <div class="column">
+                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\Gods-Signature-Compilation.jpg" height="200" width="280" class="right">
+                </div>
+    </div>
+
+    <div class="row">
+            <div class="column2">
+                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-4.jpg" height="200" width="280" class="center">
+            </div>
+            <div class="column2">
+                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\fibonacci-hand-Gods-Signature-to-his-Creation-Us.gif" height="200" width="280" class="right">
+            </div>
+                <div class="column2">
+                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-2.jpg" height="180" width="220" class="right">
+                </div>
+    </div>
+
+    
+    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\mystery-18-Gods-Signature-golden-ratio-ear-hand-arm.jpg" height="250" width="350" class="center">
+</div>
+
+
+                <label style="color: red" for="FibonacciSubmit"><b>Number to Fibbonize</b></label>
+                <input type="number" id="FibonacciSubmit" class="form-control col-3" placeholder="Enter Number">
+                <br>
+                <button class="btn btn-danger" id="getFibonacciResult">Submit</button>
+
+                <label style="color: blue " for="FinbonacciResult"><b>Result</b></label>
+                
+                        <input type="text" id="#FibonacciResult" class="form-control col-3" placeholder="Waiting" onclick="window.print()" />
+                        <div id="FibonacciResult"></div>
+                        <p id="FibonacciResult"></p>
+                
+        
+<!--
+<div>
+<input type="number" placeholder="0" id="number">
+</div>
+-->
+    
+    <!--
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                Enter Number in Fibonacci Function:
+                <input type="text"
+                       id="myNumber"
+                >
+
+                <button class="btn btn-danger" onclick="fibonacciSequence()">SUBMIT</button>
+
+                <script>
+                        function fibonacciSequence(){
+                            var n = document.getElementById("myNumber").value;
+                            var x = Number(n);
+                            if(x == 0) return 0;
+                            if(x == 1) return 1;
+                            if(x == 2) return 3;
+                        
+                            var result = fibonacciSequence(x-1) + fibonacciSequence(x-2);
+                            var solution = result.toString();
+                            document.getElementById("result").innerHTML = solution;
+                        };
+                </script>
+                <p id="result"></p>
+
+    </div>
+-->
+    
+
+
+    <div class="center">
+    <p class="center"><a href="AboutMe.html">HOME</a></p>
+    </div>
+</BODY>
+</html>
