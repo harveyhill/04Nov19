@@ -1,0 +1,13 @@
+<apex:page controller="VFPaginationExampleDemoController">
+    <apex:form >
+    	<apex:pageBlock id="paginationBlock" title="Pagination">
+            <apex:pageBlockButtons >
+            	<apex:commandButton value="Previous" action="{!setController.previous}" disabled="{!NOT(setController.hasprevious)}" reRender="paginationBlock"/>
+                <apex:commandButton value="Next" action="{!setController.next}" disabled="{!NOT(setController.hasnext)}" reRender="paginationBlock"/>
+            </apex:pageBlockButtons>
+        	<apex:pageBlockTable value="{!displayedAccounts}" var="acc">
+                <apex:column value="{!acc.name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
