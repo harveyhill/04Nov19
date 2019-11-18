@@ -307,8 +307,6 @@ function deleteElement(xArray, index){
     for(i=0; i<xArray.length-1; i++){
         outputString+= " " + xArray[i];
     }
-  
-    console.log('What the fuck is the God Damn outputString? ' + outputString);
     
     document.getElementById("output_field_deleteElement").value = outputString;
     document.getElementById("output_field_deleteElementGetLength").value = " " + xArray.length;
@@ -356,14 +354,12 @@ function spliceElement(xArray){
     for(i=0; i<xArray.length-1;i++){
         outputString += " " + xArray[i];
     }
-    console.log('I HATE JAVA-SCRIPT: ' + outputString);
     document.getElementById("output_field_spliceElement").value = outputString;
 }
 
 function onClickSpliceElementHandler(){
     var arrayList = new Array();
     var inputElements = document.getElementById("enter_field_spliceElement").value;
-    console.log('TEST WORK GOD DAMN YOU!!' + inputElements);
     //need to pull number symbols in string and convert digit-symbols-string individually 
     //into a Number, then push the Number individually each into the Array, one at a time in a for loop
     var convert = "";
@@ -377,9 +373,6 @@ function onClickSpliceElementHandler(){
             console.log('What is the Number atm? ' + n);
             arrayList.push(n);
             convert = "";
-        }
-        for(i=0; i<= arrayList.length-1; i++){
-            console.log('Where is my God Damn Array? ' + arrayList[i]);
         }
     }
     spliceElement(arrayList);
