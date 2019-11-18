@@ -33,93 +33,273 @@
 <BODY>
     <div class="animation-div">
     <div class="center">
-    <h>THE GOLDEN RATIO and The Fibonacci Sequence: The DIVINE SIGNATURE</h>
+    <h>THE GOLDEN RATIO and The Fibonacci Sequence: The DIVINE SIGNATURE of THE UNIVERSE</h>
     <p>This is a tribute page to the Golden Ratio, the Fibonacci Sequence, <br> and a demo of 15 classic functions in JavaScript.</p>
     </div>
 
     <div class="row">
             <div class="column">
-                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-1.gif" height="200" width="280" class="center">
+                <img src="images\proof-of-Gods-Signature-1.gif" height="200" width="280" class="center">
             </div>
             <div class="column">
-                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-3.jpg" height="200" width="280" class="right">
+                <img src="images\proof-of-Gods-Signature-3.jpg" height="200" width="280" class="right">
             </div>
             <div class="column">
-                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-5.jpg" height="200" width="280" class="center">
+                    <img src="images\proof-of-Gods-Signature-5.jpg" height="200" width="280" class="center">
                 </div>
                 <div class="column">
-                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\Gods-Signature-Compilation.jpg" height="200" width="280" class="right">
+                    <img src="images\Gods-Signature-Compilation.jpg" height="200" width="280" class="right">
                 </div>
     </div>
 
     <div class="row">
             <div class="column2">
-                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-4.jpg" height="200" width="280" class="center">
+                <img src="images\proof-of-Gods-Signature-4.jpg" height="200" width="280" class="center">
             </div>
             <div class="column2">
-                <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\fibonacci-hand-Gods-Signature-to-his-Creation-Us.gif" height="200" width="280" class="right">
+                <img src="images\fibonacci-hand-Gods-Signature-to-his-Creation-Us.gif" height="200" width="280" class="right">
             </div>
                 <div class="column2">
-                    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\proof-of-Gods-Signature-2.jpg" height="180" width="220" class="right">
+                    <img src="images\proof-of-Gods-Signature-2.jpg" height="180" width="220" class="right">
                 </div>
     </div>
 
     
-    <img src="C:\Users\redmo\Desktop\REVATURE\Projects\About-Me_WebPage\images\mystery-18-Gods-Signature-golden-ratio-ear-hand-arm.jpg" height="250" width="350" class="center">
+    <img src="images\mystery-18-Gods-Signature-golden-ratio-ear-hand-arm.jpg" height="250" width="350" class="center">
 </div>
-
-
-                <label style="color: red" for="FibonacciSubmit"><b>Number to Fibbonize</b></label>
-                <input type="number" id="FibonacciSubmit" class="form-control col-3" placeholder="Enter Number">
-                <br>
-                <button class="btn btn-danger" id="getFibonacciResult">Submit</button>
-
-                <label style="color: blue " for="FinbonacciResult"><b>Result</b></label>
-                
-                        <input type="text" id="#FibonacciResult" class="form-control col-3" placeholder="Waiting" onclick="window.print()" />
-                        <div id="FibonacciResult"></div>
-                        <p id="FibonacciResult"></p>
-                
-        
-<!--
-<div>
-<input type="number" placeholder="0" id="number">
-</div>
--->
-    
-    <!--
-    <div class="container">
-        <div class="row">
-            <div class="col-lg">
-                Enter Number in Fibonacci Function:
-                <input type="text"
-                       id="myNumber"
-                >
-
-                <button class="btn btn-danger" onclick="fibonacciSequence()">SUBMIT</button>
-
-                <script>
-                        function fibonacciSequence(){
-                            var n = document.getElementById("myNumber").value;
-                            var x = Number(n);
-                            if(x == 0) return 0;
-                            if(x == 1) return 1;
-                            if(x == 2) return 3;
-                        
-                            var result = fibonacciSequence(x-1) + fibonacciSequence(x-2);
-                            var solution = result.toString();
-                            document.getElementById("result").innerHTML = solution;
-                        };
-                </script>
-                <p id="result"></p>
-
+<div class="container">
+    <!--Challenge 1: Web UI For Fibonacci Function-->
+    <div class="row">
+        <div class="col-lg">
+            <label style="color: red" for="enter_field_fib"><b>Enter The nth Number In The Fibonacci Sequence</b></label>
+            <input value="Enter a Number" id="enter_field_fib">
+            <br>
+            <button onclick="onClickFibHandler()" class="btn btn-danger">Submit Fibonacci Number</button>
+        </div>
+        <div class="col-lg"> 
+            <label style="color: red" for="output_field_fib"><b>This Is The nth Number In The Sequence</b></label>
+            <br>
+            <input value="Fibonacci Sequence Output" id="output_field_fib">
+        </div>
     </div>
--->
+    <br>
+    <!--Challenge 2: Web UI For BubbleSort Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:blue" for="enter_field_bubblesort"><b>Enter The Numbers In The Array In This Format: "13,52,80,20," etc.</b></label>
+                <br>
+                <input value="Enter Numbers" id="enter_field_bubblesort">
+                <br>
+                <button onclick="onClickBubbleSortHandler()" class="btn btn-primary mb1 bg-blue">Bubble Sort Numbers In Array</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:blue" for="output_field_bubblesort"><b>These are the sorted numbers, using Bubble Sort</b></label>
+                <br>
+                <input value="Sorted Numbers" id="output_field_bubblesort">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 3: Web UI For ReverseString Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:black" for="enter_field_reverseString"><b>Enter The String</b></label>
+                <br>
+                <input value="Enter STRING" id="enter_field_reverseString">
+                <br>
+                <button onclick="onClickReverseStrHandler()" class="btn btn-danger">REVERSE STRING</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:black" for="output_field_reverseString"><b>Reversed String Here</b></label>
+                <br>
+                <input value="REVERSED STRING" id="output_field_reverseString">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 4: Web UI For Factorial Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:purple" for="enter_field_factorialFunc"><b>Enter a number</b></label>
+                <br>
+                <input value="X!" id="enter_field_factorialFunc">
+                <br>
+                <button onclick="onClickFactorialFunc()" class="btn btn-primary mb1 bg-blue">Get Factorial</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:purple" for="output_field_factorialFunc"><b>Factorial of Number</b></label>
+                <br>
+                <input value="X!=X(X-1)(X--)..." id="output_field_factorialFunc">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 5: Web UI For SubString Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:red" for="enter_field_factorialFunc"><b>Get The Sub-string In a String</b></label>
+                <br>
+                <input value="Enter a String" id="enter_field_getSubStringArg">
+                <input value="Enter the offset in the string, to get the substring" id="enter_field_getSubStringOffset">
+                <br>
+                <button onclick="onClickSubString()" class="btn btn-primary mb1 bg-blue">GET SUBSTRING</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:red" for="output_field_factorialFunc"><b>Factorial of Number</b></label>
+                <br>
+                <input value="SUB-STRING" id="output_field_getSubString">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 6: Web UI For isEven Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:green" for="enter_field_isEven"><b>Check If a Number is Even</b></label>
+                <br>
+                <input value="Enter a Number" id="enter_field_isEven">
+                <br>
+                <button onclick="onClickIsEven()" class="btn btn-primary mb1 bg-blue">IS IT EVEN?</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:green" for="output_field_isEven"><b>Even: Yes or No?</b></label>
+                <br>
+                <input value="???" id="output_field_isEven">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 7: Web UI For Palindrome Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:black" for="enter_field_isPalindrome"><b>Enter The String</b></label>
+                <br>
+                <input value="Enter STRING" id="enter_field_isPalindrome">
+                <br>
+                <button onclick="onClickIsPalindromeHandler()" class="btn btn-danger">Check For Palindrome</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:black" for="output_field_isPalindrome"><b>Check For Palindrome</b></label>
+                <br>
+                <input value="Is It a Palindrome??" id="output_field_isPalindrome">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 8: Web UI For PrintShape Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:purple" for="enter_field_printShapeType"><b>INCOMPLETE!! Enter The Type of Shape: "circle" "rectangle" "square" "triangle" "hexagon" "diamond"</b></label>
+                <br>
+                <input value="Enter Shape Type" id="enter_field_printShapeType">
+                <input value="Enter Shape Height" id="enter_field_printShapeGetHeight">
+                <input value="Enter Shape Character" id="enter_field_printShapeCharacter">
+                <br>
+                <button onclick="onClickPrintShapeHandler()" class="btn btn-primary mb1 bg-blue">PRINT THE SHAPE</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:purple" for="output_field_isPalindrome"><b>Check For Palindrome</b></label>
+                <br>
+                <input value="TEMPORARY STUB FOR PRINT SHAPE!!" id="output_field_printShape">
+            </div>
+    </div>
+    <br>
+    <!--Challenge 9: Web UI For Traverse Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color: red" for="output_field_traverseObjDisplay"><b>TRAVERSE OBJECT</b></label>
+                <input value="Items In Object" id="output_field_traverseObjDisplay">
+                <br>
+                <button onclick="onClickTraverseObjectHandler()" class="btn btn-danger">Traverse Items In Object</button>
+            </div>
+        <br>
+    </div>
+    <br>
+    <!--Challenge 10: Web UI For Delete Element Function-->
+    <div class="row">
+        <div class="col-lg">
+            <label style="color:blue" for="enter_field_deleteElement"><b>Enter The Numbers In The Array In This Format: "13,52,80,20," etc.</b></label>
+            <br>
+            <input value="Enter Numbers" id="enter_field_deleteElement">
+            <br>
+            <button onclick="onClickDeleteElementHandler()" class="btn btn-primary mb1 bg-blue">Delete 3rd Element In Array</button>
+        </div>
+        <div class="col-lg"> 
+            <label style="color:blue" for="output_field_deleteElement"><b>Array With 3rd Element Deleted, and Lenght of Array</b></label>
+            <br>
+            <input value="Array With Deleted Element" id="output_field_deleteElement">
+            <input value="Length of Array" id="output_field_deleteElementGetLength">
+        </div>
+</div>
+<br>
+    <!--Challenge 11: Web UI For Splice Element Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:black" for="enter_field_spliceElement"><b>Splice Element</b></label>
+                <input value="Enter a Number" id="enter_field_spliceElement">
+                <br>
+                <button onclick="onClickSpliceElementHandler()" class="btn btn-danger">Splice Element</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:black" for="output_field_spliceElement"><b>Spliced Element</b></label>
+                <br>
+                <input value="Splice Element Output" id="output_field_spliceElement">
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <!--Challenge 12: Web UI For 'Person' Constructor-Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:purple" for="enter_field_PersonConstructName"><b>Person Class Constructor: Enter Name and Age</b></label>
+                <input value="Enter Person's Name" id="enter_field_PersonConstructName">
+                <input value="Enter Person's Age" id="enter_field_PersonConstructAge">
+                <br>
+                <button onclick="onClickPersonConstructorHanlder()" class="btn btn-danger">Submit Name and Age</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:purple" for="output_field_fib"><b>Name and Age of Person</b></label>
+                <br>
+                <input value="Members Assigned To Person object" id="output_field_PersonObject">
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <!--Challenge 13: Web UI For getPerson Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:red" for="enter_field_getPersonName"><b>Get Person Function</b></label>
+                <input value="The Name" id="enter_field_getPersonName">
+                <input value="The Age" id="enter_field_getPersonAge">
+                <br>
+                <button onclick="onClickGetPersonHandler()" class="btn btn-danger">Submit Search For Get Person</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:red" for="output_field_getPerson"><b>Get Name and Age</b></label>
+                <br>
+                <input value="Name and Age" id="output_field_getPerson">
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <!--Challenge 14: Web DISPLAY FOR UPDATE-TIME Function: Needs to display in the upper right hand corner of Home Page and JS-15-Challenges page-->
     
-
-
+    <!--Challenge 15: Web UI For Descending Order For Digits Function-->
+    <div class="row">
+            <div class="col-lg">
+                <label style="color:black" for="enter_field_descendOrder"><b>Enter at least a 2 Digit Integer, Whole Number</b></label>
+                <input value="Enter a Number" id="enter_field_descendOrder">
+                <br>
+                <button onclick="onClickDescendOrderHandler()" class="btn btn-danger">DIGITS IN DESCENDING ORDER</button>
+            </div>
+            <div class="col-lg"> 
+                <label style="color:black" for="output_field_descendOrder"><b>These are the digits in descending order, highest possible number permutation</b></label>
+                <br>
+                <input value="Output Digits In Descending Order" id="output_field_descendOrder">
+            </div>
+        </div>
+        <br>
+    </div>
     <div class="center">
     <p class="center"><a href="AboutMe.html">HOME</a></p>
     </div>
+
 </BODY>
 </html>

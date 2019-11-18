@@ -1,35 +1,21 @@
 // 15 JavaScript Function Challenges 
 //challenge 1
-//user submits input number with button
-var inputVariable;
-window.onload = function(){
-    document.querySelector('#getFibonacciResult').addEventListener("click", FibonacciStart);
-    console.log('Is this working? CHECK');
-}
 
 function fibonacciSequence(x){
     if(x == 0) return 0;
     if(x == 1) return 1;
-    if(x == 2) return 3;
 
-    var a = 1, b = 0, temp;
+    return fibonacciSequence(x - 1) + fibonacciSequence(x - 2);
+}
 
-    while(x >= 0){
-        temp = a;
-        a += b;
-        b=temp;
-        x--;
-    }
-    return b;
-    //return fibonacciSequence(x-1) + fibonacciSequence(x-2);
-    //document.getElementById('result').innerHTML = result;
-};
+function onClickFibHandler(){
+    var inputNum = document.getElementById("enter_field_fib").value;
+    var n = Number(inputNum); //make sure n input to fib function is number
+    var f = fibonacciSequence(n);
 
-function FibonacciStart() {
-    var fibonacciResult = fibonacciSequence(document.getElementById('FibonacciSubmit'));
-    document.getElementById('FibonacciSubmit') = fibonacciResult;
-    //document.getElementById('FibonacciResult').innerHTML = fibonacciResult;
-};
+    var outputFibSeqNum = f.toString(); //make sure the result displays properly
+    document.getElementById("output_field_fib").value = outputFibSeqNum;
+}
 
 //challenge 2
 function bubbleSort(xArray){
@@ -37,7 +23,8 @@ function bubbleSort(xArray){
     var temp;
     do {
         swapped = false;
-        for (i=0; i < xArray.length()-1; i++) {
+        for (i=0; i < xArray.length-1; i++) {
+            console.log('What is xArray[i] now? ' + xArray[i]);
             if (xArray[i] > xArray[i+1]) {
                 temp = xArray[i];
                 xArray[i] = xArray[i+1];
@@ -46,11 +33,52 @@ function bubbleSort(xArray){
             }
         }
     } while (swapped);
+
+    var outString = "";
+    for(i=0; i<=xArray.length-1; i++){
+        outString+= " " + xArray[i];
+    }
+    document.getElementById("output_field_bubblesort").value = outString;
+}
+
+function onClickBubbleSortHandler(){
+    var arrayList = new Array();
+    var inputElements = document.getElementById("enter_field_bubblesort").value;
+
+    //need to pull number symbols in string and convert digit-symbols-string individually into a Number, then push the Number individually each into the Array, one at a time in a for loop
+    console.log('Show me inputElements: ' + inputElements);
+    var convert = "";
+    for(i=0; i<= inputElements.length-1; i++){
+        console.log('What is the char in the string atm? ' + inputElements[i]);
+        if(inputElements[i] != ','){
+            convert+=inputElements[i];
+            console.log('Show me the convert string atm: ' + convert);
+        }else if((inputElements[i]==',') || (inputElements[i]==';')){
+            var n = Number(convert);
+            console.log('What is the Number atm? ' + n);
+            arrayList.push(n);
+            convert = "";
+        }
+    }
+    for(i=0; i<=arrayList.length-1; i++){
+        console.log('SHOW ME arrayList Elements: ' + arrayList[i]);
+    }
+    bubbleSort(arrayList);
 }
 
 //challenge 3
 function reverseStr(s){
-    return s.split('').reverse().join('');
+    var r = ""; //reversed string
+    for(i=s.length-1; i>=0; i--){
+        r+=s[i]; //append chars of s string into r reversed-string
+    }
+    return r;
+}
+
+function onClickReverseStrHandler(){
+    var inputStr = document.getElementById("enter_field_reverseString").value;
+    var r = reverseStr(inputStr); //the reversed string
+    document.getElementById("output_field_reverseString").value = r;
 }
 
 //challenge 4
@@ -65,31 +93,89 @@ function factorialFunc(n){
     return x;
 }
 
+function onClickFactorialFunc(){
+    var inputNum = document.getElementById("enter_field_factorialFunc").value;
+    var x = Number(inputNum);
+    var f = factorialFunc(x);
+
+    var outputFactorial = f.toString(); //make sure the result displays properly
+    document.getElementById("output_field_factorialFunc").value = outputFactorial;
+}
+
 //challenge 5
 function getSubstring(s, length, offset){
-    if(offset>length){
-        console.log("No U!!");
+    if(isNaN(length) || isNaN(offset)){
+        alert("Incorrect input, enter numbers only");
+    }
+    if((offset>length) || (s.length!=length)){
+        alert("Incorrect input, offset must be less than length AND/OR length must equal string length")
     }
     return s.substring(offset,length);
 }
 
+function onClickSubString(){
+    var inputStr = document.getElementById("enter_field_getSubStringArg").value;
+    var inputOffset = document.getElementById("enter_field_getSubStringOffset").value;
+    
+    var len = inputStr.length;
+    var offset = Number(inputOffset);
+    var output_s = getSubstring(inputStr,len,offset);
+    document.getElementById("output_field_getSubString").value = output_s;
+}
+
 //challenge 6
 function isEven(n){
-    if((n/2)==(n-(n/2)))
-        return true;
-    else
+    //first, check input validation
+    if(isNaN(n)){
+        alert('Incorrect Input, Enter Integers Only Please');
         return false;
+    }
+    if(n !== parseInt(n)){
+        alert('Incorrect Input, Enter Integers Only Please');
+        return false;
+    }
+    if (n===0)
+        return true;
+    else if (n === 1)
+        return false;
+    else if (n < 0)
+        return isEven(-n);
+    else
+        return isEven(n-2);
+}
+
+function onClickIsEven(){
+    var inputNum = document.getElementById("enter_field_isEven").value;
+    var n = Number(inputNum); //make sure n input to fib function is number
+    var verdict = "FALSE: NUMBER IS ODD"; 
+    if(isEven(n))
+       verdict = "TRUE: NUMBER IS EVEN";
+        
+    document.getElementById("output_field_isEven").value = verdict;
 }
 
 //challenge 7
 function isPalindrome(s){
-    var n = s.length();
+    var n = s.length;
+    s = s.toUpperCase();
 
     for(i=0; i<= n/2; i++){
         if(s[i] != s[n-1-i])
             return false;
     }
     return true;
+}
+
+function onClickIsPalindromeHandler(){
+    var inputStr = document.getElementById("enter_field_isPalindrome").value;
+    var p = isPalindrome(inputStr); 
+    var verdict = "";
+    console.log('Test: ' + p);
+    if(p==true)
+        verdict = "TRUE: String Is a Palindrome";
+    else
+        verdict = "FALSE: String Is NOT a Palindrome";
+    document.getElementById("output_field_isPalindrome").value = verdict;
 }
 
 //challenge 8
@@ -179,29 +265,84 @@ function printShape(shape, height, character){
                 console.log("\n"); 
              } 
     }
+
+    //print diamond, the motherfucker... ... ...
+    if(shape = "diamond"){
+        //code stub
+    }
+}
+
+function onClickPrintShapeHandler(){
+    var inputShape = document.getElementById("enter_field_printShapeType").value;
+    var inputHeight = document.getElementById("enter_field_printShapeGetHeight").value;
+    var inputCharacter = document.getElementById("enter_field_printShapeCharacter").value;
+    var h = Number(inputHeight);
+
+    var temp_idea_variable = printShape(inputShape,inputHeight,inputCharacter); //this is not how the shape will print, this variable is just a temporary place holder...
+    document.getElementById("output_field_printShape").value = temp_idea_variable; //again, this is not how the shape will print, this is a place holder ...
 }
 
 
 //challenge 9
+const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+
 function traverseObject(obj){
-    let iter;
-    for(iter of obj){
-        document.querySelector('.output').textContent = iter;
-    }
+    var itemsObj = "";
+    Object.entries(obj).forEach(([key, value]) => {
+        console.log(`${key} ${value}`); 
+        itemsObj += " " + `${key} ${value}`;
+    });
+    return itemsObj;
+}
+
+function onClickTraverseObjectHandler(){
+    var displayObjItems = traverseObject(anObj);
+    document.getElementById("output_field_traverseObjDisplay").value = displayObjItems;
 }
 
 //challenge 10
 function deleteElement(xArray, index){
-     
-    delete array[index]; 
+    delete xArray[index];
+    var outputString = "";
+    for(i=0; i<xArray.length-1; i++){
+        outputString+= " " + xArray[i];
+    }
   
-    console.log(array); 
-    document.querySelector('.output').textContent = array;
+    console.log('What the fuck is the God Damn outputString? ' + outputString);
+    
+    document.getElementById("output_field_deleteElement").value = outputString;
+    document.getElementById("output_field_deleteElementGetLength").value = " " + xArray.length;
+}
+
+function onClickDeleteElementHandler(){
+    var arrayList = new Array();
+    var inputElements = document.getElementById("enter_field_deleteElement").value;
+
+    //need to pull number symbols in string and convert digit-symbols-string individually 
+    //into a Number, then push the Number individually each into the Array, one at a time in a for loop
+    console.log('Show me inputElements: ' + inputElements);
+    var convert = "";
+    for(i=0; i<= inputElements.length-1; i++){
+        console.log('What is the char in the string atm? ' + inputElements[i]);
+        if(inputElements[i] != ','){
+            convert+=inputElements[i];
+            console.log('Show me the convert string atm: ' + convert);
+        }else if((inputElements[i]==',') || (inputElements[i]==';')){
+            var n = Number(convert);
+            console.log('What is the Number atm? ' + n);
+            arrayList.push(n);
+            convert = "";
+        }
+    }
+    for(i=0; i<= arrayList.length-1; i++){
+        console.log('ARRAY LIST: ' + arrayList[i]);
+    }
+    deleteElement(arrayList, 2);
 }
 
 //challenge 11
 function spliceElement(xArray){
-    var length = xArray.length();
+    var length = xArray.length;
 
     console.log("Array length is: " + length);
     if(length < 3){
@@ -210,6 +351,38 @@ function spliceElement(xArray){
         xArray.splice(index, 2);
     }
     console.log("Array length is now: " + length);
+
+    var outputString = "EMPTY";
+    for(i=0; i<xArray.length-1;i++){
+        outputString += " " + xArray[i];
+    }
+    console.log('I HATE JAVA-SCRIPT: ' + outputString);
+    document.getElementById("output_field_spliceElement").value = outputString;
+}
+
+function onClickSpliceElementHandler(){
+    var arrayList = new Array();
+    var inputElements = document.getElementById("enter_field_spliceElement").value;
+    console.log('TEST WORK GOD DAMN YOU!!' + inputElements);
+    //need to pull number symbols in string and convert digit-symbols-string individually 
+    //into a Number, then push the Number individually each into the Array, one at a time in a for loop
+    var convert = "";
+    for(i=0; i<= inputElements.length-1; i++){
+        console.log('What is the char in the string atm? ' + inputElements[i]);
+        if(inputElements[i] != ','){
+            convert+=inputElements[i];
+            console.log('Show me the convert string atm: ' + convert);
+        }else if((inputElements[i]==',') || (inputElements[i]==';')){
+            var n = Number(convert);
+            console.log('What is the Number atm? ' + n);
+            arrayList.push(n);
+            convert = "";
+        }
+        for(i=0; i<= arrayList.length-1; i++){
+            console.log('Where is my God Damn Array? ' + arrayList[i]);
+        }
+    }
+    spliceElement(arrayList);
 }
 
 //challenge 12
@@ -218,12 +391,29 @@ function Person(name, age){
     this.age = age;
 }
 
-var john = new Person("John", 30);
+function onClickPersonConstructorHanlder(){
+    var inputName = document.getElementById("enter_field_PersonConstructName").value;
+    var inputAge = document.getElementById("enter_field_PersonConstructAge").value;
+    
+    var age = Number(inputAge);
+    var employee_1 = new Person(inputName, age);
+    var appendNameAgeOutput = " " + employee_1.name + " " + employee_1.age;
 
+    document.getElementById("output_field_PersonObject").value = appendNameAgeOutput;
+}
 
 //challenge 13
 function getPerson(name, age){
-    return Person.name + " " + Person.age;
+    return " " + name + " " + age;
+}
+
+function onClickGetPersonHandler(){
+    var searchName = document.getElementById("enter_field_getPersonName").value;
+    var searchAge = document.getElementById("enter_field_getPersonAge").value;
+
+    var outputGetPerson = getPerson(searchName,searchAge);
+    console.log('Show me outputGetPerson ' + outputGetPerson);
+    document.getElementById("output_field_getPerson").value = outputGetPerson;
 }
 
 //challenge 14
@@ -242,29 +432,26 @@ function updateTime(){
 }
 
 //challenge 15
-/*
-window.onload = function(){
-    document.querySelector('#getDescendOrderResult').addEventListener("click", this.descendOrderStart);
-}*/
+function descendOrder(t){
+    if(Number.isNaN(t))
+        alert('Incorrect input, please enter Integers, whole numbers only');
+    t = Math.abs(t); // change negative integer to positive
+    let numberArray = t.toString().split('');
 
-function descendOrder(n){
-    var s = 0; //sorted number
-    //check digits from 9 to 0 in the outer loop
-    for(i=9; i >= 0; i--){
-        while(t>0){
-            d=t%10;
-            //checking for greatest digit
-            if(d == i){
-                s *= 10;
-                s += d;
-            }
-            t /= 10; //decriment-quotient of every tens digit in n
-        }
-    return s;
-    }
+    let sorted = numberArray.sort(function(a, b) {
+        return b - a;
+    });
+    console.log('What is -sorted- output? ' + sorted);
+    return  parseInt(sorted.join(''));
 }
 
-function descendOrderStart(){
-    var descendOrderResult = descendOrder(document.querySelector('#DescendOrderSubmit').value);
-    document.querySelector('#DescendOrderResult').value = descendOrderResult;
+function onClickDescendOrderHandler(){
+    var inputNum = document.getElementById("enter_field_descendOrder").value;
+    var n = Number(inputNum); //make sure n input to descendOrder function is an Integer Number ONLY
+    console.log('What is the input number? ' + n);
+    var d = descendOrder(n);
+    console.log('What is the output number? ' + d);
+
+    var outputDescOrdNum = d.toString(); //make sure the result displays properly
+    document.getElementById("output_field_descendOrder").value = outputDescOrdNum;
 }
