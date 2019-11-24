@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <members>Doctor__c</members>
+    <members>Customer__c</members>
+    <members>Appointment__c</members>
+    <name>CustomObject</name>
+  </types>
+  <types>
+    <members>Customer</members>
+    <members>Doctor</members>
+    <name>CustomSite</name>
+  </types>
+    <version>47.0</version>
+</Package>
