@@ -23,8 +23,8 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>cliu.jonathan@gmail.com</siteAdmin>
+    <siteAdmin>francesco.ward@brave-raccoon-ptx7b0.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>franathan-developer-edition</subdomain>
-    <urlPathPrefix>doctor</urlPathPrefix>
+    <urlPathPrefix>Doctor</urlPathPrefix>
 </CustomSite>

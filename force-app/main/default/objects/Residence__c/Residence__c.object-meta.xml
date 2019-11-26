@@ -148,17 +148,18 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>false</enableReports>
+    <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Doctor</label>
+    <label>Residence</label>
     <nameField>
-        <label>Doctor Name</label>
-        <type>Text</type>
+        <displayFormat>Resident-{0000}</displayFormat>
+        <label>Office Location Doctor Name</label>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Doctors</pluralLabel>
+    <pluralLabel>Residence</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
