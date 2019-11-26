@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>medicaldoctor</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>Southern Heart is an insurance organization looking to innovate the industry.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Southern Heart</label>
+    <navType>Standard</navType>
+    <tabs>Office_Location__c</tabs>
+    <tabs>Doctor__c</tabs>
+    <tabs>Customer__c</tabs>
+    <tabs>Appointment__c</tabs>
+    <tabs>Residence__c</tabs>
+    <tabs>standard-Account</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Southern_Heart_UtilityBar</utilityBar>
+</CustomApplication>
