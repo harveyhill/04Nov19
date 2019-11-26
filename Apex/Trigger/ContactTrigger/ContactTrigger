@@ -1,0 +1,24 @@
+trigger ContactTrigger on Contact (before insert, before update, before delete, after delete, after undelete, after update, after insert) {
+    // We have our basic set up for a trigger operating under the one trigger per object practice.
+    if(trigger.isBefore){
+        // We are only operating to check for duplicates currently, so we just call a handler in this branch.
+        if(trigger.isInsert){
+			    ContactTriggerHandler.checkForDuplicates(trigger.new);            	
+        } else if(trigger.isUpdate){
+            
+        } else if(trigger.isDelete){
+            
+        }
+        
+    } else if (trigger.isAfter){
+        if(trigger.isInsert) {
+            
+        } else if(trigger.isUpdate) {
+            
+        } else if(trigger.isDelete) {
+            
+        } else if(trigger.isUndelete) {
+            
+        }
+    }
+}
