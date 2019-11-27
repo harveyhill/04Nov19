@@ -56,7 +56,8 @@
     <name>PermissionSet</name>
   </types>
   <types>
-    <members>Org</members>
+    <!--<members>Org</members>-->
+    <members>Sharing</members>
     <name>Settings</name>
   </types>
     <version>47.0</version>
