@@ -1,5 +1,6 @@
 {
-  "orgName": "Demo company",
+  "orgName": "NPFT Scratch",
   "edition": "Developer",
-  "features": []
+  "features": ["Communities"],
+  "settings": {"communitiesSettings": {"enableNetworksEnabled":true}}
 }
