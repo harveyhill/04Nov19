@@ -19,6 +19,7 @@
   </types>
   <types>
     <members>Doctor Community Login User</members>
+    <!--<members>Imported Admin</members>-->
     <name>Profile</name>
   </types>
   <types>
@@ -56,9 +57,18 @@
     <name>PermissionSet</name>
   </types>
   <types>
-    <!--<members>Org</members>-->
+    <members>Org</members>
     <members>Sharing</members>
     <name>Settings</name>
+  </types>
+  <types>
+    <members>Appointment__c-Appointment Layout</members>
+    <members>Office_Location__c-Office Location Layout</members>
+    <members>Doctor__c-Doctor Layout</members>
+    <members>Customer__c-Customer Layout</members>
+    <members>Residence__c-Residence Layout</members>
+    <members>Account-Account Layout</members>
+    <name>Layout</name>
   </types>
     <version>47.0</version>
 </Package>
