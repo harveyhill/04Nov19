@@ -1,0 +1,87 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Doctor",
+            "Doctors__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Doctor__c",
+                            "referenceId": "Doctor__cRef1"
+                        },
+                        "Name": "Ben Learn",
+                        "Email__c": "blearn@gmail.com",
+                        "Languages_Spoken__c": "Chinese",
+                        "Phone_Number__c": "8654125796",
+                        "Sex__c": "Male",
+                        "Specialty__c": "Neurosurgeon"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Doctor__c",
+                            "referenceId": "Doctor__cRef2"
+                        },
+                        "Name": "Francesco Ward",
+                        "Email__c": "fward@gmail.com",
+                        "Languages_Spoken__c": "English;Chinese",
+                        "Phone_Number__c": "987532587",
+                        "Sex__c": "Male",
+                        "Specialty__c": "Plastic Surgeon"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Doctor__c",
+                            "referenceId": "Doctor__cRef3"
+                        },
+                        "Name": "Simon Jose",
+                        "Email__c": "sjose@gmail.com",
+                        "Languages_Spoken__c": "English;Spanish;Chinese",
+                        "Phone_Number__c": "8527531598",
+                        "Sex__c": "Male",
+                        "Specialty__c": "Family Medicine"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Doctor__c",
+                            "referenceId": "Doctor__cRef4"
+                        },
+                        "Name": "Bailey Dawkins",
+                        "Email__c": "bdawkins@gmail.com",
+                        "Languages_Spoken__c": "English;Spanish",
+                        "Phone_Number__c": "5548659657",
+                        "Sex__c": "Male",
+                        "Specialty__c": "Cardiologist"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Doctor__c",
+                            "referenceId": "Doctor__cRef5"
+                        },
+                        "Name": "Jonathan Liu",
+                        "Email__c": "jliu@gmail.com",
+                        "Languages_Spoken__c": "English",
+                        "Phone_Number__c": "4125879654",
+                        "Sex__c": "Male",
+                        "Specialty__c": "Allergist"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Doctor__c",
+                            "referenceId": "Doctor__cRef6"
+                        },
+                        "Name": "Emily Blunt",
+                        "Email__c": "eblunt@gmail.com",
+                        "Languages_Spoken__c": "English",
+                        "Phone_Number__c": "8569874523",
+                        "Sex__c": "Female",
+                        "Specialty__c": "Orthopedic Specialist"
+                    }
+                ]
+            }
+        }
+    ]
+}
