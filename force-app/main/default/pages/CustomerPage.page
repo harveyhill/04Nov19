@@ -8,7 +8,12 @@
                 <apex:selectList value="{!languagesPref}" multiselect="true">
                     <apex:selectOptions value="{!languagesList}"/>
                 </apex:selectList>
-                <apex:commandButton value="Update" action="{!UpdateList}"/>
+                <apex:commandButton value="Update" action="{!updateList}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection>
+                <apex:dataList value="{!doctorList}" var="doc">
+                    <apex:outputText value="{!doc.name}"/>
+                </apex:dataList>
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>

@@ -30,15 +30,26 @@ public without sharing class CustomerPageController {
     }
     public void updateList()
     {
-        string queryString='SELECT Name, sex__c, specialty__c, languages__c FROM Doctor__c';
+        string queryString='SELECT Name, sex__c, specialty__c, Languages_Spoken__c FROM Doctor__c';
+        boolean multiFilter=false;
         if(sexPref!=null || specialtyPref!=null || languagesPref!=null)
             queryString=queryString+' WHERE';
-        if(sexPref!=null)
-            queryString=queryString+' sex__c'+sexPref;
-        if(specialtyPref!=null)
-            queryString=queryString+' specialty__c'+specialtyPref;
-        if(languagesPref!=null)
-            queryString=queryString+' languages__c'+languagesPref;
-        doctorList=Database.query(querySTring);
+        if(sexPref!=null){
+            queryString=queryString+' sex__c=\''+sexPref+'\'';
+            multifilter=true;
+        }
+        if(specialtyPref!=null){
+            if(multifilter==true)
+                queryString=queryString+ ' AND';
+            queryString=queryString+' specialty__c=\''+specialtyPref+'\'';
+            multifilter=true;
+        }
+        if(languagesPref!=null){
+            if(multifilter==true)
+                queryString=queryString+ ' AND';
+            queryString=queryString+' Languages_Spoken__c=\''+languagesPref+'\'';
+            multifilter=true;
+        }
+        doctorList=Database.query(queryString);
     }
 }
