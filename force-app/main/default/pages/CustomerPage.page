@@ -1,0 +1,12 @@
+<apex:page controller="CustomerPageController">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection title="filters">
+                <apex:selectList value="{!specialty}">
+                    <apex:selectOptions value="{!specialties}"/>
+                </apex:selectList>
+                <apex:commandButton value="Update" action="{!UpdateList}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
