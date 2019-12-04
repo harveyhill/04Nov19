@@ -2,8 +2,8 @@
     <apex:form>
         <apex:pageBlock>
             <apex:pageBlockSection title="filters">
-                <apex:selectList value="{!specialty}">
-                    <apex:selectOptions value="{!specialties}"/>
+                <apex:selectList value="{!specialtyPref}">
+                    <apex:selectOptions value="{!specialtyList}"/>
                 </apex:selectList>
                 <apex:commandButton value="Update" action="{!UpdateList}"/>
             </apex:pageBlockSection>

@@ -1,6 +1,6 @@
 public without sharing class CustomerPageController {
     public list<Doctor__c> doctorList{get;set;}
-    public List<SelectOption> specialties{get
+    public List<SelectOption> specialtyList{get
     {
         List<SelectOption> specialtyOptions=new List<SelectOption>();
         List<Schema.PicklistEntry> specialtyPicklist = Doctor__c.specialty__c.getDescribe().getPickListValues();
@@ -13,23 +13,23 @@ public without sharing class CustomerPageController {
     set;}
 
 
-    string sex{get;set;}
-    public string specialty{get;set;}
-    string languages{get;set;}
+    string sexPref{get;set;}
+    public string specialtyPref{get;set;}
+    string languagesPref{get;set;}
     public CustomerPageController() {
 
     }
     public void updateList()
     {
         string queryString='SELECT Name, sex__c, specialty__c, languages__c FROM Doctor__c';
-        if(sex!=null || specialties!=null || languages!=null)
+        if(sexPref!=null || specialtyPref!=null || languagesPref!=null)
             queryString=queryString+' WHERE';
-        if(sex!=null)
-            queryString=queryString+' sex__c'+sex;
-        if(specialties!=null)
-            queryString=queryString+' specialty__c'+specialties;
-        if(languages!=null)
-            queryString=queryString+' languages__c'+languages;
+        if(sexPref!=null)
+            queryString=queryString+' sex__c'+sexPref;
+        if(specialtyPref!=null)
+            queryString=queryString+' specialty__c'+specialtyPref;
+        if(languagesPref!=null)
+            queryString=queryString+' languages__c'+languagesPref;
         doctorList=Database.query(querySTring);
     }
 }
