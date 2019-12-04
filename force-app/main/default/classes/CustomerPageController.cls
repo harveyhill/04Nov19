@@ -40,9 +40,9 @@ public without sharing class CustomerPageController {
     }
     public void updateList()
     {
-        string queryString='SELECT Name, sex__c, specialty__c, Languages_Spoken__c FROM Doctor__c';
+        string queryString='SELECT Name, sex__c, specialty__c, Languages_Spoken__c, email__c FROM Doctor__c';
         boolean multiFilter=false;
-        if(sexPref!=null || specialtyPref!=null || languagesPref!=null)
+        if(sexPref!=null || specialtyPref!=null || languagesPref.length()>2)
             queryString=queryString+' WHERE';
         if(sexPref!=null){
             queryString=queryString+' sex__c=\''+sexPref+'\'';
@@ -54,7 +54,7 @@ public without sharing class CustomerPageController {
             queryString=queryString+' specialty__c=\''+specialtyPref+'\'';
             multifilter=true;
         }
-        if(languagesPref!=null){
+        if(languagesPref.length()>2){
             if(multifilter==true)
                 queryString=queryString+ ' AND';
             languagesPref=languagesPref.substring(1,languagesPref.length()-1); //gets ride of brackets
