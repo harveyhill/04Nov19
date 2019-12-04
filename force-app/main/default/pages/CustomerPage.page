@@ -2,6 +2,9 @@
     <apex:form >
         <apex:pageBlock >
             <apex:pageBlockSection title="filters">
+                <apex:selectList value="{!sexPref}">
+                    <apex:selectOptions value="{!sexList}"/>
+                </apex:selectList>
                 <apex:selectList value="{!specialtyPref}">
                     <apex:selectOptions value="{!specialtyList}"/>
                 </apex:selectList>

@@ -20,6 +20,16 @@ public without sharing class CustomerPageController {
         }
         return languagesOptions;
     }}
+    public List<SelectOption> sexList{get
+    {
+        List<SelectOption> sexOptions=new List<SelectOption>();
+        List<Schema.PicklistEntry> sexPickList = Doctor__c.sex__c.getDescribe().getPickListValues();
+        for(Schema.PicklistEntry entry: sexPickList)
+        {
+            sexOptions.add(new SelectOption(entry.getValue(),entry.getLabel()));
+        }
+        return sexOptions;
+    }}
 
 
     public string sexPref{get;set;}
