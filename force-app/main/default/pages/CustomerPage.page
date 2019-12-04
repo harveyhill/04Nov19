@@ -5,6 +5,9 @@
                 <apex:selectList value="{!specialtyPref}">
                     <apex:selectOptions value="{!specialtyList}"/>
                 </apex:selectList>
+                <apex:selectList value="{!languagesPref}" multiselect="true">
+                    <apex:selectOptions value="{!languagesList}"/>
+                </apex:selectList>
                 <apex:commandButton value="Update" action="{!UpdateList}"/>
             </apex:pageBlockSection>
         </apex:pageBlock>

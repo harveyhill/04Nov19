@@ -1,5 +1,5 @@
 public without sharing class CustomerPageController {
-    public list<Doctor__c> doctorList{get;set;}
+    public List<Doctor__c> doctorList{get;set;}
     public List<SelectOption> specialtyList{get
     {
         List<SelectOption> specialtyOptions=new List<SelectOption>();
@@ -9,13 +9,22 @@ public without sharing class CustomerPageController {
             specialtyOptions.add(new SelectOption(entry.getValue(),entry.getLabel()));
         }
         return specialtyOptions;
-    }
-    set;}
+    }}
+    public List<SelectOption> languagesList{get
+    {
+        List<SelectOption> languagesOptions=new List<SelectOption>();
+        List<Schema.PicklistEntry> languagesPicklist = Doctor__c.languages_spoken__c.getDescribe().getPickListValues();
+        for(Schema.PicklistEntry entry: languagesPicklist)
+        {
+            languagesOptions.add(new SelectOption(entry.getValue(),entry.getLabel()));
+        }
+        return languagesOptions;
+    }}
 
 
-    string sexPref{get;set;}
+    public string sexPref{get;set;}
     public string specialtyPref{get;set;}
-    string languagesPref{get;set;}
+    public string languagesPref{get;set;}
     public CustomerPageController() {
 
     }
