@@ -1,27 +1,32 @@
 <apex:page controller="CustomerPageController">
     <apex:form >
+        <div style="width:500px">
         <apex:pageBlock >
             <apex:pageBlockSection title="filters">
-                <apex:selectList value="{!sexPref}">
-                    <apex:selectOptions value="{!sexList}"/>
-                </apex:selectList>
-                <apex:selectList value="{!specialtyPref}">
-                    <apex:selectOptions value="{!specialtyList}"/>
-                </apex:selectList>
-                <apex:selectList value="{!languagesPref}" multiselect="true">
-                    <apex:selectOptions value="{!languagesList}"/>
-                </apex:selectList>
-                <apex:commandButton value="Update" action="{!updateList}"/>
-            </apex:pageBlockSection>
-            <apex:pageBlockSection title="Doctor List">
-                <apex:pageBlockTable  value="{!doctorList}" var="doc">
-                    <apex:column  value="{!doc.name}"/>
-                    <apex:column  value="{!doc.sex__c}"/>
-                    <apex:column  value="{!doc.specialty__c}"/>
-                    <apex:column  value="{!doc.Languages_Spoken__c}"/>
-                    <apex:column  value="{!doc.email__c}"/>
-                </apex:pageBlockTable >
-            </apex:pageBlockSection>
+                <apex:pageBlockSectionItem>
+                    <apex:selectList style="height:80px" value="{!sexPref}">
+                        <apex:selectOptions value="{!sexList}"/>
+                    </apex:selectList>
+                    <apex:selectList style="height:80px" value="{!specialtyPref}">
+                        <apex:selectOptions value="{!specialtyList}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:selectList style="height:80px" value="{!languagesPref}" multiselect="true">
+                        <apex:selectOptions value="{!languagesList}"/>
+                    </apex:selectList>
+                    <apex:commandButton value="Update" action="{!updateList}"/>
+                </apex:pageBlockSectionItem>
+                
+           </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!doctorList}" var="doc">
+                <apex:column headervalue="Name" value="{!doc.name}"/>
+                <apex:column headerValue="Sex" value="{!doc.sex__c}"/>
+                <apex:column headerValue="Specialty" value="{!doc.specialty__c}"/>
+                <apex:column headerValue="Languages" value="{!doc.Languages_Spoken__c}"/>
+                <apex:column headerValue="Contact email" value="{!doc.email__c}"/>
+            </apex:pageBlockTable >
         </apex:pageBlock>
+        </div>
     </apex:form>
 </apex:page>
