@@ -1,6 +1,6 @@
 <apex:page controller="CustomerPageController">
-    <apex:form>
-        <apex:pageBlock>
+    <apex:form >
+        <apex:pageBlock >
             <apex:pageBlockSection title="filters">
                 <apex:selectList value="{!specialtyPref}">
                     <apex:selectOptions value="{!specialtyList}"/>
@@ -10,10 +10,10 @@
                 </apex:selectList>
                 <apex:commandButton value="Update" action="{!updateList}"/>
             </apex:pageBlockSection>
-            <apex:pageBlockSection>
-                <apex:dataList value="{!doctorList}" var="doc">
-                    <apex:outputText value="{!doc.name}"/>
-                </apex:dataList>
+            <apex:pageBlockSection title="Doctor List">
+                <apex:pageBlockTable  value="{!doctorList}" var="doc">
+                    <apex:column  value="{!doc.name}"/>
+                </apex:pageBlockTable >
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>

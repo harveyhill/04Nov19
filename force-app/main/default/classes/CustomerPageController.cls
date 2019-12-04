@@ -47,9 +47,12 @@ public without sharing class CustomerPageController {
         if(languagesPref!=null){
             if(multifilter==true)
                 queryString=queryString+ ' AND';
-            queryString=queryString+' Languages_Spoken__c=\''+languagesPref+'\'';
+            languagesPref=languagesPref.substring(1,languagesPref.length()-1); //gets ride of brackets
+            languagesPref=languagesPref.replace(', ',';');
+            queryString=queryString+' Languages_Spoken__c includes(\''+languagesPref+'\')';
             multifilter=true;
         }
+        SYstem.debug(querySTring);
         doctorList=Database.query(queryString);
     }
 }
