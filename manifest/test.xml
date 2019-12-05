@@ -6,17 +6,11 @@
     <members>Appointment__c</members>
     <members>Office_Location__c</members>
     <members>Residence__c</members>
-    <members>Account</members>
     <name>CustomObject</name>
   </types>
   <types>
-    <members>Customer</members>
-    <members>Doctor</members>
-    <name>CustomSite</name>
-  </types>
-  <types>
-    <members>EnableDoctorCommunityUserController</members>
     <members>createNPFTTestData</members>
+    <members>EnableDoctorCommunityUserController</members>
     <name>ApexClass</name>
   </types>
   <types>
@@ -24,18 +18,8 @@
     <name>CustomApplication</name>
   </types>
   <types>
-    <members>Doctor Community Login User</members>
-    <!--<members>Imported Admin</members>-->
-    <name>Profile</name>
-  </types>
-  <types>
     <members>Southern_Heart_UtilityBar</members>
     <name>FlexiPage</name>
-  </types>
-  <types>
-    <members>CommunitiesLanding</members>
-    <members>EnableDoctorCommunityUser</members>
-    <name>ApexPage</name>
   </types>
   <types>
     <members>Office_Location__c</members>
@@ -44,20 +28,6 @@
     <members>Appointment__c</members>
     <members>Residence__c</members>
     <name>CustomTab</name>
-  </types>
-  <types>
-    <members>Doctor</members>
-    <members>Customer</members>
-    <name>Network</name>
-  </types>
-  <types>
-    <members>Doctor_C</members>
-    <members>Customer1</members>
-    <name>SiteDotCom</name>
-  </types>
-  <types>
-    <members>medicaldoctor</members>
-    <name>ContentAsset</name>
   </types>
   <types>
     <members>For_Export</members>
@@ -69,6 +39,10 @@
     <name>Settings</name>
   </types>
   <types>
+    <members>medicaldoctor</members>
+    <name>ContentAsset</name>
+  </types>
+  <types>
     <members>Appointment__c-Appointment Layout</members>
     <members>Office_Location__c-Office Location Layout</members>
     <members>Doctor__c-Doctor Layout</members>
@@ -76,11 +50,6 @@
     <members>Residence__c-Residence Layout</members>
     <members>Account-Account Layout</members>
     <name>Layout</name>
-  </types>
-
-  <types>
-    <members>Doctor__c.Enable_Doctor_Community_User</members>
-    <name>QuickAction</name>
   </types>
     <version>47.0</version>
 </Package>

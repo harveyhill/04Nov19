@@ -155,8 +155,9 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Doctor</label>
     <nameField>
+        <displayFormat>DOC-{0000}</displayFormat>
         <label>Doctor Name</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Doctors</pluralLabel>
     <searchLayouts/>
