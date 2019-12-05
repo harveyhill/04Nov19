@@ -8,7 +8,7 @@
                 <apex:column headerValue="Country" value="{!customer.Country__c}"/>
                 <apex:column headerValue="Firstname" value="{!customer.First_Name__c}"/>
                 <apex:column headerValue="Lastname" value="{!customer.Last_Name__c}"/>
-            </apex:pageBlockTable >
+            </apex:pageBlockTable>
         </apex:pageBlock>
         </div>
     </apex:form>
