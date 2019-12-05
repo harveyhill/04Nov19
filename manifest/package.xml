@@ -6,12 +6,18 @@
     <members>Appointment__c</members>
     <members>Office_Location__c</members>
     <members>Residence__c</members>
+    <members>Account</members>
     <name>CustomObject</name>
   </types>
   <types>
     <members>Customer</members>
     <members>Doctor</members>
     <name>CustomSite</name>
+  </types>
+  <types>
+    <members>EnableDoctorCommunityUserController</members>
+    <members>createNPFTTestData</members>
+    <name>ApexClass</name>
   </types>
   <types>
     <members>Southern_Heart</members>
@@ -28,6 +34,7 @@
   </types>
   <types>
     <members>CommunitiesLanding</members>
+    <members>EnableDoctorCommunityUser</members>
     <name>ApexPage</name>
   </types>
   <types>
@@ -69,6 +76,11 @@
     <members>Residence__c-Residence Layout</members>
     <members>Account-Account Layout</members>
     <name>Layout</name>
+  </types>
+
+  <types>
+    <members>Doctor__c.Enable_Doctor_Community_User</members>
+    <name>QuickAction</name>
   </types>
     <version>47.0</version>
 </Package>
