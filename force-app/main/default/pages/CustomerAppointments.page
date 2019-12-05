@@ -9,10 +9,13 @@
                     </apex:selectList>
                     <apex:commandButton action="{!updateAppointments}" value="Update" />
                 </apex:pageBlockSectionItem>
-                
-           </apex:pageBlockSection>
-
-           
+            </apex:pageBlockSection>    
+          
+        <apex:pageBlockSection>
+            <apex:pageBlockTable value="{!result}" var="appointment">
+                <apex:column headervalue="Start Time: " value="{!appointment.Start_Time__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection> 
         </apex:pageBlock>
         </div>
     </apex:form>
