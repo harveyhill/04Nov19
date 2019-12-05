@@ -236,11 +236,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Customer__c.Full_Adress__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Customer__c.Last_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
