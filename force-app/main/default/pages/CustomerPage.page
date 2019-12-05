@@ -26,6 +26,13 @@
                 <apex:column headerValue="Languages" value="{!doc.Languages_Spoken__c}"/>
                 <apex:column headerValue="Contact email" value="{!doc.email__c}"/>
             </apex:pageBlockTable >
+
+            <!-- doctors picklist -->
+            <apex:selectList style="height:80px">
+                    <apex:selectOptions value="{!doctorAppointmentPicker}"/>
+            </apex:selectList>
+
+
         </apex:pageBlock>
         </div>
     </apex:form>

@@ -1,5 +1,8 @@
 public without sharing class CustomerPageController {
     public List<Doctor__c> doctorList{get;set;}
+
+    public List<SelectOption> doctorAppointmentPicker{get; set;}
+
     public List<SelectOption> specialtyList{get
     {
         List<SelectOption> specialtyOptions=new List<SelectOption>();
@@ -36,8 +39,10 @@ public without sharing class CustomerPageController {
     public string specialtyPref{get;set;}
     public string languagesPref{get;set;}
     public CustomerPageController() {
+        doctorAppointmentPicker = new List<SelectOption>();
 
     }
+
     public void updateList()
     {
         string queryString='SELECT Name, sex__c, specialty__c, Languages_Spoken__c, email__c FROM Doctor__c';
@@ -62,7 +67,17 @@ public without sharing class CustomerPageController {
             queryString=queryString+' Languages_Spoken__c includes(\''+languagesPref+'\')';
             multifilter=true;
         }
-        SYstem.debug(querySTring);
         doctorList=Database.query(queryString);
+       
+
+        doctorAppointmentPicker.clear();
+        for(Doctor__c doc : doctorList)
+        {
+            doctorAppointmentPicker.add(new SelectOption(doc.Id, doc.Name));
+        }
+        
     }
+
+    
+
 }
