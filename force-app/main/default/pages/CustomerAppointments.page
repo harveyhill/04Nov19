@@ -1,0 +1,19 @@
+<apex:page controller="CustomerAppointmentsController">
+    <apex:form >
+        <div style="width:500px">
+        <apex:pageBlock >
+            <apex:pageBlockSection title="filters">
+                <apex:pageBlockSectionItem>
+                    <apex:selectList style="height:80px" value="{!statusPref}" multiselect="true">
+                        <apex:selectOptions value="{!statusList}"/>
+                    </apex:selectList>
+                    <apex:commandButton action="{!updateAppointments}" value="Update" />
+                </apex:pageBlockSectionItem>
+                
+           </apex:pageBlockSection>
+
+           
+        </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>
