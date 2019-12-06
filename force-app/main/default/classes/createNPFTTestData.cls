@@ -17,7 +17,7 @@ public class createNPFTTestData {
 
         // insert account
         Account doctorAccount = new Account(Name='Doctor');
-        insert doctorAccount;
+        upsert doctorAccount;
 
         // grab account
         doctorAccount = [SELECT Id FROM Account WHERE Name='Doctor' LIMIT 1];
@@ -155,5 +155,23 @@ public class createNPFTTestData {
         testResidences.add(new Residence__c(Doctor__c=tempDoctor.Id, Office_Location__c=vhc.id));
         
         insert testResidences;
+    }
+
+    public static void clearTestData(){
+        // delete appointments and residences
+        List<Appointment__c> testAppointments = [SELECT Id FROM Appointment__c];
+        delete testAppointments;
+        List<Residence__c> testResidences = [SELECT Id FROM Residence__c];
+        delete testResidences;
+
+        // delete customers and office locations
+        List<Customer__c> testCustomers = [SELECT Id FROM Customer__c];
+        delete testCustomers;
+        List<Office_Location__c> testOffices = [SELECT Id FROM Office_Location__c];
+        delete testOffices;
+
+        // delete doctor account and doctors
+        List<Doctor__c> testDoctors = [SELECT Id FROM Doctor__c];
+        delete testDoctors;
     }
 }
