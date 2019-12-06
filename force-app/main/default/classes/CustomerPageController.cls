@@ -38,6 +38,10 @@ public without sharing class CustomerPageController {
     public string sexPref{get;set;}
     public string specialtyPref{get;set;}
     public string languagesPref{get;set;}
+    public DateTime appointmentStartTime{get;set;}
+    public string appointmentDescription{get;set;}
+    public string appointmentDoctor{get;set;}
+    public string outputMessage{get;set;}
     public CustomerPageController() {
         doctorAppointmentPicker = new List<SelectOption>();
 
@@ -74,8 +78,30 @@ public without sharing class CustomerPageController {
         for(Doctor__c doc : doctorList)
         {
             doctorAppointmentPicker.add(new SelectOption(doc.Id, doc.Name));
+        }       
+    }
+    public void scheduleAppointment(){
+        if(appointmentStartTime==null){
+            outputMessage='Please select an appointment time';
+            return;
         }
-        
+        else if (appointmentDoctor==null){
+            outputMessage='Please select a doctor. If there are no doctors in the list, search for one first';
+        }
+        appointment__c newAppointment=new appointment__C();
+        List<customer__c> customerList=[SELECT id FROM Customer__c where user__C=:UserInfo.getUserId()];
+        if(customerList.size()>0)
+            newAppointment.customer__c=customerList.get(0).id;
+        newAppointment.Description__c=appointmentDescription;
+        newAppointment.Doctor__c=appointmentDoctor;
+        newAppointment.start_time__c=appointmentStartTime;
+        newAppointment.Status__c='Pending';
+        try{
+            insert newAppointment;
+        }
+        catch(exception e){
+            outputMessage='Server error: Could not schedule appointment. Error:'+e.getMessage();
+        }
     }
 
     

@@ -23,8 +23,9 @@ public without sharing class CustomerAppointmentsController {
         if(statusPref.length()>2){
             queryString += ' WHERE';
             statusPref=statusPref.substring(1,statusPref.length()-1); //gets ride of brackets
-            statusPref=statusPref.replace(', ',';');
-            queryString=queryString+' Status__c includes(\''+statusPref+'\')';
+            statusPref=statusPref.replace(', ','\',\'');
+            queryString=queryString+' Status__c IN(\''+statusPref+'\')';
+            System.debug(queryString);
         }
         result = Database.query(queryString);
     }
