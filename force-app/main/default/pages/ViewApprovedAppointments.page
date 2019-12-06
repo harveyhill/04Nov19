@@ -1,0 +1,11 @@
+<apex:page controller="DoctorController">
+	<apex:pageBlock >
+        <apex:pageBlockTable width="100%" columnsWidth="20%,20%,20%,20%,20%" value="{! approvedappointments }" var="app">
+            <apex:column value="{! app.Name }"/>
+            <apex:column value="{! app.Start_Time__c }"/>
+            <apex:column value="{! app.End_Time__c }"/>
+            <apex:column value="{! app.Customer__c }"/>
+            <apex:column value="{! app.Description__c }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
