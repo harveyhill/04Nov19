@@ -24,12 +24,12 @@ public class createNPFTTestData {
 
         // insert contacts for each doctor
         List<Contact> testContacts = new List<Contact>();
-        testContacts.add(new Contact(FirstName='Ben', LastName='Learn', Account=doctorAccount));
-        testContacts.add(new Contact(FirstName='Francesco', LastName='Ward', Account=doctorAccount));
-        testContacts.add(new Contact(FirstName='Simon', LastName='Jose', Account=doctorAccount));
-        testContacts.add(new Contact(FirstName='Bailey', LastName='Dawkins', Account=doctorAccount));
-        testContacts.add(new Contact(FirstName='Jonathan', LastName='Liu', Account=doctorAccount));
-        testContacts.add(new Contact(FirstName='Emily', LastName='Blunt', Account=doctorAccount));
+        testContacts.add(new Contact(FirstName='Ben', LastName='Learn', AccountId=doctorAccount.Id));
+        testContacts.add(new Contact(FirstName='Francesco', LastName='Ward', AccountId=doctorAccount.Id));
+        testContacts.add(new Contact(FirstName='Simon', LastName='Jose', AccountId=doctorAccount.Id));
+        testContacts.add(new Contact(FirstName='Bailey', LastName='Dawkins', AccountId=doctorAccount.Id));
+        testContacts.add(new Contact(FirstName='Jonathan', LastName='Liu', AccountId=doctorAccount.Id));
+        testContacts.add(new Contact(FirstName='Emily', LastName='Blunt', AccountId=doctorAccount.Id));
 
         insert testContacts;
 
