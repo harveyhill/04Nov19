@@ -89,8 +89,9 @@ public without sharing class CustomerPageController {
             outputMessage='Please select a doctor. If there are no doctors in the list, search for one first';
         }
         appointment__c newAppointment=new appointment__C();
-        
-        newAppointment.customer__c=[SELECT id FROM Customer__c where user__C=:UserInfo.getUserId()].get(0).id;
+        List<customer__c> customerList=[SELECT id FROM Customer__c where user__C=:UserInfo.getUserId()];
+        if(customerList.size()>0)
+            newAppointment.customer__c=customerList.get(0).id;
         newAppointment.Description__c=appointmentDescription;
         newAppointment.Doctor__c=appointmentDoctor;
         newAppointment.start_time__c=appointmentStartTime;
