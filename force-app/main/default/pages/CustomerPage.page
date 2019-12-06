@@ -1,9 +1,9 @@
-<apex:page controller="CustomerPageController">
+<apex:page controller="CustomerPageController" docType="html-5.0">
     <apex:form >
         <div style="width:500px">
         <apex:pageBlock >
             <apex:pageBlockSection title="filters">
-                <apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
                     <apex:selectList style="height:80px" value="{!sexPref}">
                         <apex:selectOptions value="{!sexList}"/>
                     </apex:selectList>
@@ -11,7 +11,7 @@
                         <apex:selectOptions value="{!specialtyList}"/>
                     </apex:selectList>
                 </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
                     <apex:selectList style="height:80px" value="{!languagesPref}" multiselect="true">
                         <apex:selectOptions value="{!languagesList}"/>
                     </apex:selectList>
@@ -21,16 +21,23 @@
            </apex:pageBlockSection>
             <apex:pageBlockTable value="{!doctorList}" var="doc">
                 <apex:column headervalue="Name" value="{!doc.name}"/>
-                <apex:column headerValue="Sex" value="{!doc.sex__c}"/>
-                <apex:column headerValue="Specialty" value="{!doc.specialty__c}"/>
+                <apex:column headerValue="Sex" value="{!doc.Sex__c}"/>
+                <apex:column headerValue="Specialty" value="{!doc.Specialty__c}"/>
                 <apex:column headerValue="Languages" value="{!doc.Languages_Spoken__c}"/>
-                <apex:column headerValue="Contact email" value="{!doc.email__c}"/>
-            </apex:pageBlockTable >
+                <apex:column headerValue="Contact email" value="{!doc.Email__c}"/>
+            </apex:pageBlockTable>
 
             <!-- doctors picklist -->
-            <apex:selectList style="height:80px">
+            Doctor:
+            <apex:selectList>
                     <apex:selectOptions value="{!doctorAppointmentPicker}"/>
             </apex:selectList>
+            Date and time:
+            <apex:input type="datetime-local" value="{!appointmentStartTime}"/>
+            Appointment description:
+            <apex:input type="text" value="{!appointmentDescription}"/>
+            <apex:commandButton value="Schedule" action="{!scheduleAppointment}"/>
+            <apex:outputText value="{!outputMessage}"/>
 
 
         </apex:pageBlock>
