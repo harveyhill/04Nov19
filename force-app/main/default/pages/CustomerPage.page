@@ -29,7 +29,7 @@
 
             <!-- doctors picklist -->
             Doctor:
-            <apex:selectList>
+            <apex:selectList value="{!appointmentDoctor}">
                     <apex:selectOptions value="{!doctorAppointmentPicker}"/>
             </apex:selectList>
             Date and time:
