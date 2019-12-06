@@ -19,7 +19,7 @@ public without sharing class CustomerAppointmentsController {
 
     public void updateAppointments()
     {
-        string queryString='SELECT Description__c, Doctor__c, Status__c, Start_Time__c FROM Appointment__c';
+        string queryString='SELECT Description__c, Doctor__c, Status__c, Start_Time__c, Doctor__r.name FROM Appointment__c';
         if(statusPref.length()>2){
             queryString += ' WHERE';
             statusPref=statusPref.substring(1,statusPref.length()-1); //gets ride of brackets

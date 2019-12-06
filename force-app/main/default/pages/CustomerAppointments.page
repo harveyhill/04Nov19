@@ -14,6 +14,8 @@
         <apex:pageBlockSection>
             <apex:pageBlockTable value="{!result}" var="appointment">
                 <apex:column headervalue="Start Time: " value="{!appointment.Start_Time__c}"/>
+                <apex:column headervalue="Status: " value="{!appointment.Status__c}"/>
+                <apex:column headervalue="Doctor name: " value="{!appointment.Doctor__r.name}"/>
             </apex:pageBlockTable>
         </apex:pageBlockSection> 
         </apex:pageBlock>
