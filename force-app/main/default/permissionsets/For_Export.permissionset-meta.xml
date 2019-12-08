@@ -229,6 +229,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Customer__c.Full_Adress__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Customer__c.Last_Name__c</field>
         <readable>true</readable>
@@ -312,6 +317,11 @@
         <editable>false</editable>
         <field>Office_Location__c.Full_Address__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Office_Location__c.Number_of_Doctors__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

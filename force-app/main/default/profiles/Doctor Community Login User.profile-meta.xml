@@ -6,6 +6,10 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>DoctorController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>EnableDoctorCommunityUserController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -227,11 +231,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Customer__c.FullName__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Customer__c.Full_Address__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Customer__c.Full_Adress__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -321,6 +330,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Office_Location__c.Number_of_Doctors__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Office_Location__c.State__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -366,7 +380,19 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>DoctorDetails</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>EnableDoctorCommunityUser</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>ViewApprovedAppointments</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>ViewPendingAppointments</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <tabVisibilities>

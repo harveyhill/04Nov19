@@ -9,14 +9,15 @@
     <members>Account</members>
     <name>CustomObject</name>
   </types>
-  <types>
+  <!--<types>
     <members>Customer</members>
     <members>Doctor</members>
     <name>CustomSite</name>
-  </types>
+  </types>-->
   <types>
     <members>EnableDoctorCommunityUserController</members>
     <members>createNPFTTestData</members>
+    <members>DoctorController</members>
     <name>ApexClass</name>
   </types>
   <types>
@@ -35,6 +36,9 @@
   <types>
     <members>CommunitiesLanding</members>
     <members>EnableDoctorCommunityUser</members>
+    <members>DoctorDetails</members>
+    <members>ViewApprovedAppointments</members>
+    <members>ViewPendingAppointments</members>
     <name>ApexPage</name>
   </types>
   <types>

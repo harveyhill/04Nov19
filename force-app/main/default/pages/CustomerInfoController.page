@@ -1,0 +1,15 @@
+<apex:page controller="CustomerInfoController">
+    <apex:form >
+        <div style="width:500px">
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!customerInfo}" var="customer">
+                <apex:column headervalue="Age" value="{!customer.Age__c}"/>
+                <apex:column headerValue="City" value="{!customer.City__c}"/>
+                <apex:column headerValue="Country" value="{!customer.Country__c}"/>
+                <apex:column headerValue="Firstname" value="{!customer.First_Name__c}"/>
+                <apex:column headerValue="Lastname" value="{!customer.Last_Name__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>
