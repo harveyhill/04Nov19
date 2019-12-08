@@ -5,6 +5,8 @@ public with sharing class DoctorController {
     User user = database.query('Select FirstName, LastName From User Where ID=\'' + UserID + '\' Limit 1');
    	Doctor__c doctor = database.query('Select Name, ID, First_Name__c, Last_Name__c, Specialty__c, Email__c From Doctor__c Where Last_Name__c=\'' + user.LastName + '\' Limit 1');
     public Appointment__c returnedApp {Get; Set { returnedApp = value; }}
+    public Boolean isRendered;
+    public String cancellationMessage {get; set;}
      
     
     // Query for Docter using last name of the user logged in
@@ -56,9 +58,28 @@ public with sharing class DoctorController {
     
     //Status updates to Cancelled
     public void CancelAppointment() {
-        ID appID = (ID) choosenApp;
-        Appointment__c app = database.query('Select Name, Start_Time__c, End_Time__c, Customer__r.FullName__c, Description__c, status__c From Appointment__c Where Id=:appID');
-        app.Status__c = 'Cancelled';
-        update app;
+        if(this.cancellationMessage != ''){
+            ID appID = (ID) choosenApp;
+            Appointment__c app = database.query('Select Name, Start_Time__c, End_Time__c, Customer__r.FullName__c, Description__c, status__c From Appointment__c Where Id=:appID');
+            app.Status__c = 'Cancelled';
+            app.Description__c = app.Description__c + '\n Cancellation Message: ' + this.cancellationMessage;
+            update app;
+        }
+
+    }
+
+    // show input rejection box
+    public void displayRejectionInput(){
+        setIsRendered(true);
+    }
+    // controlling input field for doctor to entire cancellation message
+    public Boolean getIsRendered(){
+        return this.isRendered;
+    }
+    public void setIsRendered(){
+        this.isRendered = false;
+    }
+    public void setIsRendered(Boolean isRendered){
+        this.isRendered = isRendered;
     }
 }

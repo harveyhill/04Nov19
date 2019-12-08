@@ -1,5 +1,5 @@
 <apex:page controller="DoctorController">
-	<apex:pageBlock >
+    <apex:pageBlock >
         <apex:pageBlockTable width="100%" columnsWidth="25%,25%,25%,25%" value="{! doctor }" var="doc">
             <apex:column value="{! doc.First_Name__c }"/>
             <apex:column value="{! doc.Last_Name__c }"/>

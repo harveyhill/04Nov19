@@ -15,8 +15,15 @@
             <table>
                 <column><apex:commandButton value="View Appointment Details" action="{! ViewAppointmentDetails}" /></column>
                 <column><apex:commandButton value="Accept" action="{! AcceptAppointment}" /></column>
-                <column><apex:commandButton value="Cancel" action="{! CancelAppointment}" /></column>
+                <column><apex:commandButton value="Cancel" action="{! displayRejectionInput}" /></column>
             </table>
+        </apex:form>
+        <apex:form >
+            <br/>
+            <apex:outputLabel value="Please enter a message detailing the reason for cancellation." rendered="{!isRendered}"/>
+            <br/>
+            <apex:inputText rendered="{!isRendered}" value="{!cancellationMessage}"/>
+            <apex:commandButton value="Submit" rendered="{!isRendered}" action="{!CancelAppointment}"/>
         </apex:form>
     </apex:pageBlock>
 </apex:page>

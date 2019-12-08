@@ -34,6 +34,10 @@
                 <behavior>Edit</behavior>
                 <field>Zip_Postal_Code__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Number_of_Doctors__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

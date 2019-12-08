@@ -319,6 +319,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Office_Location__c.Number_of_Doctors__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Office_Location__c.State__c</field>
         <readable>true</readable>
