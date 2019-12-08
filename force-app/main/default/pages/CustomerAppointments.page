@@ -16,6 +16,7 @@
                 <apex:column headervalue="Start Time: " value="{!appointment.Start_Time__c}"/>
                 <apex:column headervalue="Status: " value="{!appointment.Status__c}"/>
                 <apex:column headervalue="Doctor name: " value="{!appointment.Doctor__r.name}"/>
+                <apex:column headervalue="Description: " value="{!appointment.Description__c}"/>
             </apex:pageBlockTable>
         </apex:pageBlockSection> 
         </apex:pageBlock>
