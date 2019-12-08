@@ -1,82 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>CustomerAppointmentsController</members>
-		<members>CustomerInfoController</members>
-		<members>CustomerPageController</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>CommunitiesLanding</members>
-		<members>CustomerAppointments</members>
-		<members>CustomerInfoController</members>
-		<members>CustomerPage</members>
-		<name>ApexPage</name>
-	</types>
-	<types>
-		<members>medicaldoctor</members>
-		<name>ContentAsset</name>
-	</types>
-	<types>
-		<members>Southern_Heart</members>
-		<name>CustomApplication</name>
-	</types>
-	<types>
-		<members>Appointment__c</members>
-		<members>Customer__c</members>
-		<members>Doctor__c</members>
-		<members>Office_Location__c</members>
-		<members>Residence__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>Customer</members>
-		<members>Doctor</members>
-		<name>CustomSite</name>
-	</types>
-	<types>
-		<members>Appointment__c</members>
-		<members>Customer__c</members>
-		<members>Doctor__c</members>
-		<members>Office_Location__c</members>
-		<members>Residence__c</members>
-		<name>CustomTab</name>
-	</types>
-	<types>
-		<members>Southern_Heart_UtilityBar</members>
-		<name>FlexiPage</name>
-	</types>
-	<types>
-		<members>Account-Account Layout</members>
-		<members>Appointment__c-Appointment Layout</members>
-		<members>Customer__c-Customer Layout</members>
-		<members>Doctor__c-Doctor Layout</members>
-		<members>Office_Location__c-Office Location Layout</members>
-		<members>Residence__c-Residence Layout</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>Customer</members>
-		<members>Doctor</members>
-		<name>Network</name>
-	</types>
-	<types>
-		<members>For_Export</members>
-		<name>PermissionSet</name>
-	</types>
-	<types>
-		<members>Doctor Community Login User</members>
-		<name>Profile</name>
-	</types>
-	<types>
-		<members>Org</members>
-		<members>Sharing</members>
-		<name>Settings</name>
-	</types>
-	<types>
-		<members>Customer1</members>
-		<members>Doctor_C</members>
-		<name>SiteDotCom</name>
-	</types>
-	<version>46.0</version>
+  <types>
+    <members>Doctor__c</members>
+    <members>Customer__c</members>
+    <members>Appointment__c</members>
+    <members>Office_Location__c</members>
+    <members>Residence__c</members>
+    <members>Account</members>
+    <name>CustomObject</name>
+  </types>
+  <!--<types>
+    <members>Customer</members>
+    <members>Doctor</members>
+    <name>CustomSite</name>
+  </types>-->
+  <types>
+    <members>EnableDoctorCommunityUserController</members>
+    <members>createNPFTTestData</members>
+    <members>DoctorController</members>
+    <name>ApexClass</name>
+  </types>
+  <types>
+    <members>Southern_Heart</members>
+    <name>CustomApplication</name>
+  </types>
+  <types>
+    <members>Doctor Community Login User</members>
+    <!--<members>Imported Admin</members>-->
+    <name>Profile</name>
+  </types>
+  <types>
+    <members>Southern_Heart_UtilityBar</members>
+    <name>FlexiPage</name>
+  </types>
+  <types>
+    <members>CommunitiesLanding</members>
+    <members>EnableDoctorCommunityUser</members>
+    <members>DoctorDetails</members>
+    <members>ViewApprovedAppointments</members>
+    <members>ViewPendingAppointments</members>
+    <name>ApexPage</name>
+  </types>
+  <types>
+    <members>Office_Location__c</members>
+    <members>Doctor__c</members>
+    <members>Customer__c</members>
+    <members>Appointment__c</members>
+    <members>Residence__c</members>
+    <name>CustomTab</name>
+  </types>
+  <types>
+    <members>Doctor</members>
+    <members>Customer</members>
+    <name>Network</name>
+  </types>
+  <types>
+    <members>Doctor_C</members>
+    <members>Customer1</members>
+    <name>SiteDotCom</name>
+  </types>
+  <types>
+    <members>medicaldoctor</members>
+    <name>ContentAsset</name>
+  </types>
+  <types>
+    <members>For_Export</members>
+    <name>PermissionSet</name>
+  </types>
+  <types>
+    <members>Org</members>
+    <members>Sharing</members>
+    <name>Settings</name>
+  </types>
+  <types>
+    <members>Appointment__c-Appointment Layout</members>
+    <members>Office_Location__c-Office Location Layout</members>
+    <members>Doctor__c-Doctor Layout</members>
+    <members>Customer__c-Customer Layout</members>
+    <members>Residence__c-Residence Layout</members>
+    <members>Account-Account Layout</members>
+    <name>Layout</name>
+  </types>
+
+  <types>
+    <members>Doctor__c.Enable_Doctor_Community_User</members>
+    <name>QuickAction</name>
+  </types>
+    <version>47.0</version>
 </Package>

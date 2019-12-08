@@ -1,0 +1,5 @@
+<apex:page standardcontroller="Doctor__c" extensions="EnableDoctorCommunityUserController">
+    <apex:form >
+        <apex:commandButton value="Enable Doctor Community User" action="{!makeDoctorUser}"/>
+    </apex:form>
+</apex:page>
