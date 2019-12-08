@@ -8,6 +8,7 @@
 
 # VS files
 .vscode
+vsc workspace.code-workspace
 
 # Logs
 logs
