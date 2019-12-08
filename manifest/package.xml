@@ -17,6 +17,7 @@
   <types>
     <members>EnableDoctorCommunityUserController</members>
     <members>createNPFTTestData</members>
+    <members>DoctorController</members>
     <name>ApexClass</name>
   </types>
   <types>
@@ -38,7 +39,6 @@
     <members>DoctorDetails</members>
     <members>ViewApprovedAppointments</members>
     <members>ViewPendingAppointments</members>
-    <members>DoctorController</members>
     <name>ApexPage</name>
   </types>
   <types>
