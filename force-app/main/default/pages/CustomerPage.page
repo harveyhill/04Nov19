@@ -1,4 +1,5 @@
 <apex:page controller="CustomerPageController" docType="html-5.0">
+    Request an Appointment
     <apex:form >
         <div style="width:500px">
         <apex:pageBlock >
@@ -20,7 +21,7 @@
                 
            </apex:pageBlockSection>
             <apex:pageBlockTable value="{!doctorList}" var="doc">
-                <apex:column headervalue="Name" value="{!doc.name}"/>
+                <apex:column headervalue="Name" value="{!doc.First_Name__c} {!doc.Last_Name__c}"/>
                 <apex:column headerValue="Sex" value="{!doc.Sex__c}"/>
                 <apex:column headerValue="Specialty" value="{!doc.Specialty__c}"/>
                 <apex:column headerValue="Languages" value="{!doc.Languages_Spoken__c}"/>

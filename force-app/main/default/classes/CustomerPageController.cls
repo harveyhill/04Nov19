@@ -49,7 +49,7 @@ public without sharing class CustomerPageController {
 
     public void updateList()
     {
-        string queryString='SELECT Name, sex__c, specialty__c, Languages_Spoken__c, email__c FROM Doctor__c';
+        string queryString='SELECT first_name__c, last_name__c , sex__c, specialty__c, Languages_Spoken__c, email__c FROM Doctor__c';
         boolean multiFilter=false;
         if(sexPref!=null || specialtyPref!=null || languagesPref.length()>2)
             queryString=queryString+' WHERE';
@@ -77,7 +77,9 @@ public without sharing class CustomerPageController {
         doctorAppointmentPicker.clear();
         for(Doctor__c doc : doctorList)
         {
-            doctorAppointmentPicker.add(new SelectOption(doc.Id, doc.Name));
+            List<Residence__c> residenceList=[Select office_location__r.id, office_location__r.Full_Address__c FROM Residence__C Where Doctor__r.id = :doc.id];
+            for(Residence__c residence:residenceList)
+                doctorAppointmentPicker.add(new SelectOption(doc.Id+' '+residence.id, doc.first_name__c + ' '+doc.last_name__c+' '+residence.office_location__r.Full_Address__c));
         }       
     }
     public void scheduleAppointment(){
@@ -93,8 +95,9 @@ public without sharing class CustomerPageController {
         if(customerList.size()>0)
             newAppointment.customer__c=customerList.get(0).id;
         newAppointment.Description__c=appointmentDescription;
-        newAppointment.Doctor__c=appointmentDoctor;
+        newAppointment.Doctor__c=appointmentDoctor.split(' ')[0];
         newAppointment.start_time__c=appointmentStartTime;
+        newAppointment.location__c=appointmentDoctor.split(' ')[1];
         newAppointment.Status__c='Pending';
         try{
             insert newAppointment;

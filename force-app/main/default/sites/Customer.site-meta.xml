@@ -23,8 +23,8 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>blearn5241@playful-badger-koppx4.com</siteAdmin>
+    <siteAdmin>blearn5241@curious-otter-ezvems.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>brl112919-developer-edition</subdomain>
+    <subdomain>finalnpft-developer-edition</subdomain>
     <urlPathPrefix>Customer</urlPathPrefix>
 </CustomSite>
