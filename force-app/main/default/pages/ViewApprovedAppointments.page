@@ -1,11 +1,15 @@
 <apex:page controller="DoctorController">
+    My Approved Appointments
     <apex:pageBlock >
+        <apex:form >
         <apex:pageBlockTable width="100%" columnsWidth="20%,20%,20%,20%,20%" value="{! approvedappointments }" var="app">
             <apex:column value="{! app.Name }"/>
             <apex:column value="{! app.Start_Time__c }"/>
-            <apex:column value="{! app.End_Time__c }"/>
-            <apex:column value="{! app.Customer__c }"/>
+            <apex:column value="{! app.Customer__r.FullName__c }"/>
             <apex:column value="{! app.Description__c }"/>
+            <apex:column value="{! app.Location__r.Office_Location__r.Name}"/>
         </apex:pageBlockTable>
+        <apex:commandButton value="Update" action="{!getApprovedAppointments}"/>
+        </apex:form>
     </apex:pageBlock>
 </apex:page>

@@ -100,25 +100,25 @@ public class createNPFTTestData {
         Customer__c tempCustomer;
 
         tempDoctor = [SELECT Id FROM Doctor__c WHERE First_Name__c='Ben' AND Last_Name__c='Learn' LIMIT 1];
-        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='JohnBig' LIMIT 1];
+        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='John Big' LIMIT 1];
         testAppointments.add(new Appointment__c(Doctor__c=tempDoctor.Id, Customer__c=tempCustomer.Id, 
                                                 Start_Time__c=DateTime.newInstance(2019, 11, 28, 13, 0, 0), 
                                                 End_Time__c=DateTime.newInstance(2019, 11, 28, 14, 0, 0)));
 
         tempDoctor = [SELECT Id FROM Doctor__c WHERE First_Name__c='Bailey' AND Last_Name__c='Dawkins' LIMIT 1];
-        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='HarveyHill' LIMIT 1];
+        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='Harvey Hill' LIMIT 1];
         testAppointments.add(new Appointment__c(Doctor__c=tempDoctor.Id, Customer__c=tempCustomer.Id, 
                                                 Start_Time__c=DateTime.newInstance(2019, 11, 29, 10, 0, 0), 
                                                 End_Time__c=DateTime.newInstance(2019, 11, 29, 11, 0, 0)));
         
         tempDoctor = [SELECT Id FROM Doctor__c WHERE First_Name__c='Simon' AND Last_Name__c='Jose' LIMIT 1];
-        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='TomHanks' LIMIT 1];
+        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='Tom Hanks' LIMIT 1];
         testAppointments.add(new Appointment__c(Doctor__c=tempDoctor.Id, Customer__c=tempCustomer.Id, 
                                                 Start_Time__c=DateTime.newInstance(2019, 11, 26, 16, 0, 0), 
                                                 End_Time__c=DateTime.newInstance(2019, 11, 26, 17, 0, 0)));
 
         tempDoctor = [SELECT Id FROM Doctor__c WHERE First_Name__c='Francesco' AND Last_Name__c='Ward' LIMIT 1];
-        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='TomHanks' LIMIT 1];
+        tempCustomer = [SELECT Id FROM Customer__c WHERE FullName__c='Tom Hanks' LIMIT 1];
         testAppointments.add(new Appointment__c(Doctor__c=tempDoctor.Id, Customer__c=tempCustomer.Id, 
                                                 Start_Time__c=DateTime.newInstance(2019, 11, 20, 12, 0, 0), 
                                                 End_Time__c=DateTime.newInstance(2019, 11, 20, 13, 0, 0)));
@@ -143,6 +143,7 @@ public class createNPFTTestData {
         tempDoctor = [SELECT Id FROM Doctor__c WHERE First_Name__c='Bailey' AND Last_Name__c='Dawkins' LIMIT 1];
         testResidences.add(new Residence__c(Doctor__c=tempDoctor.Id, Office_Location__c=ro.id));
         testResidences.add(new Residence__c(Doctor__c=tempDoctor.Id, Office_Location__c=vhc.id));
+        testResidences.add(new Residence__c(Doctor__c=tempDoctor.Id, Office_Location__c=sh.id));
 
         tempDoctor = [SELECT Id FROM Doctor__c WHERE First_Name__c='Francesco' AND Last_Name__c='Ward' LIMIT 1];
         testResidences.add(new Residence__c(Doctor__c=tempDoctor.Id, Office_Location__c=ro.id));
