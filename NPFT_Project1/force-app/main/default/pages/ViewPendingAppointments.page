@@ -1,0 +1,31 @@
+<apex:page controller="DoctorController">
+    My Appointment Requests
+    <apex:pageBlock >
+        <apex:form >
+            <apex:selectList value="{! choosenApp }" multiselect="false">
+                <apex:selectOptions value="{! pendingAppointments }"></apex:selectOptions>
+            </apex:selectList>
+            
+            <apex:pageBlockTable width="100%" columnsWidth="20%,20%,20%,20%,20%" value="{! returnedApp }" var="app">
+                <apex:column value="{! app.Name }"/>
+                <apex:column value="{! app.Start_Time__c }"/>
+                <apex:column value="{! app.End_Time__c }"/>
+                <apex:column value="{! app.Customer__r.FullName__c }"/>
+                <apex:column value="{! app.Description__c }"/>
+                <apex:column value="{! app.Location__r.Name}"/>
+            </apex:pageBlockTable>
+            <table>
+                <column><apex:commandButton value="View Appointment Details" action="{! ViewAppointmentDetails}" /></column>
+                <column><apex:commandButton value="Accept" action="{! AcceptAppointment}" /></column>
+                <column><apex:commandButton value="Cancel" action="{! displayRejectionInput}" /></column>
+            </table>
+        </apex:form>
+        <apex:form >
+            <br/>
+            <apex:outputLabel value="Please enter a message detailing the reason for cancellation." rendered="{!isRendered}"/>
+            <br/>
+            <apex:inputText rendered="{!isRendered}" value="{!cancellationMessage}"/>
+            <apex:commandButton value="Submit" rendered="{!isRendered}" action="{!CancelAppointment}"/>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,6 @@
+{
+  "orgName": "NPFT Scratch",
+  "edition": "Developer",
+  "features": ["Communities"],
+  "settings": {"communitiesSettings": {"enableNetworksEnabled":true}}
+}

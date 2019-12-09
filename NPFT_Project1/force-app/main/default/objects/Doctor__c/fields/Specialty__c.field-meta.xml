@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialty__c</fullName>
+    <externalId>false</externalId>
+    <label>Specialty</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergist</fullName>
+                <default>false</default>
+                <label>Allergist</label>
+            </value>
+            <value>
+                <fullName>Cardiologist</fullName>
+                <default>false</default>
+                <label>Cardiologist</label>
+            </value>
+            <value>
+                <fullName>Dermatologist</fullName>
+                <default>false</default>
+                <label>Dermatologist</label>
+            </value>
+            <value>
+                <fullName>Family Medicine</fullName>
+                <default>false</default>
+                <label>Family Medicine</label>
+            </value>
+            <value>
+                <fullName>Neurosurgeon</fullName>
+                <default>false</default>
+                <label>Neurosurgeon</label>
+            </value>
+            <value>
+                <fullName>OBGYN</fullName>
+                <default>false</default>
+                <label>OBGYN</label>
+            </value>
+            <value>
+                <fullName>Oncologist</fullName>
+                <default>false</default>
+                <label>Oncologist</label>
+            </value>
+            <value>
+                <fullName>Orthopedic Specialist</fullName>
+                <default>false</default>
+                <label>Orthopedic Specialist</label>
+            </value>
+            <value>
+                <fullName>Orthopedic Surgeon</fullName>
+                <default>false</default>
+                <label>Orthopedic Surgeon</label>
+            </value>
+            <value>
+                <fullName>Pediatrician</fullName>
+                <default>false</default>
+                <label>Pediatrician</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgeon</fullName>
+                <default>false</default>
+                <label>Plastic Surgeon</label>
+            </value>
+            <value>
+                <fullName>Radiologist</fullName>
+                <default>false</default>
+                <label>Radiologist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

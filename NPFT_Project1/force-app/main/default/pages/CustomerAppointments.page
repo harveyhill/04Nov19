@@ -1,0 +1,29 @@
+<apex:page controller="CustomerAppointmentsController">
+    My Appointment Requests
+    <apex:pageBlock >
+    <apex:form >
+        <div style="width:100%">
+            <apex:pageBlockSection title="filters">
+                            <apex:pageBlockSectionItem >
+                                <apex:selectList style="height:80px" value="{!statusPref}" multiselect="true">
+                                    <apex:selectOptions value="{!statusList}"/>
+                                </apex:selectList>
+                                <apex:commandButton action="{!updateAppointments}" value="Update" />
+                            </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </div>
+        </apex:form> 
+        <br/>
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!result}" var="appointment" width="100%" columnsWidth="20%, 20%,20%,20%,20%">
+                    <apex:column headervalue="Start Time: " value="{!appointment.Start_Time__c}"/>
+                    <apex:column headervalue="Status: " value="{!appointment.Status__c}"/>
+                    <apex:column headervalue="Doctor name: " value="{!appointment.Doctor__r.First_Name__c} {!appointment.Doctor__r.Last_Name__c}"/>
+                    <apex:column headervalue="Description: " value="{!appointment.Description__c}"/>
+                    <apex:column headervalue="Location: " value="{!appointment.Location__r.Office_Location__r.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection> 
+        </apex:pageBlock>
+
+
+</apex:page>

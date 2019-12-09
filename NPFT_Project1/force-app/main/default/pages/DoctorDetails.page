@@ -1,0 +1,14 @@
+<apex:page controller="DoctorController">
+    <apex:pageBlock >
+        <apex:pageBlockTable width="100%" columnsWidth="25%,25%,25%,25%" value="{! doctor }" var="doc">
+            <apex:column value="{! doc.First_Name__c }"/>
+            <apex:column value="{! doc.Last_Name__c }"/>
+            <apex:column value="{! doc.Specialty__c }"/>
+            <apex:column value="{! doc.Email__c }"/>
+        </apex:pageBlockTable>
+        <br/>
+        <apex:pageBlockTable width="100%" value="{! doctorResidences}" var="res">
+            <apex:column value="{! res.Office_Location__r.Name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
