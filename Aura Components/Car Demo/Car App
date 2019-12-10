@@ -1,0 +1,13 @@
+<aura:application extends="force:SLDS">
+    <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-3"></div>
+        <div class="slds-col slds-size_1-of-3 slds-text-align_center"><c:LAC_Car_engine /></div>
+    <div class="slds-col slds-size_1-of-3"></div>
+    <div class="slds-col slds-size_2-of-12"></div>
+    <div class="slds-col slds-size_2-of-12 slds-text-align_center"><c:LAC_Car_wheel /></div>
+    <div class="slds-col slds-size_2-of-12"></div>
+    <div class="slds-col slds-size_2-of-12"></div>
+    <div class="slds-col slds-size_2-of-12 slds-text-align_center"><c:LAC_Car_wheel /></div>
+    <div class="slds-col slds-size_2-of-12"></div>
+    </div>
+</aura:application>
