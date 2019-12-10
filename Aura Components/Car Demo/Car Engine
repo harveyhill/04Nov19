@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute name="engine" type="String" default="V6" />
+	{!v.engine}
+</aura:component>
