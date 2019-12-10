@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable" >
+    <aura:attribute name="wheel" type="String" default="Firestone" />
+    <aura:attribute name="rim" type="String" default="Standard" />
+    <aura:attribute name="display" type="Boolean" default="true" />
+	
+    <aura:if isTrue="{!v.display}" >
+    
+        {!v.wheel}<br/>
+    {!v.rim}
+    </aura:if><br/>
+    <lightning:button label="Show" title="show" onclick="{!c.show}" />
+</aura:component>
