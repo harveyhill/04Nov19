@@ -1,0 +1,7 @@
+public class LAC_CasesController {
+	@AuraEnabled
+    public static List<Case> getMyOpenCases() {
+        List<Case> cases = [SELECT id, subject, priority FROM Case where status != 'Closed'];
+        return cases;
+    }
+}
