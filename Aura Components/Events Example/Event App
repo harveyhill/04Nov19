@@ -1,0 +1,5 @@
+<aura:application >
+    <!-- We use this harness in order to test and display components. -->
+    <c:LAC_EventComponentHandler />
+    <c:LAC_EventComponentNotifier />
+</aura:application>
