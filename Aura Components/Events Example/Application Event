@@ -1,0 +1,8 @@
+<!-- We declare an event, of the application type. 
+	 Application events broadcast to the entire app, allowing any component to handle it.
+	 Component events only broadcast to those in direct hierarchy with it, so it is more limited in scope.
+	 Best practice is to use component events unless we absolutely must use an Application event. -->
+<aura:event type="APPLICATION" description="Event template">
+    <!-- We declare an attribute in order to carry information inside the event. -->
+    <aura:attribute name="Bob" type="String" />
+</aura:event>
