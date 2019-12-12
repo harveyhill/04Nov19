@@ -1,0 +1,7 @@
+<aura:component >
+    <!-- This notifies the app that this component may fire the designated event. 
+		 Without this it cannot fire the event. -->
+    <aura:registerEvent name="appEvent" type="c:LAC_EventAppEvent" />
+    <!-- Here we are calling a JavaScript function, which will fire the event. -->
+    <lightning:button label="Fire App Event" onclick="{!c.FireAppEvent}" />
+</aura:component>
