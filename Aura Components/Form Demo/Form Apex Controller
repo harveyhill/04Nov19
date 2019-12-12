@@ -1,0 +1,8 @@
+public class LAC_FormController {
+	
+    @AuraEnabled
+    public static void SaveContact(Contact con) {
+        system.debug(con);
+        upsert con;
+    }
+}
