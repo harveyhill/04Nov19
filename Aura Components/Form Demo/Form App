@@ -1,0 +1,5 @@
+<aura:application extends="force:SLDS" >
+    <div class="slds-float_right">
+    	<c:LAC_Form />
+    </div>
+</aura:application>
