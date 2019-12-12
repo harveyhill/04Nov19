@@ -1,0 +1,14 @@
+<aura:component >
+    <!-- Because we want to make use of the data being stored in the event, 
+		 we need someplace to store it, so we create an attribute. -->
+    <aura:attribute name="Bob" type="String" default="All is quiet!" />
+    <!-- We declare that we are listening for this specific event, and
+		 what action to take if we hear it. -->
+    <aura:handler event="c:LAC_EventAppEvent" action="c.HandleAppEvent" />
+    
+    <!-- We display the value of Bob, which will change when the event fires. -->
+    <div>
+    	<p>Component Event Message: {!v.Bob}</p>
+    </div>
+	
+</aura:component>
