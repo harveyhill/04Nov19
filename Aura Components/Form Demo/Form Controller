@@ -1,0 +1,15 @@
+({
+	CreateContact : function(component, event, helper) {
+		let newContact = component.get("v.newContact");
+        let savContact = component.get("c.SaveContact");        
+        savContact.setParams({
+            "con": newContact
+        });
+        
+        savContact.setCallback(this, function(response) {
+        	console.log(JSON.stringify(newContact));
+
+        });
+        $A.enqueueAction(savContact);
+	}
+})
