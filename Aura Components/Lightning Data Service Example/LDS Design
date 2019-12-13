@@ -1,3 +1,5 @@
+<!-- Here we change the label for this inside the lightning app builder. -->
 <design:component label="Lightning Data Service Example">
+    <!-- Here we expose the aura:attribute from the component for use in the lightning app builder and other sources.-->
     <design:attribute name="display" label="Determine initial view." />
 </design:component>
