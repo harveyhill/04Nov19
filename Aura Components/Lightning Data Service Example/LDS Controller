@@ -1,4 +1,6 @@
 ({
+	// Not much to see here, we simply have button functionality, 
+	// nothing to do with Lightning Data Service here.
 	DisplayChange : function(component, event, helper) {
 		let display = component.get("v.display");
         component.set('v.display', !display);
