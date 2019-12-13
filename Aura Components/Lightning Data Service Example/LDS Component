@@ -1,30 +1,30 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-    // We store the field names that we want to use later in this string list.
+    <!-- We store the field names that we want to use later in this string list. -->
     <aura:attribute name="fields" 
                     type="String[]"
                     default="['Name', 'Industry']" />
     
-    // We use this simply for the aura:if statements.
+    <!-- We use this simply for the aura:if statements. -->
     <aura:attribute name="display" type="Boolean" default="true" />
     
     
     <aura:if isTrue="{!v.display}" >
-        // In this version we use the recordform to display the 
-        // fields we previously created in the attribute.
+        <!-- In this version we use the recordform to display the 
+             fields we previously created in the attribute. -->
     	<lightning:recordForm objectApiName="Account"
                               recordId="{!v.recordId}"
                               fields="{!v.fields}" />
     </aura:if>
     <aura:if isTrue="{!!v.display}" >
-        // Here instead of passing in specific fields, we say that we want to use
-        // one of the layouts. In this case compact, but we could also use Full.
-        // Compact will only display if it uses an existing record ID, otherwise
-        // it will still display the full layout.
+        <!-- Here instead of passing in specific fields, we say that we want to use
+             one of the layouts. In this case compact, but we could also use Full.
+             Compact will only display if it uses an existing record ID, otherwise
+             it will still display the full layout. -->
     	<lightning:recordForm objectApiName="Account"
                               recordId="{!v.recordId}"
                               layoutType="Compact"
                               columns="2" />
     </aura:if>
-    // We swap which component displays.
+    <!-- We swap which component displays. -->
     <lightning:button label="Change View" onclick="{!c.DisplayChange}" />
 </aura:component>
