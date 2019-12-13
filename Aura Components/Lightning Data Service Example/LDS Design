@@ -1,0 +1,3 @@
+<design:component label="Lightning Data Service Example">
+    <design:attribute name="display" label="Determine initial view." />
+</design:component>
