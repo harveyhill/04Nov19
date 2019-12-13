@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="fields" 
+                    type="String[]"
+                    default="['Name', 'Industry']" />
+    <aura:attribute name="display" type="Boolean" default="true" />
+    
+    <aura:if isTrue="{!v.display}" >
+    	<lightning:recordForm objectApiName="Account"
+                              recordId="{!v.recordId}"
+                              fields="{!v.fields}" />
+    </aura:if>
+    <aura:if isTrue="{!!v.display}" >
+    	<lightning:recordForm objectApiName="Account"
+                              recordId="{!v.recordId}"
+                              layoutType="Compact"
+                              columns="2" />
+    </aura:if>
+    <lightning:button label="Change View" onclick="{!c.DisplayChange}" />
+</aura:component>
