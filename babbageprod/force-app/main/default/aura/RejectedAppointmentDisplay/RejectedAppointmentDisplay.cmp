@@ -1,0 +1,22 @@
+<aura:component controller="CustomerAppointmentController">
+	<aura:attribute name="appointments" type="Appointment__c[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.mainInit}" />
+    
+    <div class="slds-box">
+        <lightning:accordion aura:id="accordion">
+            <aura:iteration items="{!v.appointments}" var="appointment">
+                <lightning:accordionSection label="{!appointment.Name}">
+                    <aura:set attribute="body">
+                        <!--does not display the name 
+							with Doctor__c.Contact.LastName AND does not display Office-Location info-->
+                    	<p><b>Doctor:</b> : {!appointment.Doctor__r.Name}</p>
+                        <p><b>Office:</b> : {!appointment.Residence__r.Office_Location__r.Full_Address__c}</p>
+                        <p><b>Date and Time:</b> : {!appointment.Start_Time__c} to {!appointment.End_Time__c}</p>
+                        <p><b>Status:</b> : {!appointment.Status__c}</p>
+                        <p><b>Doctor Comment:</b> : {!appointment.Doctor_Message__c}</p>
+                    </aura:set>       
+                </lightning:accordionSection>     
+            </aura:iteration>
+        </lightning:accordion>
+    </div>
+</aura:component>

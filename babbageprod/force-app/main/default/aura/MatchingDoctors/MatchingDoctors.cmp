@@ -1,0 +1,18 @@
+<aura:component >
+    <!-- event to update the selectedDoctor aura attribute in CustomerSearchRequestPage
+ -->
+    <aura:registerEvent name="doctorSelected" type="c:DoctorSelected"/>
+    
+    <aura:attribute name="matchingDoctorsList" type="List"/>
+    <aura:attribute name="chosenDoctor" type="String"/>
+    
+    <lightning:card title="" class="padded">
+        <lightning:dualListbox name="matchingDoctors" label= "Doctor:"
+                               sourceLabel="Matching Doctors" 
+                               selectedLabel="Selected Doctor"
+                               options="{!v.matchingDoctorsList}" 
+                               value="{!v.chosenDoctor}"
+                               onchange="{!c.handleChange}"
+                               max="1"/>
+    </lightning:card>
+</aura:component>

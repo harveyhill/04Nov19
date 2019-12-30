@@ -1,0 +1,41 @@
+<aura:component controller="CustomerSearchRequestPageController" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.loadOptions}"/>
+    
+    <!-- event notifier to update MatchingDoctors component -->
+    <aura:registerEvent name="queryResults" type="c:CustomerSearchResults"/>
+    
+    <aura:attribute name="genderOptions" type="String[]"/>
+    <aura:attribute name="specializationOptions" type="String[]"/>
+    <aura:attribute name="languageOptions" type="List"/>
+    <aura:attribute name="selectedLanguages" type="List"/>
+    <aura:attribute name="search" type="Search__c" 
+                    default="{'sobjectType' : 'Search__c',
+                             'Contact__c' : ''}"/>
+    
+    <!-- attribute to hold id of contact associated with current user -->
+    <aura:attribute name="currentContactId" type="String"/>
+    
+    <lightning:card title="Find a Doctor Who's Right for You" class="padded">
+    <lightning:select aura:id="genders" name="genders" label="Preferred Doctor Gender:">
+        <option value="" text=""/>
+        <aura:iteration items="{!v.genderOptions}" var="genderOption">
+            <option value="{!genderOption}" text="{!genderOption}"/>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select aura:id="specializations" name="specializations" 
+                      label="Doctor Specialization:">
+        <option value="" text=""/>
+        <aura:iteration items="{!v.specializationOptions}" var="specializationOption">
+            <option value="{!specializationOption}" text="{!specializationOption}"/>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:dualListbox name="languages" label= "Preferred Language(s):"
+                           sourceLabel="Available" selectedLabel="Selected"
+                           options="{!v.languageOptions}" 
+                           value="{!v.selectedLanguages}"/>
+    
+    <lightning:button label="Search" onclick="{!c.handleSearch}"/>
+        </lightning:card>
+</aura:component>

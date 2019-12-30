@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Birthdate_In_Past</fullName>
+    <active>true</active>
+    <errorConditionFormula>( Birthdate &gt;  TODAY() ) &amp;&amp;  (RecordType.Name == &quot;Customer&quot;)</errorConditionFormula>
+    <errorDisplayField>Birthdate</errorDisplayField>
+    <errorMessage>The Customer&#39;s Birthdate must be in the past.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Have_Email</fullName>
+    <active>true</active>
+    <description>Email must be populated.</description>
+    <errorConditionFormula>ISBLANK( Email )</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>You must enter an email.</errorMessage>
+</ValidationRule>

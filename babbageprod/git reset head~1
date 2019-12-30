@@ -1,0 +1,359 @@
+[33mcommit e3d0fd1af8be9b912c40492139b9f23abeb85a53[m[33m ([m[1;36mHEAD -> [m[1;32mjonathan[m[33m)[m
+Merge: 77ca3ec 8b52fea
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Sun Dec 29 15:41:36 2019 -0500
+
+    Merge remote-tracking branch 'origin/master' into jonathan
+
+[33mcommit 77ca3ecbf1d9ac3ca7e52603698f6b43c3e444e5[m[33m ([m[1;31morigin/jonathan[m[33m)[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Sun Dec 29 02:01:28 2019 -0500
+
+    Added rest service and callout with test class. Minor changes to data table
+
+[33mcommit 1446700af21f156929bb1ee8b7b1b803b5fc20f6[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Fri Dec 27 15:35:54 2019 -0500
+
+    Fixed bug where updating a row will cause others to lose their changes
+
+[33mcommit eb38b7e1fb68be494211f01a8ff9daa8441a48f0[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Fri Dec 27 15:23:33 2019 -0500
+
+    Made new components visible to page builders
+
+[33mcommit 685bd7d086bc6a06436c6721e32d7863dabfcf76[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Fri Dec 27 15:11:47 2019 -0500
+
+    Removed unneeded files
+
+[33mcommit 9cdedf8b8e5df0d4476c8bc4a626eb59ea75f435[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Fri Dec 27 15:10:53 2019 -0500
+
+    Added doctor appointment approval and editing feature
+
+[33mcommit f154d118e5c38edb1cafebc8967b5bd7b17e842a[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Fri Dec 27 11:39:34 2019 -0500
+
+    Added doctor appointment view
+
+[33mcommit 8f032dc4bf9e42416b3efaf8b688c3f188f106cd[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Thu Dec 26 17:00:56 2019 -0500
+
+    Added basic functioning datatable
+
+[33mcommit f293e2f1d25ad2f8ac99ff0a5299c32a441f5c9e[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Thu Dec 26 15:06:14 2019 -0500
+
+    Changed calander displayed fields. Refactored calander cmp.
+
+[33mcommit c4d06f7bd356e254c88b710b68722522cab1a70c[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Thu Dec 26 13:26:56 2019 -0500
+
+    Added refresh button to calender
+
+[33mcommit 4729363533a41a91ba10cf4262f35a56c79c58f9[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Thu Dec 26 12:25:15 2019 -0500
+
+    Added timeframe selector for doc appntmnt calander
+
+[33mcommit a2c1550e72691d469747618573273fb5594f032d[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Thu Dec 26 11:23:59 2019 -0500
+
+    Added basic calander view page/controllers
+
+[33mcommit 8b52fea2f42b15a6f362d49d19e961f81cc3d13c[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: LiuCJonathan <43073642+LiuCJonathan@users.noreply.github.com>
+Date:   Thu Dec 26 08:54:37 2019 -0500
+
+    Revert "Fixed small mistake on line 265 for zip_code" (#7)
+    
+    This reverts commit 9fd0615eaa96bda129dec2c084bed972d839757c.
+
+[33mcommit 9fd0615eaa96bda129dec2c084bed972d839757c[m
+Author: Keaton-C <57372918+Keaton-C@users.noreply.github.com>
+Date:   Thu Dec 26 01:01:35 2019 -0500
+
+    Fixed small mistake on line 265 for zip_code
+    
+    Fantastic Data Factory. It just needed a small fix on this line 265:
+    office.zip_code__c = ZipList[Integer.valueof(Math.Random()*5)];
+    
+    I took the Liberty of defining the ZipList, <List> of Strings like so:
+    static string[] ZipList=new List<String>{
+             '20170', '20171', '20172', '20173', '92370'
+        };
+    12/26/2019, 01:01 Hours EST
+
+[33mcommit ab70322efc5e938e671ff9841595be6dc75692c1[m
+Author: LiuCJonathan <43073642+LiuCJonathan@users.noreply.github.com>
+Date:   Tue Dec 24 11:21:57 2019 -0500
+
+    Data factory merge (#6)
+    
+    * Updated files for personal org
+    
+    * Create datafactory definitions
+    
+    * Edited function definitions. Added name lists
+    
+    * Added more test data values
+    
+    * Added office factory
+    
+    * Added Contact factory
+    
+    * Added birthdate and adjusted ages
+    
+    * Added residence factory. Changed some function definitions
+    
+    Deleteall, createresidence
+    
+    * Added account initalization function
+    
+    * Changed function defs to take in max # of searches,appointments,surveys per person
+    
+    * Added appointment factory
+    
+    * fixed issue where factories were not using all available picklist values
+    
+    * Prevented 'completed' appointment status
+    
+    * Changed zip code factory data format
+    
+    * Added search factory
+
+[33mcommit e60905db4d3df9a5139345b01796dcecfc505ae9[m
+Merge: 7c8df02 6d49b14
+Author: LiuCJonathan <43073642+LiuCJonathan@users.noreply.github.com>
+Date:   Tue Dec 24 11:20:30 2019 -0500
+
+    Merge branch 'master' into jonathan
+
+[33mcommit 7c8df02d0a6b5b833349140e334b9a92cff5bd55[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 11:18:48 2019 -0500
+
+    Added search factory
+
+[33mcommit 6d49b14cd49cefb288644c8a70ee9b8d6952830f[m
+Merge: 01b1884 3ffcbc6
+Author: Benjamin Learn <38740610+learnbenlearn@users.noreply.github.com>
+Date:   Tue Dec 24 10:48:33 2019 -0500
+
+    Merge pull request #5 from Project2-Team-Babbage/ben
+    
+    Ben
+
+[33mcommit 70b4808f029b4f3822759c5dc15bab91327d6e1b[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 10:48:23 2019 -0500
+
+    Changed zip code factory data format
+
+[33mcommit fd3cd64c2929575f000f0f1069a82ed3b12898f4[m
+Merge: 29f891d 8325aaa
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 10:45:58 2019 -0500
+
+    Merge resolution
+
+[33mcommit 29f891dbcfd6bc3a01b110e6ffaeffb408c92926[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 10:42:08 2019 -0500
+
+    Prevented 'completed' appointment status
+
+[33mcommit 557b9c04f0463653c804cad5b25a8d013ce528d6[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 10:40:07 2019 -0500
+
+    fixed issue where factories were not using all available picklist values
+
+[33mcommit 3ffcbc680926865a6ad1c983c2f5d60c11f77158[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 10:38:10 2019 -0500
+
+    Removed dummy text file.
+
+[33mcommit 3871023b19ce60491c941343b4fe0831ad2aa57e[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 10:35:10 2019 -0500
+
+    Added validation rule for State__c on Office_Location__c, added 'Rescheduled' value to Status__c picklist on Appointment__c, added .vscode/ to .gitignore.
+
+[33mcommit 1c3b9aa7a59ef3534e515c79fb5cec3e24c5a2bb[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 10:14:01 2019 -0500
+
+    Added appointment factory
+
+[33mcommit 4bb170159df97cb6906badd74b16a52aafe91c94[m
+Merge: 3608bc6 d26a154
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 10:08:10 2019 -0500
+
+    Fixed conflicts.
+
+[33mcommit 3608bc6b81c1ec0e0c5c15ec543b2db979f3a2c5[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 10:05:22 2019 -0500
+
+    Commits before merge.
+
+[33mcommit d26a154f5bf2f731333d76a52466946680901152[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 10:02:19 2019 -0500
+
+    Fixed merge conflicts
+
+[33mcommit d8e15ef25f0c36c9589b323220ed7462e00f5ed3[m
+Author: Benjamin Learn <38740610+learnbenlearn@users.noreply.github.com>
+Date:   Tue Dec 24 09:16:42 2019 -0500
+
+    Update Babbage Doctor User.profile-meta.xml
+    
+    Fixing remnants of merge conflicts
+
+[33mcommit f4bd2e79c5cafe529f51add8cdcaa2c027afefb1[m
+Author: Benjamin Learn <38740610+learnbenlearn@users.noreply.github.com>
+Date:   Tue Dec 24 09:14:42 2019 -0500
+
+    Update Customer.site-meta.xml
+    
+    Fixing subdomain
+
+[33mcommit 6423f4a91bca84ffbc3747ff1f2c82af789709ce[m
+Author: Benjamin Learn <38740610+learnbenlearn@users.noreply.github.com>
+Date:   Tue Dec 24 09:14:20 2019 -0500
+
+    Update Doctor.site-meta.xml
+    
+    Fixing subdomain
+
+[33mcommit e4f9d06ae28ec55d437227b567fcb6e23cf0b7db[m
+Merge: 8325aaa 08b2ecb
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 09:12:18 2019 -0500
+
+    Merge branch 'john' into ben
+
+[33mcommit 08b2ecb6396c271c2d41e737228d925f5346e32e[m
+Merge: 26e9b61 8325aaa
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Tue Dec 24 09:11:55 2019 -0500
+
+    Fixing merge conflicts.
+
+[33mcommit 3b2faaffa4beabec665cd32295546b7630a53e09[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 08:53:12 2019 -0500
+
+    Changed function defs to take in max # of searches,appointments,surveys per person
+
+[33mcommit ab01d2cd3890fc061e44786709b5856836353e44[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 08:41:15 2019 -0500
+
+    Added account initalization function
+
+[33mcommit c840effcb49a938b6e91dbca4a126829a07dc572[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Tue Dec 24 08:38:03 2019 -0500
+
+    Added residence factory. Changed some function definitions
+    
+    Deleteall, createresidence
+
+[33mcommit b47c3190552c450262bdde9fb4a17e658454dec0[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 16:28:31 2019 -0500
+
+    Added birthdate and adjusted ages
+
+[33mcommit e51adb780ab7100aaed0eff0b3a2a152aa3e1502[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 16:18:08 2019 -0500
+
+    Added Contact factory
+
+[33mcommit c191ecbc9251cd3613a0b68bd2f66f418c74917a[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 14:15:43 2019 -0500
+
+    Added office factory
+
+[33mcommit 76dfa02ced21227813befca7ce41e34fbf904d26[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 11:00:39 2019 -0500
+
+    Added more test data values
+
+[33mcommit 4cc8291e94766530745b69578da9fc4cf7fbd488[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 10:28:13 2019 -0500
+
+    Edited function definitions. Added name lists
+
+[33mcommit 306354517048f51c4ec510eec7cba411ed705594[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 10:07:32 2019 -0500
+
+    Create datafactory definitions
+
+[33mcommit f5c62ebe8be5d0e8d7e1f3ee6a17f360b902725a[m
+Author: unknown <cliu.jonathan@gmail.com>
+Date:   Mon Dec 23 09:47:27 2019 -0500
+
+    Updated files for personal org
+
+[33mcommit 8325aaa82f408ff2756cbe7e23758ef3f69490ce[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Sun Dec 22 20:53:46 2019 -0500
+
+    Added CustomerAppointmentPageController.
+
+[33mcommit 43c046ef3e097c1054afc845ba4bb75662ae2f8d[m
+Author: simon jose <simonjose.vazhakadavil@revature.net>
+Date:   Sun Dec 22 20:51:33 2019 -0500
+
+    Finished Customer Search Page controller
+
+[33mcommit 26e9b61d029f72d83ccb7e869680ee6dba0e27c7[m
+Author: Hawkgoblin <johnjmulloy@comcast.net>
+Date:   Fri Dec 20 16:12:29 2019 -0500
+
+    Added the CustomerSearchRecordController()
+
+[33mcommit 6bd258742442b98c2f59d576f88d0e65b3988d06[m
+Author: simon jose <simonjose.vazhakadavil@revature.net>
+Date:   Fri Dec 20 16:11:38 2019 -0500
+
+    first push
+
+[33mcommit a3dc95de6923c51f739a5157f9cfd79c511aa19f[m
+Author: simon jose <simonjose.vazhakadavil@revature.net>
+Date:   Fri Dec 20 14:53:21 2019 -0500
+
+    My fist git command line
+
+[33mcommit 39734c5d2496dcceff098aec8b0b394b863b42b3[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Thu Dec 19 09:11:36 2019 -0500
+
+    test commit
+
+[33mcommit 01b1884f574237ede684cdbb9df13168a1b64ff2[m[33m ([m[1;31morigin/feature[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: [Ben Learn] <blearn5241@gmail.com>
+Date:   Wed Dec 18 16:23:05 2019 -0500
+
+    Initial source commit

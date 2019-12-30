@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_State_Abbreviation</fullName>
+    <active>true</active>
+    <errorConditionFormula>CASE(State__c, &quot;AK&quot;, 0, &quot;AL&quot;, 0, &quot;AZ&quot;, 0, &quot;AR&quot;, 0, &quot;CA&quot;, 0, &quot;CO&quot;, 0, &quot;CT&quot;, 0, &quot;DE&quot;, 0, &quot;DC&quot;, 0, &quot;FL&quot;, 0, &quot;GA&quot;, 0, &quot;HI&quot;, 0, &quot;ID&quot;, 0, &quot;IL&quot;, 0, &quot;IN&quot;, 0, &quot;IA&quot;, 0, &quot;KS&quot;, 0, &quot;KY&quot;, 0, &quot;LA&quot;, 0, &quot;ME&quot;, 0, &quot;MD&quot;, 0, &quot;MA&quot;, 0, &quot;MI&quot;, 0, &quot;MN&quot;, 0, &quot;MS&quot;, 0, &quot;MO&quot;, 0, &quot;MT&quot;, 0, &quot;NE&quot;, 0, &quot;NV&quot;, 0, &quot;NH&quot;, 0, &quot;NJ&quot;, 0, &quot;NM&quot;, 0, &quot;NY&quot;, 0, &quot;NC&quot;, 0, &quot;ND&quot;, 0, &quot;OH&quot;, 0, &quot;OK&quot;, 0, &quot;OR&quot;, 0, &quot;PA&quot;, 0, &quot;RI&quot;, 0, &quot;SC&quot;, 0, &quot;SD&quot;, 0, &quot;TN&quot;, 0, &quot;TX&quot;, 0, &quot;UT&quot;, 0, &quot;VT&quot;, 0, &quot;VA&quot;, 0, &quot;WA&quot;, 0, &quot;WV&quot;, 0, &quot;WI&quot;, 0, &quot;WY&quot;, 0, 1) = 1</errorConditionFormula>
+    <errorDisplayField>State__c</errorDisplayField>
+    <errorMessage>You must enter a two-letter state abbreviation or &quot;DC&quot; for Washington, D.C.</errorMessage>
+</ValidationRule>

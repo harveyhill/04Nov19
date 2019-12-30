@@ -1,0 +1,48 @@
+<aura:component controller="DoctorAppointmentController" implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="StatusOptions" type="String[]"/>
+    <aura:attribute name="AppointmentsList" type="Object"/>
+    <aura:attribute name="AppointmentsModifiedList" type="Object"/>
+    <aura:attribute name="AppointmentsColumns" type="List"/>
+    <aura:attribute name="SortCategory" type="String" default="Start_Time__c"/>
+    <aura:attribute name="SortDirection" type="String" default="desc"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:card title="All Appointments" class="padded">
+    <div class='slds-grid'>
+        <div class='slds-col slds-size_1-of-8'>
+            <lightning:select name="statusselect" onchange="{!c.updateAppointments}" label="Status" aura:id="statusselect">
+                <aura:iteration var="option" items="{!v.StatusOptions}">
+                    <option text="{!option}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class='slds-col slds-size_1-of-6'>
+            <lightning:select name="timeselect" onchange="{!c.updateAppointments}" label="Timeframe" aura:id="timeselect">
+                <option value="Present" text="Present and Future"/>
+                <option value="Past" text="Past"/>
+            </lightning:select>
+        </div>
+        <div class='slds-col slds-size_1-of-6'>
+            <lightning:select name="periodselect" onchange="{!c.updateAppointments}" label="Period" aura:id="periodselect">
+                <option value="1" text="1 day"/>
+                <option value="7" text="7 days"/>
+                <option value="30" text="1 month"/>
+                <option value="90" text="3 months"/>
+                <option value="365" text="1 year"/>
+                <option value="All" text="All time"/>
+            </lightning:select>
+        </div>
+        
+        <lightning:buttonIcon class='slds-col slds-size_1-of-12 slds-align-bottom' iconName="utility:loop" onclick="{!c.refreshAppointments}" alternativeText="Refresh" value="Refresh"/>
+    </div>
+    <lightning:datatable aura:id="appointmentTable"
+                         data="{!v.AppointmentsList}"
+                         columns="{!v.AppointmentsColumns}"
+                         keyField="Id"
+                         onsort="{!c.updateSort}"
+                         sortedBy="{!v.SortCategory}"
+                         sortedDirection="{!v.SortDirection}"
+                         onrowaction="{!c.handleRowActions}"
+                         hideCheckboxColumn="true"
+                         suppressBottomBar="true"/>
+        </lightning:card>
+</aura:component>

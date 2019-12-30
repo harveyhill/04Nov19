@@ -1,0 +1,45 @@
+<aura:component controller="DoctorAppointmentController" implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="appointments" type="List"/>
+    <aura:attribute name="timeFrameStart" type="Date"/>
+    <aura:attribute name="timeFrameEnd" type="Date"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:card title="Upcoming Appointments" class="padded">
+        <div class='slds-text-align_center'>
+            <div class='slds-grid slds-grid_align-center'>
+                <lightning:buttonIcon class='slds-col slds-size_1-of-5' iconName="utility:chevronleft" size="large" onclick="{!c.LastTimeFrame}" alternativeText="Last Week's Schedule" />
+                <span class='slds-col slds-text_heading_medium slds-size_2-of-5' style='padding:0.5rem'> 
+                    <lightning:formattedDateTime value="{!v.timeFrameStart}"/> - 
+                    <lightning:formattedDateTime value="{!v.timeFrameEnd}"/>
+                </span>
+                <lightning:buttonIcon class='slds-col slds-size_1-of-12 rotationAnimation' iconName="utility:loop" onclick="{!c.updateAppointments}" alternativeText="Refresh"/>
+                
+                <lightning:buttonIcon class='slds-col slds-size_1-of-5' iconName="utility:chevronright" size="large" onclick="{!c.NextTimeFrame}" alternativeText="Next Week's Schedule" />
+            </div>
+            <div class='slds-grid slds-grid_align-center'>
+                <aura:iteration var="day" items="Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday">
+                    <div class='slds-col slds-box slds-size_1-of-7'>
+                        {!day}
+                    </div>
+                </aura:iteration>
+            </div>
+            <div class='slds-grid slds-grid_align-center'>
+                <aura:iteration var="apntlist" items="{!v.appointments}">
+                    <div class='slds-col slds-box slds-size_1-of-7'>
+                        <aura:iteration var="apnt" items="{!apntlist}">
+                            <p>
+                                <lightning:formattedDateTime value="{!apnt.Start_Time__c}" hour="2-digit" minute="2-digit"/><br/>
+                                <div class='slds-text-align_left slds-border_bottom'>
+                                    {!apnt.Customer__r.Name}<br/>
+                                    {!apnt.Customer__r.Email}<br/>
+                                    Preferred Language: {!apnt.Language_Preference__c}<br/>
+                                    {!apnt.Residence__r.Office_Location__r.Name}<br/>
+                                    "{!apnt.Description__c}"<br/>
+                                </div>
+                            </p>
+                        </aura:iteration>
+                    </div>
+                </aura:iteration>
+            </div> 
+        </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:AvailableforAllPageTypes,forceCommunity:availableForAllPageTypes"
+                access="global">
+    <!-- handler for event to update MatchingDoctors component -->
+    <aura:handler name="queryResults" event="c:CustomerSearchResults" 
+                  action="{!c.handleCustomerSearchResults}"/>
+    
+    <!-- handler for event to autopopulate CustomerRequestPage component -->
+    <aura:handler name="doctorSelected" event="c:DoctorSelected" 
+                  action="{!c.handleDoctorSelected}"/>
+    
+    <!-- aura attributes for matchingdoctors and customerrequestpage -->
+    <aura:attribute name="matchingDoctorsList" type="List"/>
+    <aura:attribute name="selectedDoctorResidence" type="String"/>
+    <aura:attribute name="selectedId" type="String"/>
+    
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-12"/>
+        <div class="slds-col slds-size_9-of-12">
+            <c:CustomerSearchPage/>
+        </div>
+        <div class="slds-col slds-size_2-of-12"/>
+        <br/>
+    </div><br/><br/><br/><br/>
+    
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-12"/>
+        <div class="slds-col slds-size_9-of-12">
+            <c:MatchingDoctors matchingDoctorsList="{!v.matchingDoctorsList}"/>
+        </div>
+        <div class="slds-col slds-size_1-of-12"/>
+    </div><br/><br/><br/><br/>    
+    
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-12"/>
+        <div class="slds-col slds-size_9-of-12">
+            <c:CustomerRequestPage chosenDoctorResidence="{!v.selectedDoctorResidence}"
+                                   chosenId="{!v.selectedId}"/>
+        </div>
+        <div class="slds-col slds-size_1-of-12"/>
+        <br/>
+    </div>
+    
+</aura:component>

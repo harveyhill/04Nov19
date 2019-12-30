@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_77322296</developerName>
+        <masterLabel>Customers Preference for sex</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Search__c$Sex__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_72812225</developerName>
+        <masterLabel>Specializations Demand Metric</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Search__c$Specialization__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_72812225</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>BucketField_77322296</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Search__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Search__c$Name</field>
+    </columns>
+    <columns>
+        <field>Search__c$Contact__c.Languages__c</field>
+    </columns>
+    <columns>
+        <field>Search__c$Specialization__c</field>
+    </columns>
+    <columns>
+        <field>Search__c$Sex__c</field>
+    </columns>
+    <description>Displays the amount of times customers have searched for the Doctor qualities such as: Specialization, Languages, and sex.
+NOTE: to get access to custom fields for display on reports, the visibility needs to be turned ON for all of those custom fields.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_72812225</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_77322296</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Search Trend Frequencies</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_Search_Criteria_For_Doctors__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Search__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

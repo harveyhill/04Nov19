@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="BabbageCommunityUser">
+    <lightning:button label="Enable Customer User" onclick="{!c.createCustomerUser}"/>
+</aura:component>

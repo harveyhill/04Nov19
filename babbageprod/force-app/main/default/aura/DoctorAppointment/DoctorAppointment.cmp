@@ -1,0 +1,4 @@
+<aura:component>
+    <c.DoctorAppointmentCalander/>
+    <c.DoctorAppointmentAll/>
+</aura:component>

@@ -1,0 +1,71 @@
+<aura:component controller="CustomerSearchRequestPageController">
+    <aura:attribute name="newAppointment" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="languageOptions" type="String[]"/>
+    <aura:attribute name="chosenDoctor" type="String"/>
+    <aura:attribute name="chosenResidence" type="String"/>
+    <aura:attribute name="chosenDoctorResidence" type="String"/>
+    <aura:attribute name="chosenId" type="String"/>
+    <aura:attribute name="chosenDoctorId" type="String"/>
+    <aura:attribute name="currentContactId" type="String"/>
+    <aura:attribute name="enteredDescription" type="String"/>
+    
+    <!-- change handler for chosenDoctorResidence to populate chosenDoctor and 
+ chosenResidence and change handler for chosenDoctorId to populate 
+ languageOptions-->
+    <aura:handler name="change" value="{!v.chosenDoctorResidence}" 
+                  action="{!c.doctorResidenceChange}"/>
+    <aura:handler name="change" value="{!v.chosenId}" 
+                  action="{!c.idChange}"/>
+    
+    <force:recordData aura:id="appointmentRecordCreator"
+                      layoutType="FULL"
+                      targetFields ="{!v.newAppointment}"
+                      targetError="{!v.recordError}"
+                      />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Display the new appointment form -->
+    <lightning:card title="Request Appointment">
+        <div class="slds-p-horizontal--small">
+            <!-- start time -->
+            <lightning:input aura:id="startTimeField" label="Start Time"
+                             type="datetime" 
+                             value="{!v.newAppointment.Start_Time__c}"/>
+            
+            
+            <!-- language (defaults to english) -->
+            <lightning:select aura:id="languageField" label="Preferred Language:">
+                <aura:iteration items="{!v.languageOptions}" var="languageOption">
+                    <option value="{!languageOption}" text="{!languageOption}"/>
+                </aura:iteration>
+            </lightning:select>
+            
+            <!-- optional description -->
+            <lightning:input aura:id="descriptionField" label="Description"
+                             value="{!v.enteredDescription}" 
+                             maxlength="255"
+                             placeholder="Optionally enter your reason for requesting an appointment and any other relevant details."/>
+            
+            <!-- chosen doctor (prepopulated and readonly) -->
+            <lightning:input aura:id="doctorField" label="Doctor" 
+                             value="{!v.chosenDoctor}" readonly="true"/>
+            
+            <!-- chosen residence (prepopulated and readonly) -->
+            <lightning:input aura:id="residenceField" label="Office" 
+                             value="{!v.chosenResidence}" readonly="true"/>
+            <br/>
+            <lightning:button label="Request Appointment" variant="brand" 
+                              onclick="{!c.handleRequestAppointment}"/>
+            
+        </div>
+    </lightning:card>
+    
+    <!-- Display Lightning Data Service errors -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}
+        </div>
+    </aura:if>
+</aura:component>

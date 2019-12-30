@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Enter_Sex</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISPICKVAL(Sex__c, &quot;Male&quot;)) &amp;&amp; NOT(ISPICKVAL(Sex__c, &quot;Female&quot;)) &amp;&amp; (RecordType.Name == &quot;Doctor&quot;)</errorConditionFormula>
+    <errorDisplayField>Sex__c</errorDisplayField>
+    <errorMessage>Doctors must enter have their gender entered in order to be saved.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<aura:component controller="CustomerAppointmentController" implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="appointments" type="Appointment__c[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.mainInit}" />
+    <!--Now, you need to get all the information about the Appointments 
+		inside the respective Display Aura Components-->
+	<lightning:tabset>
+        <lightning:tab label="Upcoming Appointments" id="confirmed">
+            Your Appointment Requests Accepted by the Doctor:            
+            <c:ConfirmedAppointmentDisplay />
+        </lightning:tab>
+        
+        <lightning:tab label="Pending Appointment Requests" id="pending">
+            Your Appointment Requests with no Doctor response yet:
+            <c:PendingAppointmentDisplay />
+        </lightning:tab>
+        
+        <lightning:tab label="Rescheduled Appointments" id="rescheduled">
+            Please Check Periodically for Appointments that
+            have been rescheduled by the Doctor, thank you.
+            <c:RescheduledAppointmentDisplay />
+        </lightning:tab>
+        
+        <lightning:tab label="Rejected Appointment Requests" id="rejected">
+			All of Your Appointment Requests that
+            have been Rejected by the Doctor:
+            <c:RejectedAppointmentDisplay />
+        </lightning:tab>    
+        
+    </lightning:tabset>
+</aura:component>

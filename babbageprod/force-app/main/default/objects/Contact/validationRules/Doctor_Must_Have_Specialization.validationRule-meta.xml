@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Doctor_Must_Have_Specialization</fullName>
+    <active>true</active>
+    <errorConditionFormula>(RecordType.Name == &quot;Doctor&quot;) &amp;&amp; NOT(ISPICKVAL(Specialization__c, &quot;Cardiologist&quot; )) &amp;&amp; NOT(ISPICKVAL(Specialization__c, &quot;Chiropractor&quot; )) &amp;&amp; NOT(ISPICKVAL(Specialization__c, &quot;General Practitioner&quot; )) &amp;&amp; NOT(ISPICKVAL(Specialization__c, &quot;Oncologist&quot; )) &amp;&amp; NOT(ISPICKVAL(Specialization__c, &quot;OBGYN&quot; )) &amp;&amp; NOT(ISPICKVAL(Specialization__c, &quot;Proctologist&quot; ))</errorConditionFormula>
+    <errorDisplayField>Specialization__c</errorDisplayField>
+    <errorMessage>Doctors must have a specialization.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cardiologist</fullName>
+        <default>false</default>
+        <label>Cardiologist</label>
+    </customValue>
+    <customValue>
+        <fullName>Chiropractor</fullName>
+        <default>false</default>
+        <label>Chiropractor</label>
+    </customValue>
+    <customValue>
+        <fullName>General Practitioner</fullName>
+        <default>false</default>
+        <label>General Practitioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Oncologist</fullName>
+        <default>false</default>
+        <label>Oncologist</label>
+    </customValue>
+    <customValue>
+        <fullName>OBGYN</fullName>
+        <default>false</default>
+        <label>OBGYN</label>
+    </customValue>
+    <customValue>
+        <fullName>Proctologist</fullName>
+        <default>false</default>
+        <label>Proctologist</label>
+    </customValue>
+    <masterLabel>Specialties</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
