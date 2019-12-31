@@ -49,9 +49,6 @@
         <field>Search__c$Name</field>
     </columns>
     <columns>
-        <field>Search__c$Contact__c.Languages__c</field>
-    </columns>
-    <columns>
         <field>Search__c$Specialization__c</field>
     </columns>
     <columns>

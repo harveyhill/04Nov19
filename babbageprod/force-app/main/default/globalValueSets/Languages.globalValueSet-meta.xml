@@ -20,6 +20,11 @@
         <default>false</default>
         <label>Chinese</label>
     </customValue>
+    <customValue>
+        <fullName>Cherokee</fullName>
+        <default>false</default>
+        <label>Cherokee</label>
+    </customValue>
     <masterLabel>Languages</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

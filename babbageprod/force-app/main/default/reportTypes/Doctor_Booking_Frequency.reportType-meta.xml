@@ -88,11 +88,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Doctor__c.Languages__c</field>
-            <table>Appointment__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Doctor__c.Specialization__c</field>
             <table>Appointment__c</table>
         </columns>

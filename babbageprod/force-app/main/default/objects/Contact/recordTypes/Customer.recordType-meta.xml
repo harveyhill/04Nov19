@@ -21,6 +21,10 @@
     <picklistValues>
         <picklist>Language__c</picklist>
         <values>
+            <fullName>Cherokee</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Chinese</fullName>
             <default>false</default>
         </values>
