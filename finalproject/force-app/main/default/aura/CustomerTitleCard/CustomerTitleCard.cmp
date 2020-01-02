@@ -1,0 +1,26 @@
+<aura:component controller="LAC_CustomerController"
+                implements="forceCommunity:availableForAllPageTypes">
+    <!-- Declare sObject for customer contact-->
+    <aura:attribute name="customer" type="Contact" />
+    
+    <!-- Handle Event on page initialization -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <!-- Title Card with personal info of user logged in-->
+    <lightning:tile label="Southern Heart Customer">
+        <aura:set attribute="media">
+            <lightning:icon iconName="standard:groups" />
+        </aura:set>
+        <dl class="slds-dl_horizontal">
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Name">Name: {! v.customer.Name }</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="Phone">Phone: {! v.customer.Phone }</p>
+            </dd>
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Email">Email: {! v.customer.Email }</p>
+            </dt>
+        </dl>
+    </lightning:tile>
+</aura:component>

@@ -1,0 +1,25 @@
+<aura:component>
+    <aura:attribute name="appID" type="ID" />
+    <lightning:recordViewForm recordId="{! v.appID }" objectApiName="Appointment__c">
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-6">
+            <lightning:outputField fieldName="Name"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+            <lightning:outputField fieldName="Doctor_Contact__c"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+            <lightning:outputField fieldName="Start_Time__c"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+            <lightning:outputField fieldName="End_Time__c"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+            <lightning:outputField fieldName="Status__c"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+            <lightning:outputField fieldName="Message__c"  variant="label-hidden" />
+        </div>
+    </div>
+</lightning:recordViewForm>
+</aura:component>

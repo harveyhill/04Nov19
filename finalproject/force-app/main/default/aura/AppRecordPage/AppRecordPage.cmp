@@ -1,0 +1,33 @@
+<aura:component controller="LAC_CustomerController">
+    <aura:attribute name="Apps" type="Appointment__c[]" />
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+    
+    <div class="slds-box">
+        <div class="slds-text-heading_large">Appointments</div>
+        <br/>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-6">
+                Name
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                Doctor Contact
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                Start Time
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                End Time
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                Status
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                Message
+            </div>
+        </div>
+        <aura:iteration items="{!v.Apps}" var="app"> 
+            <c:AppSingle appID="{! app.Id }" />    
+        </aura:iteration>
+    </div>
+            
+</aura:component>

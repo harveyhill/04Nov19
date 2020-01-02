@@ -1,0 +1,19 @@
+<aura:component>
+    <aura:attribute name="docID" type="ID" />
+    <lightning:recordViewForm recordId="{! v.docID }" objectApiName="Contact">
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-4">
+            <lightning:outputField fieldName="Name"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-4">
+            <lightning:outputField fieldName="Speciality__c"  variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-4">
+            <lightning:outputField fieldName="Gender__c" variant="label-hidden" />
+        </div>
+        <div class="slds-col slds-size_1-of-4">
+            <lightning:outputField fieldName="Languages__c" variant="label-hidden" />
+        </div>
+    </div>
+</lightning:recordViewForm>
+</aura:component>

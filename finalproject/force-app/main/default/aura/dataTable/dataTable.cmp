@@ -1,0 +1,7 @@
+<aura:component >
+<lightning:datatable keyField="id"
+                         data="{! v.Docs }"
+                         columns="{!v.mycolumns }"
+                         hideCheckboxColumn="true"
+                         onrowaction="{!c.myAction}" />	
+</aura:component>

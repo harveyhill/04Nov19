@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTestSuite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <!-- Custom import statements start here. -->
+    <types>                             <!-- 12/16: Schema and record types -->
+        <members>*</members>
+       <name>CustomObject</name> 
+    </types> 
+
+    <types>
+        <members>Account</members>
+        <members>Contact</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Chatter</members>
+        <members>MyDomain</members>
+        <members>Org</members>
+        <members>Sharing</members>
+        <members>Security</members>
+        <members>Communities</members>
+        <name>Settings</name>
+    </types>
+
+    <types>
+        <members>Contact.Doctor</members>
+        <members>Contact.Customer</members> 
+        <name>RecordType</name>    
+    </types> 
+
+    <types>                             <!-- 12/17: Communities enabled and profiles grabbed -->
+        <members>*</members>
+        <name>Community</name>
+    </types>
+    <types>
+        <members>Partner Community Login User</members>
+        <members>Partner Community User</members>
+        <members>Customer Community Login User</members>
+        <members>Customer Community Plus Login User</members>
+        <members>Customer Community Plus User</members>
+        <members>Customer Community User</members>
+        <name>Profile</name>
+    </types>
+    <types>                             <!-- 12/18: One community made -->
+        <members>Customer1</members>
+        <members>Doctor1</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
+        <members>Customer</members>
+        <members>Doctor</members>
+        <name>CustomSite</name>         <!-- To import, set siteAdmin tag to your own username,
+                                             e.g brady.achterberg@brave-moose-ayz3cf.com,
+                                             brady.achterberg@playful-fox-98ib6e.com       -->
+    </types>
+    <types>
+        <members>*</members>
+        <name>Network</name>
+    </types>
+    <types>                         <!-- 12/29: Full merge with other developers -->
+		<members>Southern_Heart</members>
+		<name>CustomApplication</name>
+	</types>
+    <types>
+		<members>Appointment__c</members>
+		<members>ContactResidence__c</members>
+		<members>Residence__c</members>
+        <members>Search__c</members>
+		<name>CustomTab</name>
+	</types>
+    <types>
+		<members>Contact-Customer Layout</members>
+		<members>Contact-Doctor Layout</members>
+		<name>Layout</name>
+	</types>
+    <types>                         <!-- 12/30: Reports and dashboards added with help of Workbench -->
+	    <members>SouthernHeartReports</members>
+        <members>SouthernHeartReports/Flagged_Doctors_mRN</members>
+        <members>SouthernHeartReports/Frequency_of_Appointments_for_Doctors_3io</members>
+        <members>SouthernHeartReports/Frequency_of_Doctor_visits_OG5</members>
+        <members>SouthernHeartReports/New_Search_criteria_for_doctors_Report_qJW</members>
+        <members>SouthernHeartReports/Weekly_appointment_frequency_euA</members>
+        <members>SouthernHeartReports/Searches_Report_QgP</members>
+        <members>SouthernHeartReports/Specialty_Search_Report_DUr</members>
+        <members>SouthernHeartReports/Language_Search_Report_7dN</members>
+	    <name>Report</name>
+	</types>
+    <types>
+        <members>*</members>
+	    <name>ReportType</name>
+	</types>
+    <types>
+        <members>SouthernHeartDashboardFolder</members>
+        <members>SouthernHeartDashboardFolder/oTGzgelrCeFPgGQaDfdahqhxyXIdPv</members>
+        <members>SouthernHeartDashboardFolder/CFAxfFHYybyzYPBJbSOIIHnkMdmwHY</members>
+        <name>Dashboard</name>
+    </types>
+    <version>47.0</version>
+</Package>

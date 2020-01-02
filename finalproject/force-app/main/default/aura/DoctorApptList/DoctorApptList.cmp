@@ -1,0 +1,21 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"
+                controller="DoctorHomeController">
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="currentrow" type="Object"/>
+
+    <!-- handlers -->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="updateAppt" event="c:UpdateStatus" action="{!c.updateAppt}"/>
+
+    <!-- the container element determine the height of the datatable -->
+    <div style="height: 300px">
+        <lightning:datatable	keyField="id"
+                				data="{! v.data }"
+                				columns="{! v.columns }"
+                             	onrowaction="{! c.handleRowAction }"
+                				hideCheckboxColumn="true"/>
+    </div>
+    <div aura:id="modalbox"><!-- create modal component here --></div>
+</aura:component>

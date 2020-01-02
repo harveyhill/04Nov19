@@ -1,0 +1,111 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"
+                controller="LAC_CustomerController">
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="key" type="String" default="Id"/>
+    <aura:attribute name="specOptions" type="List" />
+    <aura:attribute name="genderOptions" type="List" />
+    <aura:attribute name="langOptions" type="List" />
+    <aura:attribute name="Docs" type="Contact[]" />
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="recordName" type="String"/>
+    <aura:attribute name="selectedAccts" type="List"/>
+    <aura:attribute name="rowLast" type="String"/>
+    <aura:attribute name="mycolumns" type="list"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:handler name="init" value="{!this}" action="{!c.SortDoctor}"/>
+    
+    <lightning:navigation aura:id="navigation"/>
+    
+    <div class="c-container">
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">
+    
+                    <lightning:card title="Doctor Search" iconName="standard:visits">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning:select name="specialtyId" 
+                                                  label="Select a Speciality:" 
+                                                  aura:id="specialtyId" 
+                                                  value="Any" 
+                                                  onchange="{!c.SortDoctor}">
+                                    <aura:iteration items="{!v.specOptions}" var="specOption">
+                                        <option text="{!specOption}" value="{!specOption}" 
+                                                selected="{!specOption.selected}"/>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning:select name="genderId" 
+                                                  label="Select a Gender:" 
+                                                  aura:id="genderId" 
+                                                  value="Any" 
+                                                  onchange="{!c.SortDoctor}">
+                                    <aura:iteration items="{!v.genderOptions}" var="genderOption">
+                                        <option text="{!genderOption}" value="{!genderOption}" 
+                                                selected="{!genderOption.selected}"/>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning:select name="langId" 
+                                                  label="Select a Language:" 
+                                                  aura:id="langId" 
+                                                  value="Any" 
+                                                  onchange="{!c.SortDoctor}">
+                                    <aura:iteration items="{!v.langOptions}" var="langOption">
+                                        <option text="{!langOption}" value="{!langOption}" 
+                                                selected="{!langOption.selected}"/>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                        </div>
+
+    					<div style="height: 250px">
+                            <lightning:datatable 	aura:id="ac" 
+                                                    keyField="id"
+                                                    data="{! v.Docs }"
+                                                    columns="{!v.mycolumns }"
+                                                    hideCheckboxColumn="true"
+                                                    onrowaction="{!c.onRowAction}"
+                                                    />
+                                                
+                        </div>
+    				</lightning:card>
+    			</div>         
+    		</lightning:layoutItem>
+          	<aura:if isTrue="{!v.isOpen}">
+                <div aura:id="modalbox" class="slds-modal slds-fade-in-open">
+          			<div class="slds-modal__container">
+            			<div class="slds-modal__content slds-p-around--medium">
+              			 	<div class="custom-box" draggable="false">
+            					<lightning:layoutItem padding="around-small">
+    								<lightning:card title="Reguest for Doctor Appointment" 
+                                        			iconName="standard:service_contract">
+   
+		        						<h1>{!v.Docs.Id}</h1>
+        								<lightning:input aura:id="dateId" 
+                                             			type="datetime" 
+                                             			name="datetime" 
+                                             			label="Enter a date/time value" />
+                   
+        								<lightning:button 	variant="brand" 
+                                              				label="Cancel" 
+                                              				title="Cancel"   
+                                              				onclick="{!c.onRowAction}"/>
+        								<lightning:button variant="brand" 
+                                              				label="Save" 
+                                              				title="Save" 
+                                              				onclick="{!c.onAppSave}"/>
+  
+    								</lightning:card>  
+    							</lightning:layoutItem>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:if> 
+        </lightning:layout>
+    </div>    
+</aura:component>

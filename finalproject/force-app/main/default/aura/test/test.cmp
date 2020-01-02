@@ -1,0 +1,18 @@
+<aura:component >
+    <div class="c-container">
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">1</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">2</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">3</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">4</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

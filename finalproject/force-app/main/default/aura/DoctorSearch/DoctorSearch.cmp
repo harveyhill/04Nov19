@@ -1,0 +1,55 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"
+                controller="LAC_CustomerController">
+    <!-- Define attributes and handle events-->
+    
+    <aura:attribute name="specOptions" type="List" />
+    <aura:attribute name="genderOptions" type="List" />
+    <aura:attribute name="langOptions" type="List" />
+    <aura:attribute name="Docs" type="Contact[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:handler name="init" value="{!this}" action="{!c.SortDoctor}" />
+    
+    <!--" onchange="{!c.SortDoctor}" onchange="{!c.SortDoctor}"-->
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-3">
+            <lightning:select name="specialtyId" label="Select a Specialty:" aura:id="specialtyId" value=" Specialty" onchange="{!c.SortDoctor}">
+                <aura:iteration items="{!v.specOptions}" var="specOption">
+                    <option text="{!specOption}" value="{!specOption}" selected="{!specOption.selected}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <lightning:select name="genderId" label="Select a Gender:" aura:id="genderId" value="Gender" onchange="{!c.SortDoctor}">
+                <aura:iteration items="{!v.genderOptions}" var="genderOption">
+                    <option text="{!genderOption}" value="{!genderOption}" selected="{!genderOption.selected}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <lightning:select name="langId" label="Select a Language:" aura:id="langId" value="Languages" onchange="{!c.SortDoctor}">
+                <aura:iteration items="{!v.langOptions}" var="langOption">
+                    <option text="{!langOption}" value="{!langOption}" selected="{!langOption.selected}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+    </div>
+    <lightning:card title="Available Doctors" iconName="standard:search">
+             
+    <div>
+        <table>
+        <tr>
+            <td>Full Name</td><td>Speciality</td><td>Gender</td><td>Language</td>
+            </tr>
+        </table>
+        
+      <div style="height: 250px">
+    <lightning:datatable data="{! v.docList }"
+                         columns="{! v.mycolumns }"
+                         keyField="id"
+                         hideCheckboxColumn="true"/>
+    </div>      
+
+        
+        </div>
+        </lightning:card>
+</aura:component>

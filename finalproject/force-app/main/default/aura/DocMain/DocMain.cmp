@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" >
+    <lightning:layout horizontalAlign="space" multipleRows="true">
+            
+        <lightning:layoutItem size="12"   mediumDeviceSize="12"  padding="around-small">
+            Welcome User:
+           
+        </lightning:layoutItem>
+        
+    </lightning:layout>
+    
+    
+        
+    <lightning:layoutItem size="12"  mediumDeviceSize="8"  padding="around-small">
+        <c:ForDrSearch/>
+        </lightning:layoutItem>
+    <lightning:layoutItem size="12"  mediumDeviceSize="4"  padding="around-small">
+       <div> c:ForAppointment</div>
+        
+        </lightning:layoutItem>
+    
+ 
+       
+   
+        <lightning:layoutItem size="12" mediumDeviceSize="12" padding="around-small">
+            c:DoctMap
+        </lightning:layoutItem>
+    
+	
+</aura:component>

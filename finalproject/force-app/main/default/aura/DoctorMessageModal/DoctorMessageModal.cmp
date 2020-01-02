@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"
+                controller="DoctorHomeController">
+	<!-- register event for appointment update -->
+    <aura:registerEvent name="updateAppt" type="c:UpdateStatus"/>
+    <!-- attributes -->
+    <aura:attribute name="appt_status" type="String" default="" />
+    
+    <!-- container for modal box -->
+    <div style="height: 600px;" >
+        <div aura:id="modalbox" class="slds-modal slds-fade-in-open">
+          <div class="slds-modal__container">
+            <div class="slds-modal__content slds-p-around--medium">
+               <div align="center" draggable="false">
+                   	<lightning:textarea aura:id="drmsg" 
+                                        label="Leave a message for the customer" />
+                    <lightning:button variant="brand" 
+                                      label="{!v.appt_status}" 
+                                      onclick="{! c.sendMessage }"/>
+               </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</aura:component>
